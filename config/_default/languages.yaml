@@ -1,22 +1,32 @@
-# Languages
-#   Create a section for each of your site's languages.
-#   Documentation: https://docs.hugoblox.com/reference/language/
+# Bilingual site: English at /, Chinese at /zh/.
+# Content translations use filename suffixes (e.g. _index.zh.md);
+# author translations live in data/zh/authors/<slug>.yaml.
 
-# Default language
 en:
+  languageName: English
   locale: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  weight: 1
+  menus:
+    main:
+      - { name: Home, url: /, weight: 10 }
+      - { name: Research, url: /research/, weight: 20 }
+      - { name: Publications, url: /publications/, weight: 30 }
+      - { name: Team, url: /team/, weight: 40 }
+      - { name: News, url: /news/, weight: 50 }
+      - { name: Spaces, url: /spaces/, weight: 60 }
+      - { name: Contact, url: /contact/, weight: 70 }
 
-# Uncomment the lines below to configure your website in a second language.
-#zh:
-#  locale: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1
+zh:
+  languageName: 中文
+  locale: zh-cn
+  weight: 2
+  title: 数字能源实验室 DigiEnergy Lab
+  menus:
+    main:
+      - { name: 首页, url: /zh/, weight: 10 }
+      - { name: 研究方向, url: /zh/research/, weight: 20 }
+      - { name: 论文, url: /zh/publications/, weight: 30 }
+      - { name: 团队, url: /zh/team/, weight: 40 }
+      - { name: 新闻, url: /zh/news/, weight: 50 }
+      - { name: 实验室空间, url: /zh/spaces/, weight: 60 }
+      - { name: 联系我们, url: /zh/contact/, weight: 70 }
