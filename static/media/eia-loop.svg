@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="Inter, system-ui, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Energy–Information–Action coupling loop</title>
+  <desc id="d">A physical energy environment is observed through sensors, giving partial and noisy observations to an embodied agent. The agent estimates state, uses a physics-grounded world model to predict responses to candidate actions, and decides; actions reach the energy system through actuators. Measured responses feed back to update models and policies.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3f3f46"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#047857"/>
+    </marker>
+  </defs>
+  <rect width="960" height="500" rx="16" fill="#ffffff"/>
+
+  <!-- Physical energy environment -->
+  <rect x="24" y="70" width="250" height="300" rx="14" fill="#f4f4f5" stroke="#d4d4d8"/>
+  <text x="149" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#09090b">Physical energy environment</text>
+  <text x="149" y="122" text-anchor="middle" font-size="12" fill="#71717a">physical dynamics · operating limits</text>
+  <g font-size="13" fill="#27272a">
+    <text x="48" y="160">☀ Solar resources &amp; PV</text>
+    <text x="48" y="190">▣ Buildings</text>
+    <text x="48" y="220">▤ Storage</text>
+    <text x="48" y="250">⚡ Charging</text>
+    <text x="48" y="280">⌗ Energy networks</text>
+  </g>
+  <text x="149" y="330" text-anchor="middle" font-size="12" fill="#71717a">environmental disturbances</text>
+  <text x="149" y="348" text-anchor="middle" font-size="12" fill="#71717a">and energy constraints</text>
+
+  <!-- Physical interfaces -->
+  <rect x="330" y="70" width="150" height="80" rx="12" fill="#ffffff" stroke="#a1a1aa"/>
+  <text x="405" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#09090b">Sensors</text>
+  <text x="405" y="126" text-anchor="middle" font-size="12" fill="#71717a">physical interface</text>
+  <rect x="330" y="290" width="150" height="80" rx="12" fill="#ffffff" stroke="#a1a1aa"/>
+  <text x="405" y="325" text-anchor="middle" font-size="14" font-weight="700" fill="#09090b">Actuators</text>
+  <text x="405" y="346" text-anchor="middle" font-size="12" fill="#71717a">physical interface</text>
+
+  <!-- Embodied agent (explicit boundary) -->
+  <rect x="540" y="40" width="396" height="360" rx="16" fill="#ecfdf5" stroke="#047857" stroke-dasharray="6 5"/>
+  <text x="738" y="68" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">Embodied agent</text>
+  <rect x="570" y="86" width="336" height="70" rx="10" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="738" y="115" text-anchor="middle" font-size="14" font-weight="600" fill="#09090b">Perception &amp; state estimation</text>
+  <text x="738" y="136" text-anchor="middle" font-size="12" fill="#71717a">infer energy-relevant states under uncertainty</text>
+  <rect x="570" y="186" width="336" height="70" rx="10" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="738" y="215" text-anchor="middle" font-size="14" font-weight="600" fill="#09090b">Physics-grounded energy world model</text>
+  <text x="738" y="236" text-anchor="middle" font-size="12" fill="#71717a">predict response to candidate actions</text>
+  <rect x="570" y="286" width="336" height="70" rx="10" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="738" y="315" text-anchor="middle" font-size="14" font-weight="600" fill="#09090b">Decision &amp; control</text>
+  <text x="738" y="336" text-anchor="middle" font-size="12" fill="#71717a">safe, executable actions within constraints</text>
+  <line x1="738" y1="156" x2="738" y2="184" stroke="#047857" stroke-width="2" marker-end="url(#ahg)"/>
+  <line x1="738" y1="256" x2="738" y2="284" stroke="#047857" stroke-width="2" marker-end="url(#ahg)"/>
+
+  <!-- Observation path: environment -> sensors -> agent -->
+  <path d="M274,110 L328,110" stroke="#3f3f46" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M480,110 L568,120" stroke="#3f3f46" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <text x="524" y="98" text-anchor="middle" font-size="12" font-weight="600" fill="#27272a">observations</text>
+  <text x="524" y="146" text-anchor="middle" font-size="11" fill="#71717a">partial, noisy</text>
+
+  <!-- Action path: agent -> actuators -> environment -->
+  <path d="M568,322 L482,330" stroke="#3f3f46" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M330,330 L276,330" stroke="#3f3f46" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <text x="524" y="312" text-anchor="middle" font-size="12" font-weight="600" fill="#27272a">actions</text>
+
+  <!-- Closed-loop feedback -->
+  <path d="M149,370 C149,445 738,445 738,402" stroke="#047857" stroke-width="2" stroke-dasharray="7 5" fill="none" marker-end="url(#ahg)"/>
+  <text x="444" y="486" text-anchor="middle" font-size="13" font-weight="600" fill="#065f46">closed-loop feedback: measured response, performance &amp; safety → update models and policies</text>
+</svg>

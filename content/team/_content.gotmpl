@@ -1,0 +1,27 @@
+{{/* Generate one personal homepage per member at /team/<slug>/ from data/authors (+ data/<lang>/authors overrides). */}}
+{{ .EnableAllLanguages }}
+{{ $lang := .Site.Language.Lang }}
+{{ $zh := eq $lang "zh" }}
+{{ $langAuthors := index (index hugo.Data $lang | default dict) "authors" | default dict }}
+{{ range $slug, $base := hugo.Data.authors }}
+  {{ $a := merge $base (index $langAuthors $slug | default dict) }}
+  {{ $name := (index $langAuthors $slug | default dict).name | default dict }}
+  {{ $title := $name.display | default $base.name.display }}
+  {{ $sections := slice
+    (dict "block" "resume-biography-3" "content" (dict "username" $slug "headings" (cond $zh (dict "about" "个人简介" "interests" "研究兴趣" "education" "教育经历") dict))
+          "design" (dict "background" (dict "gradient_mesh" (dict "enable" true)) "avatar" (dict "size" "medium")))
+    (dict "block" "collection" "id" "papers"
+          "content" (dict "title" (cond $zh "论文" "Publications") "filters" (dict "folders" (slice "publications") "author" $slug))
+          "design" (dict "view" "citation"))
+  }}
+  {{ if $a.experience }}
+    {{ $sections = $sections | append (dict "block" "resume-experience" "content" (dict "username" $slug) "design" (dict "date_format" "January 2006")) }}
+  {{ end }}
+  {{ with $a.skills }}
+    {{ $sections = $sections | append (dict "block" "resume-skills" "content" (dict "username" $slug "title" (cond $zh "技能" "Skills"))) }}
+  {{ end }}
+  {{ with $a.awards }}
+    {{ $sections = $sections | append (dict "block" "resume-awards" "content" (dict "username" $slug "title" (cond $zh "荣誉" "Awards"))) }}
+  {{ end }}
+  {{ $.AddPage (dict "kind" "page" "path" $slug "title" $title "params" (dict "sections" $sections)) }}
+{{ end }}

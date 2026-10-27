@@ -3,7 +3,7 @@
 # author translations live in data/zh/authors/<slug>.yaml.
 
 en:
-  languageName: English
+  label: English
   locale: en-us
   weight: 1
   menus:
@@ -17,10 +17,10 @@ en:
       - { name: Contact, url: /contact/, weight: 70 }
 
 zh:
-  languageName: 中文
+  label: 中文
   locale: zh-cn
   weight: 2
-  title: 数字能源实验室 DigiEnergy Lab
+  title: 能源具身智能实验室 EIES Lab
   menus:
     main:
       - { name: 首页, url: /zh/, weight: 10 }

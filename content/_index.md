@@ -1,127 +1,132 @@
 ---
-# Leave the homepage title empty to use the site title
 title: ''
-summary: ''
-date: 2022-10-24
 type: landing
-
+# Homepage copy source: EIES_Lab_Homepage_Revised.md (Oct 2026). Order: Hero → Mission → Approach → Thrusts → Validation → Evidence → Join.
 sections:
-  - block: resume-biography-3
+  # 01 Hero: vision appears prominently only here
+  - block: hero
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: me
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
+      eyebrow: EIES Lab · 能源具身智能实验室
+      title: Energy Shapes Intelligence.<br>[Intelligence Reshapes Energy Systems.]
+      text: Laboratory for Embodied Intelligence in Energy Systems. Advancing the science of autonomous adaptation in renewable and interconnected energy systems.
+      primary_action:
+        text: Explore Our Research
+        url: '#thrusts'
+      secondary_action:
+        text: Our Team
+        url: /team/
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
-      background:
-        gradient_mesh:
-          enable: true
+      alignment: center
+      size: compact
 
-      # Name heading sizing to accommodate long or short names
-      name:
-        size: md # Options: xs, sm, md, lg (default), xl
-
-      # Avatar customization
-      avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+  # 02 Mission
   - block: markdown
+    id: mission
     content:
-      title: '📚 My Research'
-      subtitle: ''
+      title: Understanding the Two-Way Relationship Between Energy and Intelligence
+      subtitle: 'Scientific focus: Energy-Constrained Embodied Intelligence & Autonomous Adaptation'
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        > We investigate how energy dynamics and physical constraints shape embodied intelligence, and how closed-loop physical interaction enables energy systems to adapt autonomously.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
+        Energy systems are dynamic, interconnected and only partially observable. Their evolving physical states and operational constraints shape what an intelligent agent can observe, predict and safely do. In turn, the agent's actions can change energy flows, equipment operation and system performance. Our research seeks to understand and enable this two-way interaction, with the goal of improving the efficiency, reliability and resilience of real-world energy systems.
     design:
       columns: '1'
+
+  # 03 Approach: Energy–Information–Action coupling
+  - block: markdown
+    id: approach
+    content:
+      title: From Perception to Physical Action in Energy Systems
+      subtitle: 'Core mechanism: Energy–Information–Action Coupling'
+      text: |-
+        At the heart of our research is a closed-loop interaction between **physical energy systems** and **embodied intelligent agents**. The physical system evolves under environmental disturbances and energy constraints. An agent uses imperfect observations to estimate its state, forms physics-grounded models of how the system responds to possible actions, and selects actions that can be implemented through physical devices. The measured consequences feed back into subsequent perception, modeling and decisions.
+
+        <figure class="eia-figure"><img src="/media/eia-loop.svg" alt="Energy–Information–Action coupling loop between a physical energy environment and an embodied agent, connected by sensors and actuators, with closed-loop feedback." loading="lazy"><figcaption>Schematic of the Energy–Information–Action loop.</figcaption></figure>
+    design:
+      columns: '1'
+
+  # 04 Three interconnected thrusts (one connected process)
+  - block: focus-areas
+    id: thrusts
+    content:
+      title: Three Interconnected Research Thrusts
+      text: Perception, world models and embodied decision-making form one connected loop.
+      items:
+        - name: 01 · Energy-System Perception & Observability
+          icon: hero/eye
+          description: "**What can an energy agent know, and what information does it need?** We study how energy-relevant states and environmental conditions can be inferred from incomplete, uncertain and heterogeneous observations, connecting geospatial AI, remote sensing, 3D urban representations and observation-quality analysis with task-aware sensing and state estimation."
+        - name: 02 · Physics-Grounded Energy World Models
+          icon: hero/cube-transparent
+          description: "**How will an energy system respond to changes and actions?** We develop physically grounded representations of energy-system dynamics, spanning solar resources, energy conversion, storage, building demand and network interactions, and investigate action-conditioned prediction subject to physical laws, uncertainty and operating limits."
+        - name: 03 · Energy-Constrained Embodied Decision & Control
+          icon: hero/arrow-path
+          description: "**How can an energy agent act safely and adaptively in the physical world?** We investigate autonomous decision-making and control under incomplete information, changing energy resources and physical safety constraints, translating perception and world models into executable actions and improving them through closed-loop feedback."
+
+  # 05 Energy systems & physical validation, with truthful maturity labels
+  - block: focus-areas
+    id: energy-systems
+    content:
+      title: Grounded in Energy. Validated Through Physical Interaction.
+      text: Our scientific questions are rooted in energy systems, not in general-purpose robotics. We study how intelligent physical interaction can improve renewable-energy utilization, energy efficiency, operational reliability and resilience.
+      items:
+        - name: Renewable Energy & Urban Environments
+          icon: hero/sun
+          status: active
+          description: Solar-resource sensing, 3D urban energy assessment and the physical variability of renewable resources.
+        - name: Buildings, Storage & Energy Networks
+          icon: hero/building-office-2
+          status: active
+          description: Energy-system modeling, coupled demand–generation–storage dynamics and physically constrained operation.
+        - name: Electric Mobility & Charging
+          icon: hero/bolt
+          status: emerging
+          description: Energy-aware charging and the interaction among mobility, batteries and energy networks.
+        - name: Low-Altitude / eVTOL & Smart Energy Agriculture
+          icon: hero/sparkles
+          status: planning
+          description: Longer-term research interests, not existing testbeds. Possible future contexts for testing the same scientific mechanisms.
+
+  - block: markdown
+    id: validation
+    content:
+      title: Physical Embodiment & Validation Pathway
+      text: |-
+        The physical embodiment of our research lies in the **sensing and actuation interfaces** that connect intelligent decisions with real energy systems: energy sensors, controllable loads, battery and inverter interfaces, charging controls and, where appropriate, mobile sensing or inspection devices.
+
+        We envision a progressive validation pathway. This is a research and infrastructure development pathway; planned facilities are not yet operational.
+    design:
+      columns: '1'
+  - block: steps
+    content:
+      steps:
+        - { title: Data & physics-based simulation, icon: hero/circle-stack }
+        - { title: Closed-loop digital experiments, icon: hero/arrow-path }
+        - { title: Hardware-in-the-loop / device-level tests, icon: hero/cpu-chip }
+        - { title: Real-world physical feedback & field validation, icon: hero/globe-asia-australia }
+    design:
+      layout: horizontal
+
+  # 06 Evidence: populate only from verified lab records
   - block: collection
     id: papers
     content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: blog
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 10
-      # Filter on criteria
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
+      title: From Scientific Questions to Research Evidence
+      text: Selected publications, datasets, software and demonstrations in solar assessment, geospatial sensing and energy simulation that support the lab's longer-term mission.
+      filters: { folders: [publications], featured_only: true }
+    design: { view: article-grid, columns: 2 }
+
+  # 07 People & opportunities
   - block: cta-card
-    demo: true # Only display this section in the HugoBlox Kit demo site
+    id: join
     content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by HugoBlox Kit - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/kit" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/kit on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
+      title: Build the Future of Embodied Intelligence in Energy Systems
+      text: We welcome students, researchers and collaborators interested in energy-system science, AI, physical modeling, intelligent control and real-world validation. [Join us](/contact/) · [Contact](/contact/)
       button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+        text: Meet the Team
+        url: /team/
     design:
       card:
-        # Card background color (CSS class)
-        css_class: 'bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600 text-white shadow-2xl'
-        css_style: ''
+        text_color: light
+      background:
+        gradient: { start: primary-900, end: primary-600, direction: 135 }
 ---

@@ -1,0 +1,21 @@
+# DEMO member: copy this file to add a real member, then delete it.
+schema: hugoblox/author/v1
+slug: demo-phd
+weight: 3
+user_groups: [PhD Students]
+name:
+  display: Demo Student
+  given: Demo
+  family: Student
+role: PhD Student
+bio: Placeholder profile showing how a PhD Student page looks.
+affiliations:
+  - name: EIES Lab, PolyU
+interests:
+  - Rooftop PV mapping
+  - Machine learning
+education:
+  - degree: MSc (placeholder)
+    institution: Example University
+    start: 2020-09-01
+    end: 2022-06-30

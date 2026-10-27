@@ -1,0 +1,91 @@
+/* hugo.chat-like look: Inter, tight bold headings, near-black text, black buttons, hairline cards. */
+:root { --ink: #09090b; --muted: #71717a; --line: #e4e4e7; }
+
+html:not(.dark) body { color: var(--ink); }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; }
+h1 { letter-spacing: -0.035em; }
+html:not(.dark) .prose, html:not(.dark) p { color: var(--muted); }
+html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: var(--ink); }
+
+/* Header: plain white bar with hairline border */
+html:not(.dark) header { background: #fff !important; border-bottom: 1px solid var(--line); box-shadow: none !important; }
+
+/* Primary buttons: black with white text, like hugo.chat CTAs */
+html:not(.dark) a[class*="bg-primary-6"], html:not(.dark) button[class*="bg-primary-6"] {
+  background: var(--ink) !important; color: #fafafa !important; box-shadow: none !important;
+}
+html:not(.dark) a[class*="bg-primary-6"]:hover { background: #27272a !important; }
+
+/* Cards: hairline border, very soft shadow */
+html:not(.dark) .shadow, html:not(.dark) .shadow-md, html:not(.dark) .shadow-lg, html:not(.dark) .shadow-xl {
+  box-shadow: 0 1px 2px rgba(0,0,0,.04) !important; border: 1px solid var(--line);
+}
+
+/* Hero CTA: gradient pill -> solid black pill */
+html:not(.dark) a[class*="from-primary-600"] {
+  background: var(--ink) !important; color: #fafafa !important; box-shadow: none !important;
+}
+
+/* Focus-area cards: big gradient header -> small grey icon tile (hugo.chat feature cards) */
+.group .h-48.bg-gradient-to-br {
+  height: 2.75rem !important; width: 2.75rem; margin: 1.5rem 1.5rem 0; border-radius: .6rem;
+  background: #f4f4f5 !important; display: flex; align-items: center; justify-content: center;
+}
+html.dark .group .h-48.bg-gradient-to-br { background: #27272a !important; }
+.group .h-48.bg-gradient-to-br svg { width: 1.35rem !important; height: 1.35rem !important; color: var(--ink); opacity: 1 !important; }
+html.dark .group .h-48.bg-gradient-to-br svg { color: #fafafa; }
+.group .h-48.bg-gradient-to-br > * { position: static !important; inset: auto !important; }
+.group:has(.h-48.bg-gradient-to-br) > div { transform: none !important; }
+
+/* ===== Homepage hero, hugo.chat style =====
+   Swap the two accent colours to change the gradient (e.g. #6d28d9 / #a855f7 for hugo.chat purple). */
+#section-hero {
+  --accent-a: #047857;  /* emerald-700 */
+  --accent-b: #10b981;  /* emerald-500 */
+  background:
+    radial-gradient(40% 60% at 0% 70%, color-mix(in srgb, var(--accent-b) 14%, transparent), transparent 70%),
+    radial-gradient(40% 60% at 100% 80%, color-mix(in srgb, var(--accent-b) 12%, transparent), transparent 70%),
+    linear-gradient(180deg, #e9e9eb 0%, #f4f4f5 55%, #ffffff 100%);
+}
+html.dark #section-hero {
+  background:
+    radial-gradient(40% 60% at 0% 70%, color-mix(in srgb, var(--accent-b) 18%, transparent), transparent 70%),
+    radial-gradient(40% 60% at 100% 80%, color-mix(in srgb, var(--accent-b) 14%, transparent), transparent 70%),
+    linear-gradient(180deg, #18181b 0%, #09090b 100%);
+}
+
+/* Eyebrow -> pill with a status dot */
+#section-hero p.uppercase {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .35rem .9rem; border-radius: 9999px;
+  border: 1px solid #d4d4d8; background: rgba(228,228,231,.7);
+  color: var(--ink) !important; font-size: .78rem; letter-spacing: .06em;
+}
+#section-hero p.uppercase::before {
+  content: ""; width: .45rem; height: .45rem; border-radius: 9999px; background: var(--accent-b);
+}
+html.dark #section-hero p.uppercase { background: rgba(39,39,42,.7); border-color: #3f3f46; color: #fafafa !important; }
+
+/* Headline: larger, tighter; [bracketed] words get the ink -> accent gradient */
+#section-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; letter-spacing: -0.04em; }
+#section-hero h1 span.bg-clip-text {
+  background-image: linear-gradient(90deg, #3f3f46 0%, var(--accent-a) 45%, var(--accent-b) 100%) !important;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+html.dark #section-hero h1 span.bg-clip-text {
+  background-image: linear-gradient(90deg, #e4e4e7 0%, var(--accent-b) 60%, #6ee7b7 100%) !important;
+}
+#section-hero h1 + p { font-size: 1.2rem; line-height: 1.7; color: var(--muted); }
+
+/* Approach diagram */
+.eia-figure { margin: 2rem 0 0; }
+.eia-figure img { width: 100%; border-radius: 1rem; border: 1px solid var(--line); background: #fff; }
+.eia-figure figcaption { text-align: center; font-size: .85rem; color: var(--muted); margin-top: .5rem; }
+
+/* Hero headline: wider container so the two-line vision stays two lines */
+#section-hero [class*="max-w-2xl"], #section-hero [class*="max-w-3xl"], #section-hero [class*="max-w-4xl"] { max-width: 68rem; }
+#section-hero h1 { font-size: clamp(2.25rem, 5.2vw, 4.25rem); }
+#section-hero h1 + p { max-width: 42rem; margin-left: auto; margin-right: auto; }
+
+/* Diagram breaks out of the narrow prose column */
+.eia-figure { width: min(1040px, calc(100vw - 32px)); position: relative; left: 50%; transform: translateX(-50%); }

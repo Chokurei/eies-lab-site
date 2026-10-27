@@ -1,0 +1,21 @@
+# DEMO member: copy this file to add a real member, then delete it.
+schema: hugoblox/author/v1
+slug: demo-postdoc
+weight: 2
+user_groups: [Postdoctoral Fellows]
+name:
+  display: Demo Postdoc
+  given: Demo
+  family: Postdoc
+role: Postdoctoral Fellow
+bio: Placeholder profile showing how a Postdoctoral Fellow page looks.
+affiliations:
+  - name: EIES Lab, PolyU
+interests:
+  - Building energy simulation
+  - Machine learning
+education:
+  - degree: MSc (placeholder)
+    institution: Example University
+    start: 2020-09-01
+    end: 2022-06-30
