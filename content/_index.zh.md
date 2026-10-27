@@ -6,9 +6,9 @@ sections:
   # 01 Hero
   - block: hero
     content:
-      eyebrow: EIES Lab · 能源具身智能实验室
-      title: 能源塑造智能，<br>[智能重塑能源系统。]
-      text: Laboratory for Embodied Intelligence in Energy Systems。致力于推进可再生与互联能源系统自主适应的科学研究。
+      eyebrow: EIES Lab · Laboratory for Embodied Intelligence in Energy Systems
+      title: '[能源具身智能]实验室'
+      text: '**能源塑造智能，智能重塑能源系统。** 致力于推进可再生与互联能源系统自主适应的科学研究。'
       primary_action:
         text: 了解我们的研究
         url: '#thrusts'

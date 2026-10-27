@@ -7,8 +7,8 @@ sections:
   - block: hero
     content:
       eyebrow: EIES Lab · 能源具身智能实验室
-      title: Energy Shapes Intelligence.<br>[Intelligence Reshapes Energy Systems.]
-      text: Laboratory for Embodied Intelligence in Energy Systems. Advancing the science of autonomous adaptation in renewable and interconnected energy systems.
+      title: Laboratory for<br>[Embodied Intelligence<br>in Energy Systems]
+      text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.** Advancing the science of autonomous adaptation in renewable and interconnected energy systems.'
       primary_action:
         text: Explore Our Research
         url: '#thrusts'
