@@ -89,3 +89,14 @@ html.dark #section-hero h1 span.bg-clip-text {
 
 /* Diagram breaks out of the narrow prose column */
 .eia-figure { width: min(1040px, calc(100vw - 32px)); position: relative; left: 50%; transform: translateX(-50%); }
+#section-hero h1 { font-size: clamp(2.25rem, 4.6vw, 3.75rem); text-wrap: balance; }
+
+/* Join CTA: deep emerald gradient, white text (overrides the global ink/muted text rules) */
+#join div[class*="bg-gradient"], #join div[class*="rounded"][class*="shadow"] {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 55%, #047857 100%) !important;
+}
+#join h1, #join h2, #join h3 { color: #ffffff !important; }
+#join p, #join .prose, #join .prose * { color: rgba(255,255,255,.82) !important; }
+#join .prose a, #join p a { color: #ffffff !important; text-decoration: underline; text-underline-offset: 3px; }
+#join a[class*="rounded"][class*="shadow"], #join button { background: #ffffff !important; color: var(--ink) !important; border-color: transparent !important; }
+#join h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }
