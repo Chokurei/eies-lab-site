@@ -12,7 +12,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; }
 h1 { letter-spacing: -0.035em; }
 html:not(.dark) .prose, html:not(.dark) p { color: var(--muted); }
 html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: var(--ink); }
-html:not(.dark) header { background: #fff !important; border-bottom: 1px solid var(--line); box-shadow: none !important; }
+html:not(.dark) body > header, html:not(.dark) #site-header { background: #fff !important; border-bottom: 1px solid var(--line); box-shadow: none !important; }
 header a img { height: 34px; width: auto; }
 
 /* Primary buttons: black pills */
@@ -27,11 +27,13 @@ html:not(.dark) .shadow, html:not(.dark) .shadow-md, html:not(.dark) .shadow-lg,
 }
 
 /* ---------- Left-aligned section headers (no more everything-centred) ---------- */
-main section:not(#section-hero):not(#join) .text-center.max-w-3xl.mx-auto,
-main section:not(#section-hero):not(#join) .text-center.max-w-prose.mx-auto {
+section:not(#section-hero):not(#join) .text-center.max-w-3xl.mx-auto {
   text-align: left; margin-left: 0; max-width: 46rem;
 }
-main section:not(#section-hero):not(#join) h2 { text-align: left; }
+section:not(#section-hero):not(#join) h2 { text-align: left; }
+/* collection blocks: header + list in one left-aligned column as wide as the card grids */
+section.blox-collection > div > .flex.flex-col.items-center.max-w-prose.mx-auto,
+#papers .flex.flex-col.items-center.max-w-prose.mx-auto { align-items: flex-start; max-width: 72rem; padding: 0 1.5rem; }
 .section-link { display: inline-flex; gap: .4rem; margin-top: 1.5rem; font-weight: 600; color: var(--ink); text-decoration: none; }
 .section-link:hover { color: var(--blue); }
 html.dark .section-link { color: #fafafa; }
@@ -107,3 +109,28 @@ html.dark .group .h-48.bg-gradient-to-br svg { color: #bfdbfe; }
 #join p, #join .prose, #join .prose * { color: rgba(255,255,255,.82) !important; }
 #join .prose a, #join p a { color: #ffffff !important; text-decoration: underline; text-underline-offset: 3px; }
 #join a[class*="rounded"][class*="shadow"], #join button { background: #ffffff !important; color: var(--ink) !important; border-color: transparent !important; }
+
+/* fixes: editorial header is a <header> too; figure spans the full block width */
+.md-head { border: 0 !important; background: transparent !important; }
+.md-body:has(.eia-figure) { max-width: none; margin-top: 0; }
+/* hero emblem: no card frame */
+#section-hero img { box-shadow: none !important; border: 0 !important; background: transparent !important; border-radius: 0 !important; max-width: 400px; margin: 0 auto; display: block; }
+html.dark #section-hero img { background: #fff !important; border-radius: 9999px !important; padding: 6%; }
+/* join card body text */
+#join [class*="text-gray-700"] { color: rgba(255,255,255,.85) !important; }
+
+/* One left edge for every section: same width/gutter as the card grids (max-w-7xl + px-4/6/8) */
+.md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto {
+  max-width: 80rem !important; width: 100%; margin-left: auto !important; margin-right: auto !important;
+  padding-left: 1rem !important; padding-right: 1rem !important;
+}
+@media (min-width: 640px) { .md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 1.5rem !important; padding-right: 1.5rem !important; } }
+@media (min-width: 1024px) { .md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 2rem !important; padding-right: 2rem !important; } }
+#papers .flex.flex-col.items-center.px-6 { align-items: stretch; padding-left: 0; padding-right: 0; }
+#papers .container.max-w-3xl { margin-top: 2rem; }
+/* gutter sits outside the 80rem content box, like the card grids */
+.md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { box-sizing: content-box; width: auto; }
+/* publication list lives in a centred flex column: give it an explicit width so it doesn't shrink-wrap */
+#papers .container.max-w-3xl { --g: 1rem; box-sizing: border-box; width: min(calc(80rem + 2 * var(--g)), 100%) !important; max-width: none !important; }
+@media (min-width: 640px) { #papers .container.max-w-3xl { --g: 1.5rem; } }
+@media (min-width: 1024px) { #papers .container.max-w-3xl { --g: 2rem; } }

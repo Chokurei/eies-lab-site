@@ -17,7 +17,7 @@ sections:
         text: Our Team
         url: /team/
       media:
-        src: logo.png
+        src: /media/emblem.png
         alt: EIES Lab emblem
     design:
       layout: split-left
