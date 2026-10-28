@@ -1,0 +1,6 @@
+{{/* EIES: footer shows only the copyright line (no language switcher, licence icons or theme credit). */}}
+<footer class="container mx-auto text-sm leading-6 mt-24 mb-6 text-slate-500 dark:text-slate-400">
+  {{ with site.Params.hugoblox.copyright.notice }}
+  <p class="text-center">{{ replace . "{year}" (now.Format "2006") }}</p>
+  {{ end }}
+</footer>

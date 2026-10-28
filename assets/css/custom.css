@@ -27,13 +27,13 @@ html:not(.dark) .shadow, html:not(.dark) .shadow-md, html:not(.dark) .shadow-lg,
 }
 
 /* ---------- Left-aligned section headers (no more everything-centred) ---------- */
-section:not(#section-hero):not(#join) .text-center.max-w-3xl.mx-auto {
+section:not(#section-hero) .text-center.max-w-3xl.mx-auto {
   text-align: left; margin-left: 0; max-width: 46rem;
 }
-section:not(#section-hero):not(#join) h2 { text-align: left; }
+section:not(#section-hero) h2 { text-align: left; }
 /* collection blocks: header + list in one left-aligned column as wide as the card grids */
 section.blox-collection > div > .flex.flex-col.items-center.max-w-prose.mx-auto,
-#papers .flex.flex-col.items-center.max-w-prose.mx-auto { align-items: flex-start; max-width: 72rem; padding: 0 1.5rem; }
+:is(#papers, #news) .flex.flex-col.items-center.max-w-prose.mx-auto { align-items: flex-start; max-width: 72rem; padding: 0 1.5rem; }
 .section-link { display: inline-flex; gap: .4rem; margin-top: 1.5rem; font-weight: 600; color: var(--ink); text-decoration: none; }
 .section-link:hover { color: var(--blue); }
 html.dark .section-link { color: #fafafa; }
@@ -51,10 +51,9 @@ html.dark .md-body blockquote { color: #fafafa; }
   .md-split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 4rem; }
   .md-split .md-body { margin-top: 0; }
 }
-.md-split .md-body .eia-figure { grid-column: 1 / -1; }
-.eia-figure { margin: 2.5rem 0 0; }
-.eia-figure img { width: 100%; border-radius: 1rem; border: 1px solid var(--line); background: #fff; }
-.eia-figure figcaption { font-size: .85rem; color: var(--muted); margin-top: .5rem; }
+
+
+
 .md-wide-figure { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
 
 /* ---------- Homepage hero ---------- */
@@ -100,37 +99,90 @@ html.dark .group .h-48.bg-gradient-to-br svg { color: #bfdbfe; }
 .group .h-48.bg-gradient-to-br > * { position: static !important; inset: auto !important; }
 .group:has(.h-48.bg-gradient-to-br) > div { transform: none !important; }
 
-/* ---------- Join CTA: navy card, white text ---------- */
-#join div[class*="bg-gradient"], #join div[class*="rounded"][class*="shadow"] {
-  background: linear-gradient(135deg, #021733 0%, var(--navy) 55%, #0b4aa3 100%) !important;
-}
-#join h1, #join h2, #join h3 { color: #ffffff !important; }
-#join h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }
-#join p, #join .prose, #join .prose * { color: rgba(255,255,255,.82) !important; }
-#join .prose a, #join p a { color: #ffffff !important; text-decoration: underline; text-underline-offset: 3px; }
-#join a[class*="rounded"][class*="shadow"], #join button { background: #ffffff !important; color: var(--ink) !important; border-color: transparent !important; }
 
 /* fixes: editorial header is a <header> too; figure spans the full block width */
 .md-head { border: 0 !important; background: transparent !important; }
-.md-body:has(.eia-figure) { max-width: none; margin-top: 0; }
 /* hero emblem: no card frame */
 #section-hero img { box-shadow: none !important; border: 0 !important; background: transparent !important; border-radius: 0 !important; max-width: 400px; margin: 0 auto; display: block; }
 html.dark #section-hero img { background: #fff !important; border-radius: 9999px !important; padding: 6%; }
-/* join card body text */
-#join [class*="text-gray-700"] { color: rgba(255,255,255,.85) !important; }
 
 /* One left edge for every section: same width/gutter as the card grids (max-w-7xl + px-4/6/8) */
-.md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto {
+.md-block, :is(#papers, #news) .container.max-w-3xl, :is(#papers, #news) .flex.flex-col.items-center.max-w-prose.mx-auto {
   max-width: 80rem !important; width: 100%; margin-left: auto !important; margin-right: auto !important;
   padding-left: 1rem !important; padding-right: 1rem !important;
 }
-@media (min-width: 640px) { .md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 1.5rem !important; padding-right: 1.5rem !important; } }
-@media (min-width: 1024px) { .md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 2rem !important; padding-right: 2rem !important; } }
-#papers .flex.flex-col.items-center.px-6 { align-items: stretch; padding-left: 0; padding-right: 0; }
-#papers .container.max-w-3xl { margin-top: 2rem; }
+@media (min-width: 640px) { .md-block, :is(#papers, #news) .container.max-w-3xl, :is(#papers, #news) .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 1.5rem !important; padding-right: 1.5rem !important; } }
+@media (min-width: 1024px) { .md-block, :is(#papers, #news) .container.max-w-3xl, :is(#papers, #news) .flex.flex-col.items-center.max-w-prose.mx-auto { padding-left: 2rem !important; padding-right: 2rem !important; } }
+:is(#papers, #news) .flex.flex-col.items-center.px-6 { align-items: stretch; padding-left: 0; padding-right: 0; }
+:is(#papers, #news) .container.max-w-3xl { margin-top: 2rem; }
 /* gutter sits outside the 80rem content box, like the card grids */
-.md-block, #papers .container.max-w-3xl, #papers .flex.flex-col.items-center.max-w-prose.mx-auto { box-sizing: content-box; width: auto; }
+.md-block, :is(#papers, #news) .container.max-w-3xl, :is(#papers, #news) .flex.flex-col.items-center.max-w-prose.mx-auto { box-sizing: content-box; width: auto; }
 /* publication list lives in a centred flex column: give it an explicit width so it doesn't shrink-wrap */
-#papers .container.max-w-3xl { --g: 1rem; box-sizing: border-box; width: min(calc(80rem + 2 * var(--g)), 100%) !important; max-width: none !important; }
-@media (min-width: 640px) { #papers .container.max-w-3xl { --g: 1.5rem; } }
-@media (min-width: 1024px) { #papers .container.max-w-3xl { --g: 2rem; } }
+:is(#papers, #news) .container.max-w-3xl { --g: 1rem; box-sizing: border-box; width: min(calc(80rem + 2 * var(--g)), 100%) !important; max-width: none !important; }
+@media (min-width: 640px) { :is(#papers, #news) .container.max-w-3xl { --g: 1.5rem; } }
+@media (min-width: 1024px) { :is(#papers, #news) .container.max-w-3xl { --g: 2rem; } }
+/* Research page: untitled card grid sits right under the overview */
+section#overview + section#thrusts > div { padding-top: 0 !important; }
+
+/* Mission quote stands out; framework figure fills the right column */
+html:not(.dark) .md-body blockquote p { color: var(--ink) !important; }
+.md-body blockquote { margin: 0; }
+.eies-figure { display: block; border-radius: 1rem; overflow: hidden; border: 1px solid var(--line); background: #fff; transition: box-shadow .2s; }
+.eies-figure:hover { box-shadow: 0 8px 30px rgba(4,42,94,.12); }
+.eies-figure img { display: block; width: 100%; height: auto; margin: 0 !important; }
+.md-body .fig-note { font-size: .82rem; margin-top: .6rem; color: var(--muted); }
+@media (min-width: 900px) { #approach .md-split { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); } }
+/* news list (date-title-summary view) uses a w-fit wrapper: same width + left edge as other sections */
+#news .mt-16.w-fit { --g: 1rem; box-sizing: border-box; width: min(calc(80rem + 2 * var(--g)), 100%) !important; padding-left: var(--g); padding-right: var(--g); margin-top: 2rem !important; }
+@media (min-width: 640px) { #news .mt-16.w-fit { --g: 1.5rem; } }
+@media (min-width: 1024px) { #news .mt-16.w-fit { --g: 2rem; } }
+#news .max-w-3xl { max-width: 48rem; }
+#news .mt-16.w-fit { margin-left: auto !important; margin-right: auto !important; }
+
+/* Tighter vertical rhythm between sections */
+section.hbb-section:not(#section-hero) { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+section.hbb-section#section-hero { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+section.hbb-section:not(#section-hero) [class*="lg:py-24"] { padding-top: 0 !important; padding-bottom: 0 !important; }
+section.hbb-section:not(#section-hero) .mb-12.lg\:mb-16 { margin-bottom: 2rem !important; }
+@media (max-width: 639px) { section.hbb-section:not(#section-hero) { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; } }
+
+/* Section eyebrow labels (in block titles: <span class="sec-eyebrow">…</span>) — same look as .md-eyebrow */
+.sec-eyebrow { display: block; margin-bottom: .75rem; font-size: .78rem; line-height: 1.2; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--blue) !important; }
+html.dark .sec-eyebrow { color: #93c5fd !important; }
+
+/* Block headings match the editorial .md-title size instead of the theme's 5xl */
+section:not(#section-hero) h2[class*="text-3xl"], section:not(#section-hero) .mb-6.text-3xl {
+  font-size: clamp(1.75rem, 3vw, 2.5rem) !important; line-height: 1.15 !important; margin-bottom: 0 !important;
+}
+section:not(#section-hero) .mb-6.text-3xl { margin-bottom: .25rem !important; }
+
+/* Split blocks: right column vertically centred against the heading column */
+@media (min-width: 900px) { .md-split { align-items: center; } }
+.md-body > :first-child { margin-top: 0; }
+.md-body > :last-child { margin-bottom: 0; }
+
+/* News item titles a bit larger */
+#news article h2 { font-size: 1.25rem !important; line-height: 1.35 !important; }
+/* Link row right under the paragraph above it (Join Us) */
+.md-body p:has(> .section-link:first-child) { margin-top: .9rem; }
+.md-body .section-link { margin-top: 0; }
+.md-body p:has(+ p > .section-link:first-child) { margin-bottom: 0; }
+/* Contact map (OpenStreetMap embed via contact-info map_embed) */
+.aspect-w-16:has(> iframe) { height: clamp(18rem, 42vw, 28rem); }
+/* Spaces: four validation stages in one row (2×2 on tablets) */
+@media (min-width: 768px) { #pathway .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { #pathway .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* List pages using view: card (News): compact 3-up grid instead of one wide column */
+.container.grid.max-w-\[65ch\]:has(> [role="article"]) { max-width: 80rem; padding-inline: 1.5rem; gap: 1.5rem; }
+@media (min-width: 640px) { .container.grid.max-w-\[65ch\]:has(> [role="article"]) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .container.grid.max-w-\[65ch\]:has(> [role="article"]) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Team page: compact cards, ~6 per row on desktop */
+#section-team-showcase .grid { gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 640px)  { #section-team-showcase .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 900px)  { #section-team-showcase .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1200px) { #section-team-showcase .grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+#section-team-showcase .grid > .group > div { border-radius: .9rem; }
+#section-team-showcase .grid > .group > div > div { padding: .85rem .9rem 1rem !important; }
+#section-team-showcase .grid h3 { font-size: .95rem !important; line-height: 1.3 !important; }
+#section-team-showcase .grid h3 ~ * { font-size: .78rem !important; }
+#section-team-showcase .grid .aspect-square span, #section-team-showcase .grid .aspect-square div { font-size: 2rem; }

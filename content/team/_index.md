@@ -8,21 +8,17 @@ cascade:
 sections:
   - block: team-showcase
     content:
-      title: Meet the Team
+      title: '<span class="sec-eyebrow">People</span>Meet the Team'
       text: Researchers working on embodied intelligence in energy systems.
-      user_groups:
-        - Principal Investigator
-        - Postdoctoral Fellows
-        - PhD Students
-        - Research Assistants
-        - name: Alumni
-          sort_by: graduation_year
-          sort_ascending: false
+      # No user_groups: everyone in one grid, ordered by weight (PI first, then the order in data/authors).
       sort_by: weight
+      sort_ascending: true
       cta:
         text: Join us
         url: /contact/
     design:
       show_interests: true
+      show_organizations: false
+      show_bio: false
       max_columns: 4
 ---

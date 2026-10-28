@@ -9,7 +9,7 @@ sections:
     content:
       eyebrow: EIES Lab · 能源具身智能实验室
       title: Laboratory for<br>[Embodied Intelligence<br>in Energy Systems]
-      text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.** Advancing the science of autonomous adaptation in renewable and interconnected energy systems.'
+      text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.** Advancing the science of autonomous adaptation in renewable and interconnected urban energy systems.'
       primary_action:
         text: Explore Our Research
         url: /research/
@@ -30,9 +30,7 @@ sections:
       title: Understanding the Two-Way Relationship Between Energy and Intelligence
       subtitle: 'Scientific focus: Energy-Constrained Embodied Intelligence & Autonomous Adaptation'
       text: |-
-        > We investigate how energy dynamics and physical constraints shape embodied intelligence, and how closed-loop physical interaction enables energy systems to adapt autonomously.
-
-        Energy systems are dynamic, interconnected and only partially observable. Their evolving physical states and operational constraints shape what an intelligent agent can observe, predict and safely do. In turn, the agent's actions can change energy flows, equipment operation and system performance. Our research seeks to understand and enable this two-way interaction, with the goal of improving the efficiency, reliability and resilience of real-world energy systems.
+        > We investigate how energy dynamics and physical constraints ground embodied intelligence, enabling closed-loop interaction and autonomous adaptation for efficient, reliable, and resilient urban energy systems.
     design:
       layout: split
 
@@ -43,19 +41,13 @@ sections:
       title: From Perception to Physical Action in Energy Systems
       subtitle: 'Core mechanism: Energy–Information–Action Coupling'
       text: |-
-        At the heart of our research is a closed-loop interaction between **physical energy systems** and **embodied intelligent agents**. The physical system evolves under environmental disturbances and energy constraints. An agent uses imperfect observations to estimate its state, forms physics-grounded models of how the system responds to possible actions, and selects actions that can be implemented through physical devices. The measured consequences feed back into subsequent perception, modeling and decisions.
+        <a class="eies-figure" href="/media/eies-framework.jpg" target="_blank" rel="noopener"><img src="/media/eies-framework.jpg" alt="Energy embodied intelligence as a model-based reinforcement learning framework: a physical energy environment and an embodied agent (perception, world model, decision policy) linked by observations, physical actions and feedback." loading="lazy"></a><p class="fig-note">Energy embodied intelligence as a model-based RL framework. Click to enlarge.</p>
     design:
       layout: split
-  - block: markdown
-    id: approach-figure
-    content:
-      text: |-
-        <figure class="eia-figure"><img src="/media/eia-loop.svg" alt="Energy–Information–Action coupling loop between a physical energy environment and an embodied agent, connected by sensors and actuators, with closed-loop feedback." loading="lazy"><figcaption>Energy–Information–Action loop (schematic).</figcaption></figure>
-
   - block: focus-areas
     id: thrusts
     content:
-      title: Research Thrusts
+      title: '<span class="sec-eyebrow">Our Research</span>Research Thrusts'
       text: 'Three connected steps of one loop. <a class="section-link" href="/research/">Read more about our research →</a>'
       items:
         - name: Energy-System Perception & Observability
@@ -68,41 +60,41 @@ sections:
           icon: hero/arrow-path
           description: How can an energy agent act safely and adaptively in the physical world?
 
-  # Real cases only. Each card: replace TODO with a verified project (image + one-line result + link).
   - block: focus-areas
     id: cases
     content:
-      title: Energy Systems & Physical Validation
-      text: 'Selected cases from the energy systems we study. Active = existing foundation; Emerging = in development.'
+      title: '<span class="sec-eyebrow">Validation</span>Energy Systems & Physical Validation'
       items:
         - name: Renewable Energy & Urban Environments
           icon: hero/sun
           status: active
-          description: 'TODO: one verified case, e.g. a solar-resource or 3D urban energy assessment project, with its result and link.'
+          description: Agents sense solar resources and urban form from remote sensing and 3D city models, predict how PV output responds to weather and siting, and turn this into placement and operation decisions that are checked against measured generation.
         - name: Buildings, Storage & Energy Networks
           icon: hero/building-office-2
           status: active
-          description: 'TODO: one verified case on coupled demand–generation–storage modeling, with its result and link.'
-        - name: Electric Mobility & Charging
+          description: Agents estimate building demand and storage states, use physics-grounded models to predict how scheduling actions shift energy flows, and act through controllable loads, batteries and inverters within operating limits.
+        - name: Electric Mobility & Low-Altitude Energy
           icon: hero/bolt
           status: emerging
-          description: 'TODO: describe the current stage of this application; avoid implying a deployed testbed.'
+          description: Vehicles, chargers and eVTOL platforms are energy-constrained embodied agents. We study how they perceive grid and battery states, plan charging and flight energy, and adapt under limited energy and safety constraints.
 
   - block: collection
-    id: papers
+    id: news
     content:
-      title: Selected Publications
-      text: '<a class="section-link" href="/publications/">All publications →</a>'
+      title: '<span class="sec-eyebrow">Latest</span>News'
+      text: '<a class="section-link" href="/news/">All news →</a>'
       count: 3
-      filters: { folders: [publications], featured_only: true }
-    design: { view: citation }
+      filters: { folders: [news] }
+    design: { view: date-title-summary }
 
-  - block: cta-card
+  - block: markdown
     id: join
     content:
-      title: Build the Future of Embodied Intelligence in Energy Systems
-      text: We welcome students, researchers and collaborators interested in energy-system science, AI, physical modeling, intelligent control and real-world validation. [Join us](/contact/)
-      button:
-        text: Meet the Team
-        url: /team/
+      eyebrow: Join Us
+      title: Build the Future
+      subtitle: '<a class="section-link" href="/team/">Meet the team →</a> &nbsp; <a class="section-link" href="/contact/">Contact us →</a>'
+      text: |-
+        We welcome students, researchers, and collaborators with interests in energy systems science, GeoAI, physical AI, physics-based modeling, and real-world validation and deployment.
+    design:
+      layout: split
 ---

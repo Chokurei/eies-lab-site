@@ -1,6 +1,6 @@
 ---
 title: 'Demo paper 2: replace with a real publication'
-authors: [zhiling-guo, demo-postdoc]
+authors: [zhiling-guo]
 date: '2026-04-01'
 publication_types: ['article-journal']
 publication: { name: 'Example Journal' }

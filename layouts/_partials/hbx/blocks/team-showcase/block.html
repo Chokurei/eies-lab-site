@@ -17,6 +17,8 @@
 {{ $show_role := partial "functions/coerce_bool" (dict "value" (index $design "show_role") "default" true) }}
 {{ $show_organizations := partial "functions/coerce_bool" (dict "value" (index $design "show_organizations") "default" true) }}
 {{ $show_empty_groups := partial "functions/coerce_bool" (dict "value" (index $design "show_empty_groups") "default" false) }}
+{{/* EIES: design.show_bio (default true) hides the bio excerpt on cards; the bio stays on the member page. */}}
+{{ $show_bio := partial "functions/coerce_bool" (dict "value" (index $design "show_bio") "default" true) }}
 {{ $max_interests_int := partial "functions/coerce_int" (dict "value" (index $design "max_interests") "default" 3 "min" 0) }}
 {{ $max_columns_int := partial "functions/coerce_int" (dict "value" (index $design "max_columns") "default" 4 "min" 2 "max" 4) }}
 
@@ -215,7 +217,7 @@
           {{ $profile := $groupProfile.profile }}
           {{ $avatar := $profile.avatar }}
           {{ $link := printf "team/%s/" $profile.slug | relLangURL }}
-          {{ $nameSource := $profile.name_given | default $profile.title | default "?" }}
+          {{ $nameSource := $profile.name_family | default $profile.name_given | default $profile.title | default "?" }}
           {{ $initial := cond (gt (len $nameSource) 0) (upper (substr $nameSource 0 1)) "?" }}
           
           <div class="group relative">
@@ -284,7 +286,7 @@
                 {{ end }}
                 
                 {{ $bio := "" }}
-                {{ with $profile.bio }}{{ $bio = printf "%v" . }}{{ end }}
+                {{ with and $show_bio $profile.bio }}{{ $bio = printf "%v" . }}{{ end }}
                 {{ with $bio }}
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                   {{ . }}
@@ -414,7 +416,7 @@
         {{ $profile := $sortedProfile.profile }}
         {{ $avatar := $profile.avatar }}
         {{ $link := printf "team/%s/" $profile.slug | relLangURL }}
-        {{ $nameSource := $profile.name_given | default $profile.title | default "?" }}
+        {{ $nameSource := $profile.name_family | default $profile.name_given | default $profile.title | default "?" }}
         {{ $initial := cond (gt (len $nameSource) 0) (upper (substr $nameSource 0 1)) "?" }}
         <div class="group relative">
           <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -479,7 +481,7 @@
               </div>
               {{ end }}
               {{ $bio := "" }}
-              {{ with $profile.bio }}{{ $bio = printf "%v" . }}{{ end }}
+              {{ with and $show_bio $profile.bio }}{{ $bio = printf "%v" . }}{{ end }}
               {{ with $bio }}
               <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">{{ . }}</p>
               {{ end }}

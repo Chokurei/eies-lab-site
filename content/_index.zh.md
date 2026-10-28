@@ -7,7 +7,7 @@ sections:
     content:
       eyebrow: EIES Lab · Laboratory for Embodied Intelligence in Energy Systems
       title: '[能源具身智能]<br>实验室'
-      text: '**能源塑造智能，智能重塑能源系统。** 致力于推进可再生与互联能源系统自主适应的科学研究。'
+      text: '**能源塑造智能，智能重塑能源系统。** 致力于推进可再生与互联城市能源系统自主适应的科学研究。'
       primary_action:
         text: 了解我们的研究
         url: /zh/research/
@@ -28,9 +28,7 @@ sections:
       title: 理解能源与智能之间的双向关系
       subtitle: 科学聚焦：能源约束下的具身智能与自主适应
       text: |-
-        > 我们研究能源动态与物理约束如何塑造具身智能，以及闭环物理交互如何使能源系统实现自主适应。
-
-        能源系统是动态的、相互关联的，且只能被部分观测。其不断演化的物理状态和运行约束，决定了智能体能够观测什么、预测什么以及能安全地做什么。反过来，智能体的行动又会改变能量流动、设备运行和系统性能。我们的研究致力于理解并实现这种双向交互，以提升真实能源系统的效率、可靠性与韧性。
+        > 我们研究能源动态与物理约束如何为具身智能奠定基础，实现闭环交互与自主适应，构建高效、可靠、有韧性的城市能源系统。
     design:
       layout: split
 
@@ -41,19 +39,13 @@ sections:
       title: 从感知到能源系统中的物理行动
       subtitle: 核心机制：能量–信息–行动耦合
       text: |-
-        我们研究的核心，是**物理能源系统**与**具身智能体**之间的闭环交互。物理系统在环境扰动和能源约束下不断演化；智能体利用不完整的观测估计系统状态，建立基于物理的模型来预测系统对可能行动的响应，并选择可通过物理设备执行的行动。实测结果再反馈到后续的感知、建模与决策中。
+        <a class="eies-figure" href="/media/eies-framework.jpg" target="_blank" rel="noopener"><img src="/media/eies-framework.jpg" alt="能源具身智能作为基于模型的强化学习框架：物理能源环境与具身智能体（感知、世界模型、决策策略）通过观测、物理行动与反馈形成闭环。" loading="lazy"></a><p class="fig-note">能源具身智能作为强化学习框架。点击查看大图。</p>
     design:
       layout: split
-  - block: markdown
-    id: approach-figure
-    content:
-      text: |-
-        <figure class="eia-figure"><img src="/media/eia-loop.svg" alt="能量–信息–行动耦合闭环：物理能源环境与具身智能体通过传感器和执行器相连，并形成闭环反馈。" loading="lazy"><figcaption>能量–信息–行动闭环示意图（图中标注为英文）。</figcaption></figure>
-
   - block: focus-areas
     id: thrusts
     content:
-      title: 研究方向
+      title: '<span class="sec-eyebrow">研究内容</span>研究方向'
       text: '同一闭环中相互衔接的三个环节。<a class="section-link" href="/zh/research/">了解更多研究内容 →</a>'
       items:
         - name: 能源系统感知与可观测性
@@ -66,41 +58,41 @@ sections:
           icon: hero/arrow-path
           description: 能源智能体如何在物理世界中安全、自适应地行动？
 
-  # 只放真实案例。每张卡片把 TODO 换成核实过的项目（图片 + 一句话结果 + 链接）。
   - block: focus-areas
     id: cases
     content:
-      title: 能源系统与物理验证
-      text: 我们所研究能源系统中的精选案例。Active = 已有基础；Emerging = 开发中。
+      title: '<span class="sec-eyebrow">物理验证</span>能源系统与物理验证'
       items:
         - name: 可再生能源与城市环境
           icon: hero/sun
           status: active
-          description: TODO：一个核实过的案例，例如太阳能资源或三维城市能源评估项目，附结果与链接。
+          description: 智能体通过遥感与三维城市模型感知太阳能资源和城市形态，预测光伏出力如何随天气与选址变化，并据此做出布局与运行决策，再以实测发电数据检验。
         - name: 建筑、储能与能源网络
           icon: hero/building-office-2
           status: active
-          description: TODO：一个关于需求–发电–储能耦合建模的核实案例，附结果与链接。
-        - name: 电动交通与充电
+          description: 智能体估计建筑负荷与储能状态，用基于物理的模型预测调度行动如何改变能量流动，并在运行限制内通过可控负荷、电池与逆变器执行行动。
+        - name: 电动交通与低空能源
           icon: hero/bolt
           status: emerging
-          description: TODO：说明该应用目前所处阶段，避免暗示已有投入运行的试验平台。
+          description: 电动车、充电设施与 eVTOL 平台本身就是受能源约束的具身智能体。我们研究它们如何感知电网与电池状态、规划充电与飞行能耗，并在有限能量与安全约束下自适应运行。
 
   - block: collection
-    id: papers
+    id: news
     content:
-      title: 精选论文
-      text: '<a class="section-link" href="/zh/publications/">全部论文 →</a>'
+      title: '<span class="sec-eyebrow">最新动态</span>新闻'
+      text: '<a class="section-link" href="/zh/news/">全部新闻 →</a>'
       count: 3
-      filters: { folders: [publications], featured_only: true }
-    design: { view: citation }
+      filters: { folders: [news] }
+    design: { view: date-title-summary }
 
-  - block: cta-card
+  - block: markdown
     id: join
     content:
-      title: 共建能源系统具身智能的未来
-      text: 欢迎对能源系统科学、人工智能、物理建模、智能控制与真实场景验证感兴趣的学生、研究人员和合作者加入我们。[加入我们](/zh/contact/)
-      button:
-        text: 认识团队
-        url: /zh/team/
+      eyebrow: 加入我们
+      title: 共建未来
+      subtitle: '<a class="section-link" href="/zh/team/">认识团队 →</a> &nbsp; <a class="section-link" href="/zh/contact/">联系我们 →</a>'
+      text: |-
+        欢迎对能源系统科学、地理人工智能（GeoAI）、物理人工智能（Physical AI）、基于物理的建模以及真实场景验证与部署感兴趣的学生、研究人员和合作者加入我们。
+    design:
+      layout: split
 ---

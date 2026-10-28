@@ -1,0 +1,14 @@
+schema: hugoblox/author/v1
+slug: xu-jian
+weight: 20
+user_groups: [MPhil Students]
+name:
+  display: XU Jian
+  given: Jian
+  family: XU
+  alternate: ''  # TODO: Chinese name
+role: MPhil Student (Year 2)
+interests:  # TODO: placeholder, align with the three research thrusts
+  - Energy-system perception
+  - Observability & state estimation
+# TODO: bio, education, links, avatar (assets/media/authors/xu-jian.jpg)

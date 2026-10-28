@@ -1,0 +1,14 @@
+schema: hugoblox/author/v1
+slug: dong-kechuan
+weight: 18
+user_groups: [PhD Students]
+name:
+  display: DONG Kechuan
+  given: Kechuan
+  family: DONG
+  alternate: ''  # TODO: Chinese name
+role: PhD Student (Year 1)
+interests:  # TODO: placeholder, align with the three research thrusts
+  - Embodied decision & control
+  - Electric mobility & charging
+# TODO: bio, education, links, avatar (assets/media/authors/dong-kechuan.jpg)

@@ -6,11 +6,10 @@ sections:
   - block: markdown
     id: overview
     content:
-      eyebrow: 研究方向
-      title: 三个相互关联的研究方向
-      subtitle: 感知、世界模型与具身决策构成一个相互衔接的闭环，而不是三个互不相关的项目类别。
+      eyebrow: 研究
+      title: 研究方向
       text: |-
-        每个方向回答能量–信息–行动闭环中的一个问题：能源智能体能知道什么，系统会如何响应它的行动，以及它如何在物理世界中安全地行动。
+        能源系统是动态的、相互关联的，且只能被部分观测。其不断演化的物理状态和运行约束，决定了智能体能够观测什么、预测什么以及能安全地做什么；反过来，智能体的行动又会改变能量流动、设备运行和系统性能。
     design:
       layout: split
 
@@ -31,8 +30,7 @@ sections:
   - block: focus-areas
     id: energy-systems
     content:
-      title: 立足能源
-      text: 我们的科学问题根植于能源系统，而非通用机器人。标签表示成熟度：Active = 已有基础，Emerging = 开发中，Planning = 远期兴趣。
+      title: '<span class="sec-eyebrow">能源系统</span>立足能源'
       items:
         - name: 可再生能源与城市环境
           icon: hero/sun
@@ -42,6 +40,10 @@ sections:
           icon: hero/building-office-2
           status: active
           description: 能源系统建模、需求–发电–储能耦合动态，以及物理约束下的运行。
+        - name: 面向城市能源韧性的多智能体协同
+          icon: hero/user-group
+          status: active
+          description: 协调建筑、储能、车辆与电网设施等大量分布式能源智能体，使城市能够预判、承受并从扰动中快速恢复。
         - name: 电动交通与充电
           icon: hero/bolt
           status: emerging
@@ -51,15 +53,4 @@ sections:
           status: planning
           description: 研究兴趣，并非现有试验平台。未来可能作为检验同一科学机制的应用场景。
 
-  - block: markdown
-    id: validation
-    content:
-      eyebrow: 验证
-      title: 物理具身与验证路径
-      text: |-
-        我们研究的物理具身，体现在连接智能决策与真实能源系统的**感知与执行接口**上，例如能源传感器、可控负荷、电池与逆变器接口、充电控制，以及在合适场景下的移动感知或巡检设备。
-
-        我们设想一条循序渐进的验证路径：**数据与物理仿真 → 闭环数字实验 → 硬件在环 / 器件级测试 → 真实物理反馈与实地验证。** 这是一条研究与基础设施建设路径，规划中的设施目前尚未投入运行。
-    design:
-      layout: split
 ---
