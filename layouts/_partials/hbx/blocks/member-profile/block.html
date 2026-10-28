@@ -1,0 +1,84 @@
+{{/* EIES member profile header (ziheng.ac.cn-style): avatar + name + links on the left;
+     About, then Interests | Education side by side on the right. Data: data/authors/<username>.yaml.
+     content: username, headings {about, interests, education}, button {text, url} */}}
+{{ $page := .wcPage }}
+{{ $content := .wcBlock.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $profile := partial "functions/get_author_profile" (index $content "username" | default "me") }}
+{{ $headings := index $content "headings" | default dict }}
+{{ $avatar := $profile.avatar }}
+{{ $initial := upper (substr ($profile.name_family | default $profile.title | default "?") 0 1) }}
+{{ $bio := "" }}{{ with $profile.bio }}{{ $bio = printf "%v" . | $page.RenderString }}{{ end }}
+{{ $interests := $profile.interests | default slice }}
+{{ $education := $profile.education | default slice }}
+{{ $button := index $content "button" | default dict }}
+
+<div class="mp">
+  <div class="mp-inner">
+    <aside class="mp-id">
+      <div class="mp-avatar">
+        {{ with $avatar }}
+          {{ $img := .Fill "400x400 Center" }}
+          <img src="{{ $img.RelPermalink }}" alt="{{ $profile.title }}" width="168" height="168">
+        {{ else }}
+          <span aria-hidden="true">{{ $initial }}</span>
+        {{ end }}
+      </div>
+      <h1 class="mp-name">{{ $profile.title }}</h1>
+      {{ with $profile.role }}<p class="mp-role">{{ . | markdownify }}</p>{{ end }}
+      {{ range $profile.affiliations }}{{ with .name }}<p class="mp-aff">{{ . }}</p>{{ end }}{{ end }}
+      {{ with $profile.links }}
+      <div class="mp-links">
+        {{ range . }}
+          {{ $url := .url | default .link }}
+          {{ if $url }}
+          {{ $ext := in (slice "http" "https") (urls.Parse $url).Scheme }}
+          <a href="{{ $url | safeURL }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} {{ with .label }}title="{{ . }}"{{ end }}>
+            {{ partial "functions/get_icon" (dict "name" (.icon | default "hero/link") "attributes" "class=\"w-5 h-5\"") }}
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </aside>
+
+    <div class="mp-main">
+      {{ with $bio }}
+      <h2 class="mp-h">{{ index $headings "about" | default "About Me" }}</h2>
+      <div class="mp-bio prose dark:prose-invert">{{ . }}</div>
+      {{ end }}
+      {{ if and $button.text $button.url }}
+        <a class="mp-btn" href="{{ $button.url | safeURL }}" target="_blank" rel="noopener">{{ $button.text }}</a>
+      {{ end }}
+
+      {{ if or $interests $education }}
+      <div class="mp-cols">
+        {{ with $interests }}
+        <div>
+          <h3 class="mp-h3">{{ index $headings "interests" | default "Interests" }}</h3>
+          <ul class="mp-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+        </div>
+        {{ end }}
+        {{ with $education }}
+        <div>
+          <h3 class="mp-h3">{{ index $headings "education" | default "Education" }}</h3>
+          <ul class="mp-edu">
+            {{ range . }}
+            <li>
+              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class=\"mp-edu-icon\"") }}
+              <div>
+                <p class="mp-edu-degree">{{ .degree }}</p>
+                {{ with .institution }}<p class="mp-edu-meta">{{ . }}{{ with $.Page }}{{ end }}</p>{{ end }}
+                {{ $years := .year | default (printf "%s%s" (substr (printf "%v" (.start | default "")) 0 4) (cond (ne (printf "%v" (.end | default "")) "") (printf " – %s" (substr (printf "%v" .end) 0 4)) "")) }}
+                {{ with $years }}<p class="mp-edu-meta">{{ . }}</p>{{ end }}
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
