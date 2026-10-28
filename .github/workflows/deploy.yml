@@ -1,9 +1,8 @@
 name: Deploy website to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  push:
-    branches: ['main']
+  # EIES: manual-only while the site is in testing (private repo, Pages not set up).
+  # To deploy on every push again, restore:  push: { branches: ['main'] }
   # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 

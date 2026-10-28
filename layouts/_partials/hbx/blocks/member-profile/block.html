@@ -68,7 +68,7 @@
               {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class=\"mp-edu-icon\"") }}
               <div>
                 <p class="mp-edu-degree">{{ .degree }}</p>
-                {{ with .institution }}<p class="mp-edu-meta">{{ . }}{{ with $.Page }}{{ end }}</p>{{ end }}
+                {{ with .institution }}<p class="mp-edu-meta">{{ . }}</p>{{ end }}
                 {{ $years := .year | default (printf "%s%s" (substr (printf "%v" (.start | default "")) 0 4) (cond (ne (printf "%v" (.end | default "")) "") (printf " – %s" (substr (printf "%v" .end) 0 4)) "")) }}
                 {{ with $years }}<p class="mp-edu-meta">{{ . }}</p>{{ end }}
               </div>

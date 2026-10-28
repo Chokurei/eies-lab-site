@@ -8,11 +8,10 @@
   {{ $name := (index $langAuthors $slug | default dict).name | default dict }}
   {{ $title := $name.display | default $base.name.display }}
   {{ $sections := slice
-    (dict "block" "resume-biography-3" "content" (dict "username" $slug "headings" (cond $zh (dict "about" "个人简介" "interests" "研究兴趣" "education" "教育经历") dict))
-          "design" (dict "background" (dict "gradient_mesh" (dict "enable" true)) "avatar" (dict "size" "medium")))
+    (dict "block" "member-profile" "content" (dict "username" $slug "headings" (cond $zh (dict "about" "关于我" "interests" "研究兴趣" "education" "教育经历") dict)))
     (dict "block" "collection" "id" "papers"
-          "content" (dict "title" (cond $zh "论文" "Publications") "filters" (dict "folders" (slice "publications") "author" $slug))
-          "design" (dict "view" "citation"))
+          "content" (dict "title" (cond $zh "<span class=\"sec-eyebrow\">研究成果</span>论文" "<span class=\"sec-eyebrow\">Research Output</span>Publications") "count" 6 "filters" (dict "folders" (slice "publications") "author" $slug))
+          "design" (dict "view" "article-grid" "columns" 3))
   }}
   {{ if $a.experience }}
     {{ $sections = $sections | append (dict "block" "resume-experience" "content" (dict "username" $slug) "design" (dict "date_format" "January 2006")) }}
