@@ -1,12 +1,14 @@
 {
-  "name": "hugo-blox-academic-cv-starter",
+  "name": "digital-lab-site",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.14.0",
-  "description": "Academic CV starter template for Hugo Blox with Tailwind CSS v4",
+  "description": "Digital Lab (PolyU) website: Hugo + HugoBlox, with a three.js homepage scene",
   "scripts": {
     "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify && pnpm run pagefind",
+    "scenes:dev": "pnpm --filter scenes dev",
+    "scenes:build": "pnpm --filter scenes build",
+    "build": "pnpm scenes:build && hugo --minify && pnpm run pagefind",
     "pagefind": "pagefind --site public"
   },
   "dependencies": {
