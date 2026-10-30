@@ -3,23 +3,24 @@ title: ''
 type: landing
 # 与 content/_index.md 结构一一对应；改动时两边同步。
 sections:
-  - block: hero
+  - block: hero-scene
     content:
-      eyebrow: EIES Lab · Laboratory for Embodied Intelligence in Energy Systems
+      eyebrow: Digital Lab · 香港理工大学
       title: '[能源具身智能]<br>实验室'
-      text: '**能源塑造智能，智能重塑能源系统。** 致力于推进可再生与互联城市能源系统自主适应的科学研究。'
+      text: '**能源塑造智能，智能重塑能源系统。**'
       primary_action:
         text: 了解我们的研究
         url: /zh/research/
       secondary_action:
         text: 团队成员
         url: /zh/team/
-      media:
-        src: /media/emblem.png
-        alt: EIES Lab 标志
-    design:
-      layout: split-left
-      size: compact
+      # Live 3D background (scenes/ project). theme: research theme in scenes/src/themes/; place: scenes/src/places/;
+      # poster: shown first and on phones / reduced motion. act: pin one act (0–5), omit to loop.
+      scene:
+        theme: pv
+        place: polyu
+        dim: 0.15
+        poster: media/scenes/pv-polyu.jpg
 
   - block: markdown
     id: mission
@@ -32,16 +33,13 @@ sections:
     design:
       layout: split
 
-  - block: markdown
+  - block: loop-diagram
     id: approach
     content:
       eyebrow: 研究路径
       title: 从感知到能源系统中的物理行动
       subtitle: 核心机制：能量–信息–行动耦合
-      text: |-
-        <a class="eies-figure" href="/media/eies-framework.jpg" target="_blank" rel="noopener"><img src="/media/eies-framework.jpg" alt="能源具身智能作为基于模型的强化学习框架：物理能源环境与具身智能体（感知、世界模型、决策策略）通过观测、物理行动与反馈形成闭环。" loading="lazy"></a><p class="fig-note">能源具身智能作为强化学习框架。点击查看大图。</p>
-    design:
-      layout: split
+
   - block: focus-areas
     id: thrusts
     content:

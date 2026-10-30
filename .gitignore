@@ -7,10 +7,10 @@
 # ============================================================================
 
 # Generated site output
-public/
+/public/
 
 # Hugo resources (processed assets)
-resources/
+/resources/
 
 # Hugo build lock
 .hugo_build.lock
@@ -67,3 +67,8 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# 3D scenes (scenes/): build output of `pnpm scenes:build`, generated into static/, never committed
+/static/scenes/
+# 3D tiles data: served by the server at /scene-data/, never in git
+/scene-data/

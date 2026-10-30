@@ -126,6 +126,9 @@ jobs:
       id: pages
       uses: actions/configure-pages@v5
 
+    - name: Build 3D scenes (scenes/ -> static/scenes/)
+      run: pnpm scenes:build
+
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production

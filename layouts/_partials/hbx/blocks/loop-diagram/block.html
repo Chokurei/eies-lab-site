@@ -1,0 +1,102 @@
+{{/* Closed loop as an animated diagram: energy system ⇄ embodied agent, five steps lit in turn, with a detail panel
+     for the active step. Labels and content come from data/loop.yaml (single source, en/zh).
+     content: eyebrow, title, subtitle. JS: assets/js/loop-diagram.js (steps through the loop while visible; click a step to hold it). */}}
+{{ $page := .wcPage }}
+{{ $c := .wcBlock.content }}
+{{ if not (reflect.IsMap $c) }}{{ $c = dict }}{{ end }}
+{{ $L := cond (eq $page.Language.Lang "zh") "zh" "en" }}
+{{ $d := hugo.Data.loop }}
+{{ $step := dict }}{{ range $d.steps }}{{ $step = merge $step (dict .key .) }}{{ end }}
+
+{{/* line icons for the energy-system elements, drawn around (0,0) in a ~36px box */}}
+{{ $icons := dict
+  "sun" `<circle r="8"/><path d="M0-14v-4M0 14v4M-14 0h-4M14 0h4M-10-10l-3-3M10 10l3 3M-10 10l-3 3M10-10l3-3"/>`
+  "city" `<path d="M-18 16V-2h10v18M-8 16V-16h13v32M5 16V2h13v14M-20 16h40M-4-10h5M-4-4h5M-4 2h5"/>`
+  "pv" `<path class="ld-pv" d="M-18 4l8-14h28l-8 14z"/><path d="M-14-3h28M-1-10l-8 14M9-10l-8 14M-4 4v12M4 4v12M-10 16h20"/>`
+  "storage" `<rect x="-10" y="-14" width="20" height="30" rx="3"/><rect x="-4" y="-18" width="8" height="4" rx="1"/><path class="ld-bolt" d="M1-8l-6 9h5l-2 8 7-10h-5z"/>`
+  "load" `<path d="M-16 16V-2L0-16 16-2v18zM-5 16V5h10v11"/>`
+  "grid" `<path d="M-9 16L0-18 9 16M-5 2h10M-14-8h28M-6 9h12"/>`
+}}
+
+<div class="ld">
+  {{ if or $c.eyebrow $c.title }}
+  <header class="ld-head">
+    {{ with $c.eyebrow }}<p class="md-eyebrow">{{ . }}</p>{{ end }}
+    {{ with $c.title }}<h2 class="md-title">{{ . }}</h2>{{ end }}
+    {{ with $c.subtitle }}<p class="ld-sub">{{ . }}</p>{{ end }}
+  </header>
+  {{ end }}
+
+  <figure class="ld-card" data-loop-diagram data-step="perceive">
+    <svg class="ld-svg" viewBox="0 0 1000 440" role="img" aria-labelledby="ld-title">
+      <title id="ld-title">{{ index $d.system $L }} ⇄ {{ index $d.agent $L }}: {{ range $i, $s := $d.steps }}{{ if $i }} → {{ end }}{{ index $s $L }}{{ end }}</title>
+      <defs>
+        <marker id="ld-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+        </marker>
+      </defs>
+
+      {{/* physical energy environment: six elements in a 3 × 2 grid */}}
+      <rect class="ld-box ld-env" x="16" y="56" width="296" height="328" rx="20"/>
+      <text class="ld-h" x="40" y="94">{{ index $d.system $L }}</text>
+      {{ range $i, $it := $d.system_items }}
+        {{ $cx := add 81 (mul (mod $i 3) 83) }}
+        {{ $cy := add 170 (mul (div $i 3) 110) }}
+        <g class="ld-ico i-{{ $it.icon }}" transform="translate({{ $cx }} {{ $cy }})">{{ index $icons $it.icon | safeHTML }}</g>
+        <text class="ld-icl" x="{{ $cx }}" y="{{ add $cy 44 }}" text-anchor="middle">{{ index $it $L }}</text>
+      {{ end }}
+
+      {{/* embodied agent */}}
+      <rect class="ld-box ld-agent" x="430" y="56" width="554" height="220" rx="20"/>
+      <text class="ld-h" x="454" y="94">{{ index $d.agent $L }}</text>
+      {{ range $i, $k := slice "perceive" "model" "decide" }}
+        {{ $x := add 454 (mul $i 178) }}
+        {{ $s := index $step $k }}
+        <g class="ld-node n-{{ $k }}">
+          <rect x="{{ $x }}" y="124" width="150" height="100" rx="14"/>
+          <text class="ld-num" x="{{ add $x 16 }}" y="150">0{{ add $i 1 }}</text>
+          <text class="ld-name" x="{{ add $x 16 }}" y="188">{{ index $s $L }}</text>
+          {{ with $s.sub }}<text class="ld-nsub" x="{{ add $x 16 }}" y="208">{{ index . $L }}</text>{{ end }}
+        </g>
+      {{ end }}
+      <path class="ld-edge e-p2m" d="M606 174H630" marker-end="url(#ld-arrow)"/>
+      <path class="ld-edge e-m2d" d="M784 174H808" marker-end="url(#ld-arrow)"/>
+      <path class="ld-edge ld-dash e-rollout" d="M885 124C885 100 707 100 707 120" marker-end="url(#ld-arrow)"/>
+      <text class="ld-lbl l-rollout" x="796" y="98" text-anchor="middle">{{ index $d.rollout $L }}</text>
+
+      {{/* loop edges between the two */}}
+      <path id="ld-p-observe" class="ld-edge e-observe" d="M312 174H450" marker-end="url(#ld-arrow)"/>
+      <text class="ld-lbl l-observe" x="381" y="162" text-anchor="middle">{{ index $d.observe $L }}</text>
+
+      <path id="ld-p-act" class="ld-edge e-act" d="M885 224V410H164V388" marker-end="url(#ld-arrow)"/>
+      <g class="ld-pill p-act"><rect x="510" y="394" width="180" height="32" rx="16"/><text x="600" y="415" text-anchor="middle"><tspan class="ld-pnum">04</tspan> {{ index (index $step "act") $L }}</text></g>
+
+      <path id="ld-p-feedback" class="ld-edge ld-dash e-feedback" d="M312 330H707V228" marker-end="url(#ld-arrow)"/>
+      <g class="ld-pill p-feedback"><rect x="430" y="314" width="150" height="32" rx="16"/><text x="505" y="335" text-anchor="middle"><tspan class="ld-pnum">05</tspan> {{ index (index $step "feedback") $L }}</text></g>
+
+      {{/* travelling pulses on the active edge */}}
+      {{ range slice "observe" "act" "feedback" }}
+      <circle class="ld-dot d-{{ . }}" r="5"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#ld-p-{{ . }}"/></animateMotion></circle>
+      {{ end }}
+    </svg>
+
+    <div class="ld-foot">
+      <ol class="ld-steps">
+        {{ range $i, $s := $d.steps }}
+        <li><button type="button" data-k="{{ $s.key }}"><span>0{{ add $i 1 }}</span>{{ index $s $L }}</button></li>
+        {{ end }}
+      </ol>
+      <div class="ld-details">
+        {{ range $i, $s := $d.steps }}
+        <section class="ld-detail" data-k="{{ $s.key }}" aria-live="polite">
+          <p class="ld-dt">{{ with $s.desc }}{{ index . $L }}{{ end }}</p>
+          {{ with $s.items }}<ul class="ld-items">{{ range index . $L }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        </section>
+        {{ end }}
+      </div>
+    </div>
+  </figure>
+</div>
+{{ with resources.Get "js/loop-diagram.js" }}{{ $js := . | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}
