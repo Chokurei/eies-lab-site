@@ -13,7 +13,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "EIES Lab"
+    name: "EIES-Lab"  # navbar text next to the PolyU logo (assets/media/logo.png)
     # Legal entity for copyright notices (defaults to name if not set)
     organization: "The Hong Kong Polytechnic University"
     # Schema.org type for structured data
@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "EIES Lab: Laboratory for Embodied Intelligence in Energy Systems."
+    description: "EIES-Lab, The Hong Kong Polytechnic University: embodied intelligence in energy systems."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
@@ -39,7 +39,7 @@ hugoblox:
     colors:
       primary: "blue" # matches logo; Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
       secondary: ""
-      neutral: "zinc" # Affects gray utilities (text-gray-*, bg-gray-*)
+      neutral: "neutral" # Affects gray utilities (text-gray-*, bg-gray-*); true grays for the monochrome look
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}
@@ -89,7 +89,7 @@ hugoblox:
     # Feature toggles
     search: true
     theme_toggle: true
-    theme_picker: true
+    theme_picker: false
     language_switcher: true
     # Call-to-action button
     cta:
@@ -114,7 +114,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} EIES Lab, The Hong Kong Polytechnic University."
+    notice: "© {year} EIES-Lab, The Hong Kong Polytechnic University."
     license:
       type: cc # cc | custom
       allow_derivatives: false
@@ -287,3 +287,16 @@ hugoblox:
     # Affiliate referral code for rewards program
     # Join affiliate program: https://hugoblox.com/affiliates
     affiliate_code: ""
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3D SCENES (scenes/) — where the homepage hero (block: hero-scene) loads the scene from.
+# Production: `pnpm scenes:build` writes it to static/scenes/; the 3D data is served from /scene-data/
+# on the same server. Development override: config/development/params.yaml.
+# ──────────────────────────────────────────────────────────────────────────────
+scenes:
+  src: /scenes/
+
+# Pages CMS: repository the "Edit" button opens (see .pages.yml, docs/editing.md).
+cms:
+  repo: Chokurei/eies-lab-site
+  branch: main

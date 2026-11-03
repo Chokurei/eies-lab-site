@@ -1,8 +1,9 @@
 name: Deploy website to GitHub Pages
 
 on:
-  # EIES: manual-only while the site is in testing (private repo, Pages not set up).
-  # To deploy on every push again, restore:  push: { branches: ['main'] }
+  # Every push to main (including saves from Pages CMS) rebuilds and deploys the site.
+  push:
+    branches: ['main']
   # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 

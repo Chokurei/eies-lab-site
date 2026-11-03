@@ -11,7 +11,7 @@ on:
         options:
         - Stable
         - Beta (Preview)
-  # EIES: weekly auto-upgrade disabled; local overrides in layouts/ need a manual check first.
+  # Local: weekly auto-upgrade disabled; local overrides in layouts/ need a manual check first.
 
 permissions:
   contents: write

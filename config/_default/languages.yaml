@@ -20,7 +20,7 @@ zh:
   label: 中文
   locale: zh-cn
   weight: 2
-  title: 能源具身智能实验室 EIES Lab
+  title: EIES-Lab
   menus:
     main:
       - { name: 首页, url: /zh/, weight: 10 }

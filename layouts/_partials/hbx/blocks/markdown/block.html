@@ -1,5 +1,5 @@
 {{/* LOCAL OVERRIDE of Hugo Blox markdown block: wide, left-aligned editorial layout instead of a centred prose column.
-     content: eyebrow, title, subtitle, text
+     content: eyebrow, title, subtitle, text, image (path under assets/media/, shown below the text)
      design.layout: "split" (heading left, text right) | "wide" (default, heading above text) */}}
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
@@ -24,5 +24,9 @@
     {{ with $subtitle }}<p class="md-subtitle">{{ . }}</p>{{ end }}
   </header>
   {{ end }}
-  {{ with $text }}<div class="md-body prose prose-slate lg:prose-lg dark:prose-invert">{{ . }}</div>{{ end }}
+  {{ $img := "" }}{{ with index $content "image" }}{{ $img = resources.Get (printf "media/%s" .) }}{{ end }}
+  {{ if or $text $img }}<div class="md-main">
+    {{ with $text }}<div class="md-body prose prose-slate lg:prose-lg dark:prose-invert">{{ . }}</div>{{ end }}
+    {{ with $img }}{{ $r := .Resize "1600x webp q82" }}<figure class="md-figure"><img src="{{ $r.RelPermalink }}" alt="{{ index $content "image_alt" | default "" }}" width="{{ $r.Width }}" height="{{ $r.Height }}" loading="lazy"></figure>{{ end }}
+  </div>{{ end }}
 </div>

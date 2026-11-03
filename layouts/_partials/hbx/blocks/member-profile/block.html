@@ -1,84 +1,107 @@
-{{/* EIES member profile header (ziheng.ac.cn-style): avatar + name + links on the left;
-     About, then Interests | Education side by side on the right. Data: data/authors/<username>.yaml.
-     content: username, headings {about, interests, education}, button {text, url} */}}
+{{/* Member profile hero: editorial intro with portrait, key numbers, research interests and a sticky section bar. */}}
 {{ $page := .wcPage }}
-{{ $content := .wcBlock.content }}
-{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
-{{ $profile := partial "functions/get_author_profile" (index $content "username" | default "me") }}
-{{ $headings := index $content "headings" | default dict }}
-{{ $avatar := $profile.avatar }}
+{{ $slug := .wcBlock.content.username }}
+{{ $profile := partial "functions/get_author_profile" $slug }}
+{{ $authors := partialCached "functions/get_authors_data" . site.Language.Lang }}
+{{ $data := index $authors $slug | default dict }}
+{{ $zh := eq site.Language.Lang "zh" }}
 {{ $initial := upper (substr ($profile.name_family | default $profile.title | default "?") 0 1) }}
-{{ $bio := "" }}{{ with $profile.bio }}{{ $bio = printf "%v" . | $page.RenderString }}{{ end }}
-{{ $interests := $profile.interests | default slice }}
-{{ $education := $profile.education | default slice }}
-{{ $button := index $content "button" | default dict }}
-
-<div class="mp">
-  <div class="mp-inner">
-    <aside class="mp-id">
-      <div class="mp-avatar">
-        {{ with $avatar }}
-          {{ $img := .Fill "400x400 Center" }}
-          <img src="{{ $img.RelPermalink }}" alt="{{ $profile.title }}" width="168" height="168">
-        {{ else }}
-          <span aria-hidden="true">{{ $initial }}</span>
-        {{ end }}
-      </div>
-      <h1 class="mp-name">{{ $profile.title }}</h1>
-      {{ with $profile.role }}<p class="mp-role">{{ . | markdownify }}</p>{{ end }}
-      {{ range $profile.affiliations }}{{ with .name }}<p class="mp-aff">{{ . }}</p>{{ end }}{{ end }}
+{{ $scholar := "" }}{{ $home := "" }}
+{{ range $profile.links }}{{ $u := .url | default .link | default "" }}{{ if in (.icon | default "") "google-scholar" }}{{ $scholar = $u }}{{ else if or (eq (.icon | default "") "globe-alt") (eq (lower (.label | default "")) "homepage") }}{{ $home = $u }}{{ end }}{{ end }}
+{{ with $data.website }}{{ if and (not $home) (not (in . "example.com")) }}{{ $home = . }}{{ end }}{{ end }}
+{{/* Key numbers */}}
+{{ $papers := partial "member/papers" $slug }}
+{{ $lead := 0 }}{{ range $papers }}{{ if in (slice "first" "co-first") (partial "member/author-role" (dict "paper" . "member" $slug)) }}{{ $lead = add $lead 1 }}{{ end }}{{ end }}
+{{ $talks := $data.talks | default slice }}
+{{ $since := "" }}{{ with $data.joined }}{{ $since = (time.AsTime .).Format "2006" }}{{ end }}
+<div class="mp-hero mp-shell">
+  <div class="mp-hero-copy">
+    {{ with $profile.role }}<p class="mp-eyebrow">{{ . | markdownify }}</p>{{ end }}
+    <h1 class="mp-name">{{ $profile.title }}{{ with $profile.name_alternate }}{{ if ne . $profile.title }} <span class="mp-alt">{{ . }}</span>{{ end }}{{ end }}</h1>
+    {{ with $profile.affiliations }}{{ range first 1 . }}<p class="mp-aff">{{ .name }}</p>{{ end }}
+    {{ else }}<p class="mp-aff">{{ cond $zh "EIES-Lab · 香港理工大学" "EIES-Lab · The Hong Kong Polytechnic University" }}</p>{{ end }}
+    <div class="mp-lead">
+      {{ with $profile.bio }}{{ $page.RenderString (dict "display" "block") . }}{{ else }}<p>{{ cond $zh "个人简介待补充。" "Biography to come." }}</p>{{ end }}
+    </div>
+    <div class="mp-actions">
+      {{ with $scholar }}<a class="mp-btn mp-btn-primary" href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>{{ end }}
+      {{ with $home }}<a class="mp-btn" href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">{{ cond $zh "个人主页" "Homepage" }} <span aria-hidden="true">↗</span></a>{{ end }}
       {{ with $profile.links }}
       <div class="mp-links">
         {{ range . }}
           {{ $url := .url | default .link }}
-          {{ if $url }}
-          {{ $ext := in (slice "http" "https") (urls.Parse $url).Scheme }}
-          <a href="{{ $url | safeURL }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} {{ with .label }}title="{{ . }}"{{ end }}>
-            {{ partial "functions/get_icon" (dict "name" (.icon | default "hero/link") "attributes" "class=\"w-5 h-5\"") }}
-          </a>
+          {{ $icon := .icon | default "hero/link" }}
+          {{ if and $url (not (in $icon "google-scholar")) (ne $icon "globe-alt") }}
+          {{ $label := .label | default (cond (in $icon "researchgate") "ResearchGate" (cond (in $icon "github") "GitHub" (cond (hasPrefix $url "mailto:") (cond $zh "电子邮箱" "Email") (cond $zh "个人链接" "Profile Link")))) }}
+          <a href="{{ $url | safeURL }}" aria-label="{{ $label }}" title="{{ $label }}"{{ if hasPrefix $url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ partial "functions/get_icon" (dict "name" $icon "attributes" "class=\"mp-social-icon\" aria-hidden=\"true\"") }}</a>
           {{ end }}
-        {{ end }}
-      </div>
-      {{ end }}
-    </aside>
-
-    <div class="mp-main">
-      {{ with $bio }}
-      <h2 class="mp-h">{{ index $headings "about" | default "About Me" }}</h2>
-      <div class="mp-bio prose dark:prose-invert">{{ . }}</div>
-      {{ end }}
-      {{ if and $button.text $button.url }}
-        <a class="mp-btn" href="{{ $button.url | safeURL }}" target="_blank" rel="noopener">{{ $button.text }}</a>
-      {{ end }}
-
-      {{ if or $interests $education }}
-      <div class="mp-cols">
-        {{ with $interests }}
-        <div>
-          <h3 class="mp-h3">{{ index $headings "interests" | default "Interests" }}</h3>
-          <ul class="mp-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-        </div>
-        {{ end }}
-        {{ with $education }}
-        <div>
-          <h3 class="mp-h3">{{ index $headings "education" | default "Education" }}</h3>
-          <ul class="mp-edu">
-            {{ range . }}
-            <li>
-              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class=\"mp-edu-icon\"") }}
-              <div>
-                <p class="mp-edu-degree">{{ .degree }}</p>
-                {{ with .institution }}<p class="mp-edu-meta">{{ . }}</p>{{ end }}
-                {{ $years := .year | default (printf "%s%s" (substr (printf "%v" (.start | default "")) 0 4) (cond (ne (printf "%v" (.end | default "")) "") (printf " – %s" (substr (printf "%v" .end) 0 4)) "")) }}
-                {{ with $years }}<p class="mp-edu-meta">{{ . }}</p>{{ end }}
-              </div>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
         {{ end }}
       </div>
       {{ end }}
     </div>
   </div>
+  <figure class="mp-portrait">
+    {{ with $profile.avatar }}{{ $img := (.Filter images.AutoOrient).Fill "720x900 Center q85" }}<img src="{{ $img.RelPermalink }}" alt="{{ $profile.title }}" width="{{ $img.Width }}" height="{{ $img.Height }}">{{ else }}<span aria-hidden="true">{{ $initial }}</span>{{ end }}
+  </figure>
 </div>
+
+<div class="mp-shell">
+  <dl class="mp-stats">
+    <div><dt>{{ cond $zh "论文" "Publications" }}</dt><dd>{{ len $papers }}</dd></div>
+    <div><dt>{{ cond $zh "一作 / 共同一作" "First / co-first author" }}</dt><dd>{{ $lead }}</dd></div>
+    <div><dt>{{ cond $zh "学术报告" "Talks" }}</dt><dd>{{ len $talks }}</dd></div>
+    <div><dt>{{ cond $zh "加入课题组" "In the lab since" }}</dt><dd>{{ $since | default "—" }}</dd></div>
+  </dl>
+
+  <div class="mp-about">
+    <section aria-labelledby="mp-interests-h">
+      <h2 id="mp-interests-h">{{ cond $zh "研究兴趣" "Research Interests" }}</h2>
+      {{ with $profile.interests }}
+      <ol class="mp-interest-list">{{ range $i, $x := . }}<li><span>{{ printf "%02d" (add $i 1) }}</span>{{ $x }}</li>{{ end }}</ol>
+      {{ else }}<p class="mp-empty">{{ cond $zh "研究兴趣待补充。" "Research interests to come." }}</p>{{ end }}
+    </section>
+    <section aria-labelledby="mp-edu-h">
+      <h2 id="mp-edu-h">{{ cond $zh "教育背景" "Education" }}</h2>
+      {{ with $profile.education }}
+      <ol class="mp-edu-list">
+        {{ range sort . "start" "desc" }}
+        <li>
+          <p class="mp-edu-years">{{ partial "member/cv-years" (merge . (dict "zh" $zh)) }}</p>
+          <div><p class="mp-edu-degree">{{ .degree }}</p>{{ with .institution }}<p class="mp-edu-school">{{ . }}</p>{{ end }}</div>
+        </li>
+        {{ end }}
+      </ol>
+      {{ else }}<p class="mp-empty">{{ cond $zh "教育背景待补充。" "Education to come." }}</p>{{ end }}
+    </section>
+  </div>
+</div>
+
+<nav class="mp-subnav" aria-label="{{ cond $zh "页面导航" "On this page" }}">
+  <div class="mp-shell">
+    {{ range (slice
+      (dict "id" "member-publications" "en" "Publications" "zh" "论文")
+      (dict "id" "member-talks" "en" "Talks" "zh" "报告")
+      (dict "id" "member-projects" "en" "Projects" "zh" "项目")
+      (dict "id" "cv-skills" "en" "Skills" "zh" "技能")
+      (dict "id" "cv-awards" "en" "Awards" "zh" "荣誉")) }}<a href="#{{ .id }}">{{ cond $zh .zh .en }}</a>{{ end }}
+  </div>
+</nav>
+<script>
+(function () {
+  // Lift the bar out of the hero section so it stays pinned while the rest of the page scrolls,
+  // then highlight the section currently under the bar.
+  var nav = document.querySelector('.mp-subnav'), sec = nav && nav.closest('section');
+  if (sec) sec.after(nav);
+  var links = [].slice.call(document.querySelectorAll('.mp-subnav a'));
+  document.addEventListener('DOMContentLoaded', function () {
+    var targets = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function spy() {
+      var line = window.innerHeight * 0.35, cur = -1;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= line) cur = i; });
+      links.forEach(function (a, i) { a.classList.toggle('is-active', i === cur); });
+    }
+    window.addEventListener('scroll', spy, { passive: true });
+    spy();
+  });
+})();
+</script>

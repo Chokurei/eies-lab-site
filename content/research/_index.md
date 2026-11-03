@@ -17,14 +17,14 @@ sections:
     id: thrusts
     content:
       items:
-        - name: 01 · Energy-System Perception & Observability
-          icon: hero/eye
+        - name: Energy-System Perception & Observability
+          image: home/thrust-perception.jpg
           description: "**What can an energy agent know, and what information does it need?** We study how energy-relevant states and environmental conditions can be inferred from incomplete, uncertain and heterogeneous observations. Our work connects geospatial AI, remote sensing, 3D urban representations and observation-quality analysis with task-aware sensing and state estimation, aiming to identify the information that matters for reliable energy decisions."
-        - name: 02 · Physics-Grounded Energy World Models
-          icon: hero/cube-transparent
+        - name: Physics-Grounded Energy World Models
+          image: home/thrust-world-model.jpg
           description: "**How will an energy system respond to changes and actions?** We develop physically grounded representations of energy-system dynamics, spanning solar resources, energy conversion, storage, building demand and network interactions. Beyond forecasting system states, we investigate action-conditioned prediction: how possible interventions affect future energy flows and performance, subject to physical laws, uncertainty and operating limits."
-        - name: 03 · Energy-Constrained Embodied Decision & Control
-          icon: hero/arrow-path
+        - name: Energy-Constrained Embodied Decision & Control
+          image: home/thrust-control.jpg
           description: "**How can an energy agent act safely and adaptively in the physical world?** We investigate autonomous decision-making and control under incomplete information, changing energy resources and physical safety constraints. The focus is on translating perception and world models into executable actions, evaluating their real physical consequences and improving decisions through closed-loop feedback."
 
   - block: focus-areas
@@ -33,23 +33,23 @@ sections:
       title: '<span class="sec-eyebrow">Energy Systems</span>Grounded in Energy'
       items:
         - name: Renewable Energy & Urban Environments
-          icon: hero/sun
+          image: home/case-solar.jpg
           status: active
           description: Solar-resource sensing, 3D urban energy assessment and the physical variability of renewable resources.
         - name: Buildings, Storage & Energy Networks
-          icon: hero/building-office-2
+          image: home/case-buildings.jpg
           status: active
           description: Energy-system modeling, coupled demand–generation–storage dynamics and physically constrained operation.
         - name: Multi-Agent Coordination for Urban Energy Resilience
-          icon: hero/user-group
+          image: home/area-resilience.jpg
           status: active
           description: Coordinating many distributed energy agents — buildings, storage, vehicles and grid assets — so cities can anticipate, absorb and recover from disruptions.
         - name: Electric Mobility & Charging
-          icon: hero/bolt
+          image: home/case-mobility.jpg
           status: emerging
           description: Energy-aware charging and the interaction among mobility, batteries and energy networks.
         - name: Low-Altitude / eVTOL & Smart Energy Agriculture
-          icon: hero/sparkles
+          image: home/area-low-altitude.jpg
           status: planning
           description: Research interests, not existing testbeds. Possible future contexts for testing the same scientific mechanisms.
 

@@ -3,23 +3,24 @@ title: ''
 type: landing
 # 与 content/_index.md 结构一一对应；改动时两边同步。
 sections:
-  - block: hero
+  - block: hero-scene
     content:
-      eyebrow: EIES Lab · Laboratory for Embodied Intelligence in Energy Systems
+      eyebrow: EIES-Lab · 香港理工大学
       title: '[能源具身智能]<br>实验室'
-      text: '**能源塑造智能，智能重塑能源系统。** 致力于推进可再生与互联城市能源系统自主适应的科学研究。'
+      text: '**能源塑造智能，智能重塑能源系统。**'
       primary_action:
         text: 了解我们的研究
         url: /zh/research/
       secondary_action:
         text: 团队成员
         url: /zh/team/
-      media:
-        src: /media/emblem.png
-        alt: EIES Lab 标志
-    design:
-      layout: split-left
-      size: compact
+      # Live 3D background (scenes/ project). theme: research theme in scenes/src/themes/; place: scenes/src/places/;
+      # poster: shown first and on phones / reduced motion. act: pin one act (0–5), omit to loop.
+      scene:
+        theme: pv
+        place: polyu
+        dim: 0.15
+        poster: media/scenes/pv-polyu.jpg
 
   - block: markdown
     id: mission
@@ -32,16 +33,13 @@ sections:
     design:
       layout: split
 
-  - block: markdown
+  - block: loop-diagram
     id: approach
     content:
       eyebrow: 研究路径
       title: 从感知到能源系统中的物理行动
-      subtitle: 核心机制：能量–信息–行动耦合
-      text: |-
-        <a class="eies-figure" href="/media/eies-framework.jpg" target="_blank" rel="noopener"><img src="/media/eies-framework.jpg" alt="能源具身智能作为基于模型的强化学习框架：物理能源环境与具身智能体（感知、世界模型、决策策略）通过观测、物理行动与反馈形成闭环。" loading="lazy"></a><p class="fig-note">能源具身智能作为强化学习框架。点击查看大图。</p>
-    design:
-      layout: split
+      subtitle: 看见、预判、决定、动手、检验——AI 在真实能源系统中闭环学习。
+
   - block: focus-areas
     id: thrusts
     content:
@@ -49,14 +47,14 @@ sections:
       text: '同一闭环中相互衔接的三个环节。<a class="section-link" href="/zh/research/">了解更多研究内容 →</a>'
       items:
         - name: 能源系统感知与可观测性
-          icon: hero/eye
-          description: 能源智能体能知道什么？它需要哪些信息？
+          image: home/thrust-perception.jpg
+          description: '能源智能体能知道什么？它需要哪些信息？'
         - name: 基于物理的能源世界模型
-          icon: hero/cube-transparent
-          description: 能源系统会如何响应变化与行动？
+          image: home/thrust-world-model.jpg
+          description: '能源系统会如何响应变化与行动？'
         - name: 能源约束下的具身决策与控制
-          icon: hero/arrow-path
-          description: 能源智能体如何在物理世界中安全、自适应地行动？
+          image: home/thrust-control.jpg
+          description: '能源智能体如何在物理世界中安全、自适应地行动？'
 
   - block: focus-areas
     id: cases
@@ -64,17 +62,17 @@ sections:
       title: '<span class="sec-eyebrow">物理验证</span>能源系统与物理验证'
       items:
         - name: 可再生能源与城市环境
-          icon: hero/sun
+          image: home/case-solar.jpg
           status: active
-          description: 智能体通过遥感与三维城市模型感知太阳能资源和城市形态，预测光伏出力如何随天气与选址变化，并据此做出布局与运行决策，再以实测发电数据检验。
+          description: '智能体通过遥感与三维城市模型感知太阳能资源和城市形态，预测光伏出力如何随天气与选址变化，并据此做出布局与运行决策，再以实测发电数据检验。'
         - name: 建筑、储能与能源网络
-          icon: hero/building-office-2
+          image: home/case-buildings.jpg
           status: active
-          description: 智能体估计建筑负荷与储能状态，用基于物理的模型预测调度行动如何改变能量流动，并在运行限制内通过可控负荷、电池与逆变器执行行动。
+          description: '智能体估计建筑负荷与储能状态，用基于物理的模型预测调度行动如何改变能量流动，并在运行限制内通过可控负荷、电池与逆变器执行行动。'
         - name: 电动交通与低空能源
-          icon: hero/bolt
+          image: home/case-mobility.jpg
           status: emerging
-          description: 电动车、充电设施与 eVTOL 平台本身就是受能源约束的具身智能体。我们研究它们如何感知电网与电池状态、规划充电与飞行能耗，并在有限能量与安全约束下自适应运行。
+          description: '电动车、充电设施与 eVTOL 平台本身就是受能源约束的具身智能体。我们研究它们如何感知电网与电池状态、规划充电与飞行能耗，并在有限能量与安全约束下自适应运行。'
 
   - block: collection
     id: news
