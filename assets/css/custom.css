@@ -950,3 +950,16 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
   .sp-visit { padding: 1.5rem; }
   .sp-facts > div { grid-template-columns: 4.5rem minmax(0, 1fr); }
 }
+/* Scenario cards (Research + homepage): a card without a photo yet keeps a centred icon on the dark media panel */
+:is(#overview ~ section#energy-systems, #section-hero-scene ~ section#cases) .group .h-48.bg-gradient-to-br:not(:has(img)) > * { position: absolute !important; inset: 0 !important; display: flex; align-items: center; justify-content: center; }
+:is(#overview ~ section#energy-systems, #section-hero-scene ~ section#cases) .group .h-48.bg-gradient-to-br:not(:has(img)) svg { width: 3.5rem !important; height: 3.5rem !important; color: rgba(255, 255, 255, .5) !important; }
+/* Homepage section intros (#thrusts, #cases): sentence and "Read more →" link on one line */
+#section-hero-scene ~ section:is(#thrusts, #cases) .max-w-3xl.mx-auto:has(> p .section-link) { max-width: 64rem !important; }
+#section-hero-scene ~ section:is(#thrusts, #cases) p:has(> .section-link) { max-width: none !important; }
+#section-hero-scene ~ section:is(#thrusts, #cases) .section-link { white-space: nowrap; }
+/* Homepage Approach intro in the Mission block's two-column form (loop-diagram content.text): same columns, same right-hand text */
+#approach .ld-split { margin-bottom: 2.5rem; }
+@media (min-width: 900px) { #approach .md-split.ld-split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.45; font-weight: 500; letter-spacing: -.01em; }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote p { color: var(--u-black) !important; }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote p::before, #section-hero-scene ~ #approach .ld-split .md-body blockquote p::after { content: none; }

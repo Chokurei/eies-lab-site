@@ -2,7 +2,7 @@
      five steps as small cards on a ring, and action badges on the equipment they act on. The step lit in turn is
      shared by the card, its badges and the button row.
      Text: data/loop.yaml (en/zh). Overlay coordinates: data/loop_scene.json, exported together with the image in a
-     1280 × 720 frame. content: eyebrow, title, subtitle. JS: assets/js/loop-diagram.js (steps), which loads
+     1280 × 720 frame. content: eyebrow, title, subtitle, text (text set: heading left, text right, like the Mission block). JS: assets/js/loop-diagram.js (steps), which loads
      assets/js/loop-scene.js (the same scene live, each step's action animated; bundled with three.js). */}}
 {{ $page := .wcPage }}
 {{ $c := .wcBlock.content }}
@@ -13,8 +13,19 @@
 {{ $W := $sc.w }}{{ $H := $sc.h }}
 {{ $img := resources.Get "media/home/loop-scene.webp" }}
 
+{{ $text := "" }}{{ with $c.text }}{{ $text = printf "%v" . | $page.RenderString | safeHTML }}{{ end }}
+
 <div class="ld">
-  {{ if or $c.eyebrow $c.title }}
+  {{ if $text }}
+  <div class="md-split ld-split">
+    <header class="md-head">
+      {{ with $c.eyebrow }}<p class="md-eyebrow">{{ . }}</p>{{ end }}
+      {{ with $c.title }}<h2 class="md-title">{{ . }}</h2>{{ end }}
+      {{ with $c.subtitle }}<p class="md-subtitle">{{ . }}</p>{{ end }}
+    </header>
+    <div class="md-main"><div class="md-body prose prose-slate lg:prose-lg dark:prose-invert">{{ $text }}</div></div>
+  </div>
+  {{ else if or $c.eyebrow $c.title }}
   <header class="ld-head">
     {{ with $c.eyebrow }}<p class="md-eyebrow">{{ . }}</p>{{ end }}
     {{ with $c.title }}<h2 class="md-title">{{ . }}</h2>{{ end }}

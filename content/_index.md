@@ -29,10 +29,10 @@ sections:
     id: mission
     content:
       eyebrow: Our Mission
-      title: Understanding the Two-Way Relationship Between Energy and Intelligence
-      subtitle: 'Scientific focus: Energy-Constrained Embodied Intelligence & Autonomous Adaptation'
+      title: Understanding the Coupled Dynamics of Energy and Embodied Intelligence
+      subtitle: 'Underlying Mechanism: Energy–Information–Action Coupling'
       text: |-
-        > We investigate how energy dynamics and physical constraints ground embodied intelligence, enabling closed-loop interaction and autonomous adaptation for efficient, reliable, and resilient urban energy systems.
+        > We investigate how energy constraints and physical dynamics shape intelligent perception, decision-making, and autonomous adaptation, and how embodied intelligence, through physical actions and feedback, transforms the operation of energy systems.
     design:
       layout: split
 
@@ -40,8 +40,9 @@ sections:
     id: approach
     content:
       eyebrow: Our Approach
-      title: From Perception to Physical Action in Energy Systems
-      subtitle: 'See, predict, decide, act, check — AI that learns in a closed loop inside real energy systems.'
+      title: Closing the Loop Between Energy Perception and Physical Action
+      text: |-
+        > We integrate energy-system perception, physics-grounded world models, and energy-constrained decision-making with physical action and feedback, enabling autonomous adaptation in complex and dynamic energy systems.
 
   - block: focus-areas
     id: thrusts
@@ -61,21 +62,20 @@ sections:
 
   - block: focus-areas
     id: cases
+    # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">Validation</span>Energy Systems & Physical Validation'
+      title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Embodied Intelligence in Energy Systems'
+      text: 'From Physical Energy Dynamics to Autonomous Intelligent Action. <a class="section-link" href="/research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
-        - name: Renewable Energy & Urban Environments
+        - name: Autonomous Urban BIPV & Solar–Storage Systems
           image: home/case-solar.jpg
           status: active
-          description: 'Agents sense solar resources and urban form from remote sensing and 3D city models, predict how PV output responds to weather and siting, and turn this into placement and operation decisions that are checked against measured generation.'
-        - name: Buildings, Storage & Energy Networks
-          image: home/case-buildings.jpg
+        - name: Embodied Intelligence for Data Center Energy & Cooling
+          image: home/case-buildings.jpg  # TODO: data center photo
           status: active
-          description: 'Agents estimate building demand and storage states, use physics-grounded models to predict how scheduling actions shift energy flows, and act through controllable loads, batteries and inverters within operating limits.'
-        - name: Electric Mobility & Low-Altitude Energy
-          image: home/case-mobility.jpg
-          status: emerging
-          description: 'Vehicles, chargers and eVTOL platforms are energy-constrained embodied agents. We study how they perceive grid and battery states, plan charging and flight energy, and adapt under limited energy and safety constraints.'
+        - name: Climate-Resilient Urban Renewable Energy Networks
+          image: home/area-resilience.jpg
+          status: active
 
   - block: collection
     id: news

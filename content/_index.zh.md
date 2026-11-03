@@ -27,10 +27,10 @@ sections:
     id: mission
     content:
       eyebrow: 我们的使命
-      title: 理解能源与智能之间的双向关系
-      subtitle: 科学聚焦：能源约束下的具身智能与自主适应
+      title: 理解能源与具身智能的耦合动态
+      subtitle: 底层机制：能量–信息–行动耦合
       text: |-
-        > 我们研究能源动态与物理约束如何为具身智能奠定基础，实现闭环交互与自主适应，构建高效、可靠、有韧性的城市能源系统。
+        > 我们研究能源约束与物理动态如何塑造智能感知、决策与自主适应，以及具身智能如何通过物理行动与反馈，改变能源系统的运行方式。
     design:
       layout: split
 
@@ -38,8 +38,9 @@ sections:
     id: approach
     content:
       eyebrow: 研究路径
-      title: 从感知到能源系统中的物理行动
-      subtitle: 看见、预判、决定、动手、检验——AI 在真实能源系统中闭环学习。
+      title: 打通能源感知与物理行动的闭环
+      text: |-
+        > 我们将能源系统感知、基于物理的世界模型和能源约束下的决策，与物理行动和反馈相结合，使复杂、动态的能源系统能够自主适应。
 
   - block: focus-areas
     id: thrusts
@@ -59,21 +60,20 @@ sections:
 
   - block: focus-areas
     id: cases
+    # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">物理验证</span>能源系统与物理验证'
+      title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的具身智能'
+      text: '从物理能源动态到自主智能行动。<a class="section-link" href="/zh/research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
-        - name: 可再生能源与城市环境
+        - name: 城市自主光伏建筑一体化（BIPV）与光储系统
           image: home/case-solar.jpg
           status: active
-          description: '智能体通过遥感与三维城市模型感知太阳能资源和城市形态，预测光伏出力如何随天气与选址变化，并据此做出布局与运行决策，再以实测发电数据检验。'
-        - name: 建筑、储能与能源网络
-          image: home/case-buildings.jpg
+        - name: 面向数据中心能源与冷却的具身智能
+          image: home/case-buildings.jpg  # TODO: data center photo
           status: active
-          description: '智能体估计建筑负荷与储能状态，用基于物理的模型预测调度行动如何改变能量流动，并在运行限制内通过可控负荷、电池与逆变器执行行动。'
-        - name: 电动交通与低空能源
-          image: home/case-mobility.jpg
-          status: emerging
-          description: '电动车、充电设施与 eVTOL 平台本身就是受能源约束的具身智能体。我们研究它们如何感知电网与电池状态、规划充电与飞行能耗，并在有限能量与安全约束下自适应运行。'
+        - name: 气候韧性城市可再生能源网络
+          image: home/area-resilience.jpg
+          status: active
 
   - block: collection
     id: news
