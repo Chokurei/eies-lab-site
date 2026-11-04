@@ -6,15 +6,71 @@ name:
   display: ZHANG Yongan
   given: Yongan
   family: ZHANG
-  alternate: '' # TODO: Chinese name
+  alternate: 张永安
 role: PhD Student (Year 3)
 role_zh: 博士生（三年级）
+joined: 2024-09-01
 interests:
-  # TODO: placeholder, align with the three research thrusts
-  - Energy-system perception
-  - Observability & state estimation
+  - LLM agents for urban resilience
+  - Global energy systems (hydro, wind and solar PV)
+  - AI agents for energy-system modelling and decision-making
+  - Time-series forecasting for renewable energy
 interests_zh:
-  - 能源系统感知
-  - 可观测性与状态估计
-
-# TODO: bio, education, links, avatar (assets/media/authors/zhang-yongan.jpg)
+  - 面向城市韧性的大语言模型智能体
+  - 全球能源系统（水电、风电、光伏）
+  - 能源系统建模与决策智能体
+  - 可再生能源时序预测
+bio: |
+  Yongan Zhang is a third-year PhD student at EIES-Lab, The Hong Kong Polytechnic University. His research
+  centres on large language model (LLM) agents for urban resilience and global energy systems. He builds
+  agents that bring together heterogeneous data on cities, climate and energy infrastructure, reason with
+  physics-grounded models, and support decisions on how urban energy systems prepare for, withstand and
+  recover from extreme events. At the global scale, he studies hydro, wind and solar PV systems, using AI
+  agents and time-series models to assess resources, forecast generation and inform planning toward
+  low-carbon, resilient energy supply.
+bio_zh: |
+  香港理工大学 EIES-Lab 三年级博士生，研究核心是面向城市韧性与全球能源系统的大语言模型智能体。他构建能够整合城市、
+  气候与能源基础设施多源数据、结合物理约束模型进行推理的智能体，支撑城市能源系统在极端事件前的准备、事件中的承压
+  与事后恢复决策。在全球尺度上，他研究水电、风电与光伏系统，利用 AI 智能体和时序模型评估资源、预测发电并辅助规划，
+  服务于低碳且有韧性的能源供应。
+links:
+  - icon: at-symbol
+    url: mailto:yongan.zhang@connect.polyu.hk
+    label: E-mail
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=U4n759IAAAAJ
+  - icon: brands/github
+    url: https://github.com/YonganZhang
+education:
+  - degree: PhD in Building Environment and Energy Engineering
+    degree_zh: 博士，建筑环境及能源工程
+    institution: The Hong Kong Polytechnic University
+    institution_zh: 香港理工大学
+    start: 2024-09-01
+  - degree: MS in Computer Science and Technology
+    degree_zh: 硕士，计算机科学与技术
+    institution: China University of Petroleum (East China)
+    institution_zh: 中国石油大学（华东）
+    start: 2021-09-01
+    end: 2024-06-30
+  - degree: Bachelor's degree
+    degree_zh: 学士
+    institution: China University of Petroleum (Beijing)
+    institution_zh: 中国石油大学（北京）
+    start: 2017-09-01
+    end: 2021-06-30
+awards:
+  - title: National Scholarship for Postgraduate Students
+    title_zh: 研究生国家奖学金
+    awarder: Ministry of Education of China
+    awarder_zh: 中华人民共和国教育部
+    date: 2023-12-01
+  - title: National Second Prize, China Graduate Mathematical Contest in Modeling (Huawei Cup)
+    title_zh: 中国研究生数学建模竞赛（"华为杯"）全国二等奖
+    date: 2022-12-01
+  - title: Honorable Mention, MCM/ICM
+    title_zh: 美国大学生数学建模竞赛 Honorable Mention
+    date: 2020-04-01
+  - title: National Second Prize, China Undergraduate Mathematical Contest in Modeling
+    title_zh: 全国大学生数学建模竞赛全国二等奖
+    date: 2019-11-01
