@@ -58,7 +58,7 @@ skills:
     name_zh: 爱好
     sample: false
     items:
-      - name: Photography, Movie, Painting
-        name_zh: 摄影，电影，绘画
+      - name: Photography, Painting
+        name_zh: 摄影，绘画
       - name: Table tennis
         name_zh: 乒乓球
