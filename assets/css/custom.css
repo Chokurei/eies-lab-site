@@ -19,6 +19,14 @@ header a img { height: 34px; width: auto; }
 @media (min-width: 640px) { .navbar-brand { margin-left: 1.75rem; } }
 html:not(.dark) header nav a.navbar-brand { color: #000; }
 html.dark header nav a.navbar-brand { color: #fff; }
+/* partner (UEX) logo beside the lab logo, after a hairline */
+#site-header .navbar > .order-0 { display: flex; align-items: center; }
+#site-header .navbar-partner { display: flex; align-items: center; margin-left: 1.125rem; padding-left: 1.125rem; border-left: 1px solid rgba(128, 128, 128, .35); }
+#site-header .navbar-partner img { height: 44px; width: auto; }
+/* hidden where the bar is already full: narrow phones (brand, three icons, menu button) and 1024–1099 px (brand, full menu, icons) */
+@media (max-width: 459px), (min-width: 1024px) and (max-width: 1099px) { #site-header .navbar-partner { display: none; } }
+@media (min-width: 640px) and (max-width: 1099px) { #site-header .navbar-partner img { height: 40px; } }
+@media (min-width: 460px) and (max-width: 639px) { #site-header .navbar-partner { margin-left: .75rem; padding-left: .75rem; } #site-header .navbar-partner img { height: 32px; } }
 
 /* Primary buttons: black pills */
 html:not(.dark) a[class*="bg-primary-6"], html:not(.dark) button[class*="bg-primary-6"],

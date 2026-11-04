@@ -84,6 +84,8 @@ hugoblox:
     style: navbar # navbar | navbar-simple | minimal
     # logo.svg already reads "EIES Lab", so no text title next to it
     show_title: false
+    # Partner logo beside the lab logo (image under assets/media/; layouts/_partials/components/headers/navbar.html)
+    partner: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
     # Stick to top on scroll
     sticky: true
     # Menu alignment
