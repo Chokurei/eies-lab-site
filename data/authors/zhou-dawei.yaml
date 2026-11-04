@@ -18,3 +18,16 @@ interests:
 interests_zh:
   - 面向建筑的多智能体强化学习
   - 城市能源韧性
+education:
+  - degree: BS in Statistics
+    degree_zh: 学士，统计学
+    institution: East China Normal University
+    institution_zh: 华东师范大学
+    start: 2021-09-01
+    end: 2025-07-01
+  - degree: MS in Statistics
+    degree_zh: 硕士，统计学
+    institution: The Chinese University of Hong Kong, Shenzhen
+    institution_zh: 香港中文大学，深圳
+    start: 2025-09-01
+    end: 2027-07-01
