@@ -70,7 +70,7 @@ sections:
       text: 'A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
-          image: home/thrust-world-model.jpg
+          image: home/case-solar-twin.jpg
           status: active
         - name: Embodied Intelligence for Data Center Energy & Cooling
           image: home/case-datacenter.jpg

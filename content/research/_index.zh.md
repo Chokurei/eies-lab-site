@@ -44,7 +44,7 @@ sections:
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
           status: active
-          image: home/thrust-world-model.jpg
+          image: home/case-solar-twin.jpg
           description: 整合城市主动感知、基于物理的太阳能评估、光伏建筑一体化与自适应能源管理。我们研究智能感知、物理世界模型与自主控制如何在复杂城市环境中，实现更可靠的可再生能源评估、部署与运行。
         - name: 面向数据中心能源与冷却的具身智能
           status: active
