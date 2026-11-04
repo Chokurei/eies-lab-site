@@ -45,7 +45,21 @@
 			raf = video.paused ? 0 : requestAnimationFrame( tick );
 
 		};
-		const play = () => video.play().catch( () => {} );
+		// Autoplay can be refused (iOS Low Power Mode, in-app browsers): then the first tap anywhere starts it.
+		const UNLOCK = [ 'touchend', 'click' ];
+		const unlock = () => {
+
+			for ( const ev of UNLOCK ) document.removeEventListener( ev, unlock );
+			if ( onScreen ) play();
+
+		};
+		const play = () => video.play().catch( () => {
+
+			for ( const ev of UNLOCK ) document.addEventListener( ev, unlock, { passive: true } );
+
+		} );
+		// WeChat's browser only autoplays from inside its bridge callback
+		const wechat = () => window.WeixinJSBridge.invoke( 'getNetworkType', {}, () => onScreen && play() );
 
 		video.addEventListener( 'playing', () => {
 
@@ -82,6 +96,8 @@
 			video.load();
 			started = true;
 			if ( onScreen ) play();
+			if ( window.WeixinJSBridge ) wechat();
+			else document.addEventListener( 'WeixinJSBridgeReady', wechat, { once: true } );
 
 		} );
 		return;
