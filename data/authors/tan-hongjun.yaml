@@ -3,6 +3,7 @@ schema: hugoblox/author/v1
 is_owner: false
 name:
   display: TAN Hongjun
+  alternate: 谭鸿骏
   given: Hongjun
   family: TAN
 avatar: media/authors/9af53f2eb084d140f2476d3b3e4631ee.jpg
