@@ -397,7 +397,7 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 #section-hero-scene ~ section .section-link:hover { color: var(--u-body) !important; }
 
 /* mission: the statement set as a sub-heading, no ornaments */
-#section-hero-scene ~ #mission .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.5; font-weight: 400; letter-spacing: -.01em; }
+#section-hero-scene ~ #mission .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.6; font-weight: 400; letter-spacing: -.005em; }
 #section-hero-scene ~ #mission .md-body blockquote p { color: var(--u-body) !important; }
 #section-hero-scene ~ #mission .md-body blockquote p::before, #section-hero-scene ~ #mission .md-body blockquote p::after { content: none; }
 
@@ -961,7 +961,7 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
 /* Homepage Approach intro in the Mission block's two-column form (loop-diagram content.text): same columns, same right-hand text */
 #approach .ld-split { margin-bottom: 2.5rem; }
 @media (min-width: 900px) { #approach .md-split.ld-split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
-#section-hero-scene ~ #approach .ld-split .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.5; font-weight: 400; letter-spacing: -.01em; }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.6; font-weight: 400; letter-spacing: -.005em; }
 #section-hero-scene ~ #approach .ld-split .md-body blockquote p { color: var(--u-body) !important; }
 #section-hero-scene ~ #approach .ld-split .md-body blockquote p::before, #section-hero-scene ~ #approach .ld-split .md-body blockquote p::after { content: none; }
 
