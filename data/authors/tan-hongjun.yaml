@@ -5,6 +5,7 @@ name:
   display: TAN Hongjun
   given: Hongjun
   family: TAN
+avatar: media/authors/9af53f2eb084d140f2476d3b3e4631ee.jpg
 user_groups:
   - PhD Students
 role: PhD Student (Year 4)
@@ -54,6 +55,7 @@ education:
   - degree: PhD
     institution: The Hong Kong Polytechnic University
     start: 2023-09-01
+    end: 2026-11-04
   - degree: Exchange
     institution: University of Oxford
     start: 2026-03-23
