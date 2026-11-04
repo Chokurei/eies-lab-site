@@ -67,10 +67,18 @@
 			if ( ! raf ) raf = requestAnimationFrame( tick );
 
 		} );
-		// Keep the poster if no source can play (an error on a source the browser skipped is not a failure)
+		// Keep the poster if no source can play (an error on a source the browser skipped is not a failure). The sources
+		// only get their src in idle() below, and the parser fires an error on each src-less <source> as soon as it meets
+		// the video: when this script runs early (cached), those errors arrive here and must not count.
 		video.querySelector( 'source:last-of-type' ).addEventListener( 'error', () => {
 
-			if ( video.readyState === 0 ) video.remove();
+			if ( started && video.readyState === 0 ) video.remove();
+
+		} );
+		// Back/forward cache: the page comes back with the video paused
+		window.addEventListener( 'pageshow', ( e ) => {
+
+			if ( e.persisted && started && onScreen ) play();
 
 		} );
 		for ( const a of acts ) a.b.addEventListener( 'click', () => {
