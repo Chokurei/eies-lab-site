@@ -1,20 +1,40 @@
-schema: hugoblox/author/v1
 slug: liu-yuhan
-weight: 27
-user_groups: [Affiliated Members]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: LIU Yuhan
+  alternate: 刘宇涵
   given: Yuhan
   family: LIU
-  alternate: '' # TODO: Chinese name
+user_groups:
+  - Affiliated Members
 role: Affiliated Member
 role_zh: 编外成员
+weight: 27
+joined: 2026-11-04
 interests:
-  # TODO: placeholder, align with the three research thrusts
   - Physics-grounded world models
   - PV output forecasting
 interests_zh:
   - 基于物理的世界模型
   - 光伏出力预测
-
-# TODO: bio, education, links, avatar (assets/media/authors/liu-yuhan.jpg)
+bio: Yuhan Liu is a second-year Master student in the computer science
+  department at University of Copenhagen. He used to study at Southern
+  Univerisity of Science and Technology. His early research primarily focused on
+  human computer interaction, while his current research is mainly about remote
+  sensing, especially physic-grounded world models and PV output
+  forecasting.  He has published several works on international conferences such
+  as Applied Energy and CHI's Workshop.
+website: https://yuhanliu.space/
+education:
+  - degree: Bachelor, Computer Science and Technology
+    degree_zh: 学士，计算机科学与技术
+    institution: Southern University of Science and Technology
+    institution_zh: 南方科技大学
+    start: 2021-09-01
+    end: 2025-06-30
+  - degree: Master, Computer Science
+    degree_zh: 硕士，计算机科学
+    institution: University of Copenhagen
+    institution_zh: 哥本哈根大学
+    start: 2025-09-01
