@@ -31,7 +31,10 @@ links:
     url: https://scholar.google.com/citations?user=YKDrnY0AAAAJ
     label: Google Scholar
     label_zh: 谷歌学术
-  - {}
+  - icon: academicons/orcid
+    url: https://orcid.org/my-orcid?orcid=0009-0009-7155-1022
+    label: ORCID
+    label_zh: ORCID
 education:
   - degree: Bachelor, Computer Science and Technology
     degree_zh: 学士，计算机科学与技术
