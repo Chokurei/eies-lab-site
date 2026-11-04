@@ -1,75 +1,64 @@
-# The lab's closed loop, in order. Single source for the loop diagram (layouts/_partials/hbx/blocks/loop-diagram)
-# and project loop tags. Content follows the framework figure "Energy Embodied Intelligence as a Model-Based RL
-# Framework" (static/media/eies-framework.jpg), without its RL mapping table and reward labels.
-# Feedback flows from the energy system back to the agent.
-system: { en: Energy system, zh: 物理能源环境 }
-# Elements of the physical energy environment, drawn as icons in the diagram (icon = shape key in the template).
+# The lab's closed loop: single source for the homepage "Our Approach" diagram (layouts/_partials/hbx/blocks/loop-diagram).
+# a · the physical energy environment sends observations to b · the embodied agent: perception → world model → decision,
+# planning through imagined rollouts; physical action changes the environment, and physical feedback (reward, cost,
+# safety) returns to the agent, updating its world model and decision policy.
+system: { en: Physical energy environment, zh: 物理能源环境 }
+# Labels on the environment drawing (key = position in the template).
 system_items:
-  - { icon: sun, en: Solar radiation, zh: 太阳辐射 }
-  - { icon: city, en: 3D city, zh: 三维城市 }
-  - { icon: pv, en: PV, zh: 光伏 }
-  - { icon: storage, en: Storage, zh: 储能 }
-  - { icon: load, en: Building loads, zh: 建筑负荷 }
-  - { icon: grid, en: Grid, zh: 电网 }
+  - { key: sun, en: Solar radiation, zh: 太阳辐射 }
+  - { key: city, en: 3D city, zh: 三维城市 }
+  - { key: pv, en: PV, zh: 光伏 }
+  - { key: grid, en: Grid, zh: 电网 }
+  - { key: load, en: Building loads, zh: 建筑负荷 }
+  - { key: storage, en: Storage, zh: 储能 }
+  - { key: ev, en: EV, zh: 电动汽车 }
+  - { key: drone, en: Low-altitude, zh: 低空 }
 agent: { en: Embodied agent, zh: 具身智能体 }
-# Homepage scene (loop-diagram block): the worked example and the note under the figure.
-example: { en: 'A teaching building · clouds tomorrow afternoon', zh: 一栋教学楼 · 明天下午有云 }
-example_label: { en: e.g., zh: 例 }
-note: { en: Illustrative values, zh: 数值为示意 }
-observe: { en: observations, zh: 观测 / 实时数据 }
-rollout: { en: rollout, zh: 想象推演 }
-steps:
+links:
+  observe: { en: Observations, zh: 观测 }
+  observe_sub: { en: real-time data, zh: 实时数据 }
+  feedback: { en: Physical feedback, zh: 物理反馈 }
+  feedback_sub: { en: 'reward · cost · safety', zh: 奖励 · 成本 · 安全 }
+  act: { en: Action, zh: 行动 }
+  rollout: { en: 'Rollout · planning', zh: 想象推演 / 规划 }
+# The agent's modules in loop order (two short lines each).
+modules:
   - key: perceive
-    plain: { en: See, zh: 看见 }
-    en: Perception
-    zh: 感知
-    sub: { en: State estimation, zh: 状态估计 }
-    desc:
-      en: Estimate the state of the energy system from incomplete, noisy observations.
-      zh: 从不完整、有噪声的观测中估计能源系统的状态。
-    items:
-      en: [Multi-source observations, Partial observability, State estimation & uncertainty]
-      zh: [多源观测处理, 部分可观测环境, 状态估计与不确定性]
+    en: Perception & state estimation
+    zh: 感知与状态估计
+    lines:
+      en: [Multi-source partial observations, State estimate with uncertainty]
+      zh: [多源观测 · 部分可观测, 状态估计与不确定性]
   - key: model
-    plain: { en: Predict, zh: 预判 }
     en: World model
     zh: 世界模型
-    sub: { en: Internal model, zh: 环境的内部模型 }
-    desc:
-      en: Not just a predictor — the agent's internal model of how the environment evolves and what its actions will cause.
-      zh: 不是单纯的预测器，而是智能体对环境演化规律与行动后果的内部模型。
-    items:
-      en: [State representation, Dynamics & transition, Observation model, Physics & safety constraints, Action-consequence prediction]
-      zh: [状态表征, 状态转移与系统动力学, 观测模型, 物理规律与安全约束, 行动后果预测]
+    lines:
+      en: ['State · dynamics · observations', 'Physics, safety, consequences']
+      zh: [状态表征 · 系统动力学 · 观测模型, 物理规律与安全约束 · 行动后果预测]
   - key: decide
-    plain: { en: Decide, zh: 决定 }
-    en: Decision
-    zh: 决策
-    sub: { en: Policy & planning, zh: 策略与规划 }
-    desc:
-      en: Plan and decide by imagining outcomes in the world model before acting.
-      zh: 在世界模型中想象推演行动后果，再进行规划与决策。
-    items:
-      en: [Planning & control, Safe decisions, 'Objectives: revenue, cost, resilience']
-      zh: [规划与控制, 安全决策, 目标优化（收益 / 成本 / 韧性）]
-  - key: act
-    plain: { en: Act, zh: 动手 }
-    chips: { en: [Charge, Pre-cool, Inspect], zh: [充电, 预冷, 巡检] }
-    en: Physical action
-    zh: 物理行动
-    desc:
-      en: Act on the physical energy system.
-      zh: 在物理能源系统中执行行动。
-    items:
-      en: [Active observation, Device control, Energy dispatch, Robot operation]
-      zh: [主动观测, 设备控制, 能量调度, 机器人操作]
-  - key: feedback
-    plain: { en: Check, zh: 检验 }
-    en: Feedback
-    zh: 反馈
-    desc:
-      en: The physical response is observed again and continually updates the world model and the policy.
-      zh: 执行后的物理响应反馈到感知系统，并持续更新世界模型与决策策略。
-    items:
-      en: [Physical response, World-model update, Policy update]
-      zh: [物理响应, 世界模型更新, 策略更新]
+    en: Decision & policy
+    zh: 决策策略
+    lines:
+      en: ['Planning, control & safe decisions', 'Revenue · cost · resilience']
+      zh: [规划与控制 · 安全决策, 目标优化（收益 / 成本 / 韧性）]
+action: { en: Physical embodied action, zh: 物理具身行动 }
+action_sub: { en: Acting on the real energy system, zh: 作用于真实能源系统 }
+# icon = symbol key in the template
+action_items:
+  - { icon: sense, en: Active sensing, zh: 主动观测 }
+  - { icon: control, en: Device control, zh: 设备控制 }
+  - { icon: dispatch, en: Energy dispatch, zh: 能量调度 }
+  - { icon: robot, en: Robot operation, zh: 机器人操作 }
+# Read by screen readers in place of the drawing.
+summary:
+  en: >-
+    a · The physical energy environment (solar radiation, a 3D city, PV, grid, building loads, storage, EVs and
+    low-altitude drones) sends
+    observations to b · the embodied agent. Perception estimates the system state; the world model predicts how the system
+    evolves and what actions will cause; decision and policy plan through imagined rollouts and choose a safe action.
+    Physical action (active sensing, device control, energy dispatch, robot operation) changes the environment, and
+    physical feedback (reward, cost, safety) returns to the agent to update its world model and policy.
+  zh: >-
+    a · 物理能源环境（太阳辐射、三维城市、光伏、电网、建筑负荷、储能、电动汽车、低空无人机）把观测送给 b · 具身智能体：感知估计系统状态，
+    世界模型预测系统演化与行动后果，决策策略先想象推演再选出安全的行动；物理具身行动（主动观测、设备控制、能量调度、机器人操作）
+    改变环境，物理反馈（奖励、成本、安全）回到智能体，更新世界模型与策略。
