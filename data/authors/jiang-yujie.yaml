@@ -6,6 +6,7 @@ name:
   alternate: 江宇杰
   given: Yujie
   family: JIANG
+avatar: media/authors/d69b2300ed3f5038b2496e4d2920d8d4.jpg
 user_groups:
   - PhD Students
 role: PhD Student (Year 1)
@@ -19,8 +20,29 @@ interests_zh:
   - 基于物理的世界模型
   - 建筑与储能动态
 education:
-  - start: 2026-11-03
-    end: 2026-11-03
-awards:
-  - date: 2026-11-03
+  - degree: BEng in Building Science and Engineering with a Secondary Major in
+      Artificial Intelligence and Data Analytics
+    institution: The Hong Kong Polytechnic University
+    institution_zh: 香港理工大学
+    start: 2022-09-01
+    end: 2026-09-01
+  - degree: PhD in Building Environment and Energy Engineering
+    degree_zh: 博士，建筑环境及能源工程
+    institution: The Hong Kong Polytechnic University
+    institution_zh: 香港理工大学
+    start: 2026-09-01
+skills:
+  - name: Technical Skills
+    name_zh: 技术能力
     sample: false
+    items:
+      - name: BIM MEP
+      - name: EnergyPlus
+      - name: Python
+  - name: Hobbies
+    name_zh: 爱好
+    sample: false
+    items:
+      - name: Movie
+      - name: Photography
+      - name: Painting
