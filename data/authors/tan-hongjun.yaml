@@ -1,20 +1,58 @@
-schema: hugoblox/author/v1
 slug: tan-hongjun
-weight: 13
-user_groups: [PhD Students]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: TAN Hongjun
   given: Hongjun
   family: TAN
-  alternate: '' # TODO: Chinese name
+user_groups:
+  - PhD Students
 role: PhD Student (Year 4)
 role_zh: 博士生（四年级）
+weight: 13
+joined: 2026-11-04
 interests:
-  # TODO: placeholder, align with the three research thrusts
   - Embodied decision & control
   - Electric mobility & charging
 interests_zh:
   - 具身决策与控制
   - 电动交通与充电
+bio: >-
+  I am an interdisciplinary researcher working across climate change, renewable
+  energy, artificial intelligence, and urban sustainability, with expertise in
+  AI, generative AI, remote sensing, GIS, photovoltaics, and data-driven
+  modelling. My strength lies in connecting advanced computational approaches
+  with real-world energy and sustainability challenges, supported by a strong
+  track record of interdisciplinary research and publication. 
 
-# TODO: bio, education, links, avatar (assets/media/authors/tan-hongjun.jpg)
+
+  I have gained international research experience at the Environmental Change
+  Institute (ECI), University of Oxford, supported by the competitive RSAP and
+  ICRF Scholarships. This experience has further shaped my ability to work
+  across disciplines, institutions, and international research environments.
+
+
+  Beyond research, I built strong leadership, communication, and organizational
+  skills. I have organized and supported 10+ international conferences across
+  the UK, Qatar, Japan, South Korea, Thailand, and beyond, with individual
+  events attracting up to 600 participants. My experience also extends to
+  academic publishing and peer-review coordination.
+
+
+  Outside academia, 5+ years of dance teaching and 3+ years of scuba diving have
+  strengthened my communication, adaptability, creativity, and teamwork. 
+
+
+  Together, these experiences allow me to bring scientific expertise, technical
+  capability, international perspective, and people-centered leadership to
+  collaborative and interdisciplinary environments.
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/hongjun-tan-b8a767289/
+education:
+  - degree: Master of Engineering
+    institution: Tongji University
+    start: 2020-09-01
+    end: 2023-03-31
+  - start: 2026-11-04
+    end: 2026-11-04
