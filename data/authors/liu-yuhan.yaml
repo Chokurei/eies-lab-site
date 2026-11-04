@@ -26,6 +26,12 @@ bio: Yuhan Liu is a second-year Master student in the computer science
   forecasting.  He has published several works on international conferences such
   as Applied Energy and CHI's Workshop.
 website: https://yuhanliu.space/
+links:
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=YKDrnY0AAAAJ
+    label: Google Scholar
+    label_zh: 谷歌学术
+  - {}
 education:
   - degree: Bachelor, Computer Science and Technology
     degree_zh: 学士，计算机科学与技术
@@ -38,3 +44,4 @@ education:
     institution: University of Copenhagen
     institution_zh: 哥本哈根大学
     start: 2025-09-01
+    end: 2026-11-04
