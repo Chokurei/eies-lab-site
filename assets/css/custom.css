@@ -357,7 +357,6 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 .hs-act-n, .hs-act-t { grid-row: 2; }
 .hs-act-n { font-variant-numeric: tabular-nums; opacity: .7; }
 .hs-act-t { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500; }
-.hs-credit { margin: .25rem 0 0; font-size: .6875rem; color: rgba(255,255,255,.45); text-align: right; }
 /* functional scrim only: keeps white copy legible over any frame */
 .hs-veil { z-index: -1; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 38%, rgba(0,0,0,0) 66%); }
 @media (max-width: 767px) { .hs-veil { background: rgba(0,0,0,.66); } }
@@ -396,8 +395,8 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 #section-hero-scene ~ section .section-link:hover { color: var(--u-body) !important; }
 
 /* mission: the statement set as a sub-heading, no ornaments */
-#section-hero-scene ~ #mission .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.45; font-weight: 500; letter-spacing: -.01em; }
-#section-hero-scene ~ #mission .md-body blockquote p { color: var(--u-black) !important; }
+#section-hero-scene ~ #mission .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.5; font-weight: 400; letter-spacing: -.01em; }
+#section-hero-scene ~ #mission .md-body blockquote p { color: var(--u-body) !important; }
 #section-hero-scene ~ #mission .md-body blockquote p::before, #section-hero-scene ~ #mission .md-body blockquote p::after { content: none; }
 
 /* ---------- Cards: research thrusts and energy systems (homepage + /research/) ---------- */
@@ -880,7 +879,7 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
 /* validation pathway: four stages on a rail; black = done/active, dashed = starting, grey = planned */
 .sp-path { margin-top: 6rem; }
 .sp-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 2.5rem; }
-.sp-head h2, .sp-visit h2 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.2; font-weight: 700; letter-spacing: -.02em; }
+.sp-head h2 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.2; font-weight: 700; letter-spacing: -.02em; }
 .sp-legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; color: var(--u-body); font-size: .875rem; }
 .sp-legend li { display: flex; align-items: center; gap: .5rem; }
 .sp-node { display: inline-block; width: 14px; height: 14px; flex: none; box-sizing: border-box; border-radius: 50%; }
@@ -906,7 +905,6 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
 .sp-step-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* where we work */
-.sp-visit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2rem 4rem; align-items: center; margin-top: 6rem; padding: 2.5rem 3rem; border-radius: 16px; background: var(--u-chip); }
 .sp-facts { margin: 0; }
 .sp-facts > div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: .875rem 0; border-top: 1px solid var(--u-hover); }
 .sp-facts > div:last-child { border-bottom: 1px solid var(--u-hover); }
@@ -925,7 +923,6 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
   .sp-ifaces { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sp-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 1.5rem; }
   .sp-step:nth-child(2n) .sp-rail::before { display: none; }
-  .sp-visit { grid-template-columns: 1fr; padding: 2.25rem; }
 }
 @media (max-width: 639px) {
   #spaces.hbb-section { padding: 2.5rem 0 4rem !important; }
@@ -934,7 +931,7 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
   .sp-ifaces { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin-top: 2rem; }
   .sp-ifaces li { gap: .625rem; padding: .75rem; font-size: .875rem; }
   .sp-iface-icon { width: 32px; height: 32px; }
-  .sp-path, .sp-visit { margin-top: 4rem; }
+  .sp-path { margin-top: 4rem; }
   .sp-head { margin-bottom: 2rem; }
   /* one column with the rail running down the left */
   .sp-steps { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -943,7 +940,6 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
   .sp-rail::before, .sp-step:nth-child(2n) .sp-rail::before { display: block; left: 6px; right: auto; top: 22px; bottom: -2.5rem; width: 2px; height: auto; }
   .sp-step.is-emerging .sp-rail::before { background: repeating-linear-gradient(180deg, var(--u-black) 0 6px, transparent 6px 12px); }
   .sp-step:last-child .sp-rail::before { display: none; }
-  .sp-visit { padding: 1.5rem; }
   .sp-facts > div { grid-template-columns: 4.5rem minmax(0, 1fr); }
 }
 /* Scenario cards (Research + homepage): a card without a photo yet keeps a centred icon on the dark media panel */
@@ -957,8 +953,8 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
 /* Homepage Approach intro in the Mission block's two-column form (loop-diagram content.text): same columns, same right-hand text */
 #approach .ld-split { margin-bottom: 2.5rem; }
 @media (min-width: 900px) { #approach .md-split.ld-split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
-#section-hero-scene ~ #approach .ld-split .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.45; font-weight: 500; letter-spacing: -.01em; }
-#section-hero-scene ~ #approach .ld-split .md-body blockquote p { color: var(--u-black) !important; }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote { margin: 0; padding: 0; border: 0; quotes: none; font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.5; font-weight: 400; letter-spacing: -.01em; }
+#section-hero-scene ~ #approach .ld-split .md-body blockquote p { color: var(--u-body) !important; }
 #section-hero-scene ~ #approach .ld-split .md-body blockquote p::before, #section-hero-scene ~ #approach .ld-split .md-body blockquote p::after { content: none; }
 
 /* ---------- Contact page (layouts/_partials/hbx/blocks/contact; type and buttons shared with Spaces) ---------- */

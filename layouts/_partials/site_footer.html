@@ -21,7 +21,7 @@
     </nav>
     {{ end }}
     <div class="sf-bottom">
-      {{ with site.Params.hugoblox.copyright.notice }}<p>{{ replace . "{year}" (now.Format "2006") }}</p>{{ end }}
+      {{ with site.Params.hugoblox.copyright.notice }}<p>{{ replace . "{year}" (now.Format "2006") }}{{ with $f.credit }} {{ . }}{{ end }}</p>{{ end }}
       {{ with $f.org }}<p>{{ . }}</p>{{ end }}
     </div>
   </div>

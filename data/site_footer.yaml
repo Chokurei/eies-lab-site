@@ -17,6 +17,7 @@ en:
     - { text: News, url: news/ }
     - { text: Contact, url: contact/ }
   org: PolyU · Department of Building Environment and Energy Engineering (BEEE)
+  credit: "3D scene data: Lands Department, HKSAR · PolyU."   # data attribution for the homepage 3D scene (scenes/src/places/polyu.js)
 zh:
   name: EIES-Lab
   tagline: 面向可再生与互联城市能源系统的具身智能研究。
@@ -33,3 +34,4 @@ zh:
     - { text: 新闻, url: news/ }
     - { text: 联系我们, url: contact/ }
   org: 香港理工大学 · 建筑环境及能源工程学系（BEEE）
+  credit: 三维场景数据：香港特区政府地政总署 · 香港理工大学。

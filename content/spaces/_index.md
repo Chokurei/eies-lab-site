@@ -1,7 +1,7 @@
 ---
 title: Spaces
 type: landing
-# One block (layouts/_partials/hbx/blocks/spaces/): intro + interfaces, validation pathway, where the lab is.
+# One block (layouts/_partials/hbx/blocks/spaces/): intro + interfaces, validation pathway.
 # Keep in sync with _index.zh.md. Pathway status: active | emerging | planning.
 sections:
   - block: spaces
@@ -36,14 +36,4 @@ sections:
             image: spaces/stage-4.jpg
             status: planning
             description: Deployment in real buildings and energy sites, where physical feedback closes the loop and tests reliability.
-      visit:
-        eyebrow: Lab Space
-        title: Where We Work
-        facts:
-          - { label: Room, value: ZS831 }
-          - { label: Building, value: Block Z }
-          - { label: Campus, value: "Hung Hom, The Hong Kong Polytechnic University" }
-        note: Visits are welcome by arrangement.
-        contact_url: contact/
-        map_url: https://www.google.com/maps/search/?api=1&query=Block+Z%2C+The+Hong+Kong+Polytechnic+University%2C+Hung+Hom
 ---

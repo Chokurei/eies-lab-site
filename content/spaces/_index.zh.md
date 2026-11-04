@@ -35,14 +35,4 @@ sections:
             image: spaces/stage-4.jpg
             status: planning
             description: 部署到真实建筑与能源场地，以物理反馈闭合回路，检验可靠性。
-      visit:
-        eyebrow: 实验室位置
-        title: 我们在这里
-        facts:
-          - { label: 房间, value: ZS831 室 }
-          - { label: 楼宇, value: Z 座 }
-          - { label: 校园, value: 香港理工大学红磡校园 }
-        note: 欢迎预约参观。
-        contact_url: contact/
-        map_url: https://www.google.com/maps/search/?api=1&query=Block+Z%2C+The+Hong+Kong+Polytechnic+University%2C+Hung+Hom
 ---

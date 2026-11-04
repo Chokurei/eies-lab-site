@@ -1,8 +1,7 @@
 {{/* Spaces page (content/spaces/_index*.md): intro with the lab's sensing and actuation interfaces, the validation
-     pathway as four stages on a progress rail, and where the lab is.
+     pathway as four stages on a progress rail.
      content: eyebrow, title, lead, interfaces [{name, icon}],
-              pathway {eyebrow, title, items [{name, description, image (under assets/media/), status: active | emerging | planning}]},
-              visit {eyebrow, title, facts [{label, value}], note, map_url, contact_url} */}}
+              pathway {eyebrow, title, items [{name, description, image (under assets/media/), status: active | emerging | planning}]} */}}
 {{ $c := .wcBlock.content }}
 {{ $page := .wcPage }}
 {{ $zh := eq site.Language.Lang "zh" }}
@@ -43,21 +42,6 @@
       </li>
       {{ end }}
     </ol>
-  </section>
-  {{ end }}
-
-  {{ with $c.visit }}
-  <section class="sp-visit" aria-labelledby="sp-visit-h">
-    <div class="sp-visit-copy">
-      {{ with .eyebrow }}<p class="sp-eyebrow">{{ . }}</p>{{ end }}
-      <h2 id="sp-visit-h">{{ .title }}</h2>
-      {{ with .note }}<p class="sp-note">{{ . }}</p>{{ end }}
-      <div class="sp-actions">
-        {{ with .contact_url }}<a class="sp-btn sp-btn-primary" href="{{ . | relLangURL }}">{{ cond $zh "预约参观" "Arrange a visit" }} <span aria-hidden="true">→</span></a>{{ end }}
-        {{ with .map_url }}<a class="sp-btn" href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">{{ partial "functions/get_icon" (dict "name" "hero/map-pin" "attributes" "class=\"sp-btn-icon\" aria-hidden=\"true\"") }}{{ cond $zh "在地图中查看" "Open in Maps" }}</a>{{ end }}
-      </div>
-    </div>
-    {{ with .facts }}<dl class="sp-facts">{{ range . }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl>{{ end }}
   </section>
   {{ end }}
 </div>
