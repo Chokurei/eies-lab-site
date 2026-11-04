@@ -1,4 +1,5 @@
-{{/* Team directory: PI intro, then one section per user_groups value (order follows member weight). */}}
+{{/* Team directory: PI intro, then one section per user_groups value. Groups follow the fixed order below;
+     member weight only orders people inside a group. Unlisted groups go last. */}}
 {{ $zh := eq site.Language.Lang "zh" }}
 {{ $authors := partialCached "functions/get_authors_data" .wcPage site.Language.Lang }}
 {{ $lead := dict }}{{ $members := slice }}
@@ -8,8 +9,14 @@
 {{ end }}
 {{ $members = sort $members "weight" "asc" }}
 {{ $other := cond $zh "其他成员" "Other Members" }}
+{{ $order := cond $zh
+  (slice "课题组负责人" "博士后" "博士生" "硕士研究生（MPhil）" "研究助理" "编外成员" "已毕业")
+  (slice "Principal Investigator" "Postdoctoral Fellows" "PhD Students" "MPhil Students" "Research Assistants" "Affiliated Members" "Alumni") }}
+{{ $seen := slice }}
+{{ range $members }}{{ $g := index (.user_groups | default (slice $other)) 0 }}{{ if not (in $seen $g) }}{{ $seen = $seen | append $g }}{{ end }}{{ end }}
 {{ $groups := slice }}
-{{ range $members }}{{ $g := index (.user_groups | default (slice $other)) 0 }}{{ if not (in $groups $g) }}{{ $groups = $groups | append $g }}{{ end }}{{ end }}
+{{ range $order }}{{ if in $seen . }}{{ $groups = $groups | append . }}{{ end }}{{ end }}
+{{ range $seen }}{{ if not (in $order .) }}{{ $groups = $groups | append . }}{{ end }}{{ end }}
 
 <div class="td-shell td-head">
   <h1>{{ cond $zh "团队" "Team" }}</h1>
