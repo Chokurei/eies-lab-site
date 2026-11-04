@@ -12,10 +12,11 @@ user_groups:
 role: Affiliated Member
 role_zh: 编外成员
 weight: -29
-joined: 2026-11-04
+joined: 2023-10-11
 interests:
   - Physics-grounded world models
   - Building & storage dynamics
 interests_zh:
   - 基于物理的世界模型
   - 建筑与储能动态
+website: https://jiazeli0329.github.io/
