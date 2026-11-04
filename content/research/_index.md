@@ -19,13 +19,13 @@ sections:
       items:
         - name: Energy-System Perception & Observability
           image: home/thrust-perception.jpg
-          description: "**What can an energy agent know, and what information does it need?** We study how energy-relevant states and environmental conditions can be inferred from incomplete, uncertain and heterogeneous observations. Our work connects geospatial AI, remote sensing, 3D urban representations and observation-quality analysis with task-aware sensing and state estimation, aiming to identify the information that matters for reliable energy decisions."
+          description: "**What information is sufficient for reliable energy decisions?**<br>We investigate how incomplete observations affect energy-state estimation and how active sensing can provide decision-relevant information."
         - name: Physics-Grounded Energy World Models
           image: home/thrust-world-model.jpg
-          description: "**How will an energy system respond to changes and actions?** We develop physically grounded representations of energy-system dynamics, spanning solar resources, energy conversion, storage, building demand and network interactions. Beyond forecasting system states, we investigate action-conditioned prediction: how possible interventions affect future energy flows and performance, subject to physical laws, uncertainty and operating limits."
+          description: "**How do energy systems respond to changes and actions?**<br>We develop physics-grounded world models to predict energy-system dynamics and action consequences under uncertainty and physical constraints."
         - name: Energy-Constrained Embodied Decision & Control
           image: home/thrust-control.jpg
-          description: "**How can an energy agent act safely and adaptively in the physical world?** We investigate autonomous decision-making and control under incomplete information, changing energy resources and physical safety constraints. The focus is on translating perception and world models into executable actions, evaluating their real physical consequences and improving decisions through closed-loop feedback."
+          description: "**How can energy agents act safely and adaptively?**<br>We investigate autonomous, energy-constrained decision-making and control, connecting intelligent planning with physical actions and feedback-driven adaptation."
 
   - block: markdown
     id: scenarios-intro

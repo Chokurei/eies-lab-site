@@ -417,6 +417,10 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 :is(#section-hero-scene ~ section:is(#thrusts, #cases), #overview ~ section:is(#thrusts, #energy-systems, #pathway)) .grid > .group > div > .flex-col { padding: 1.25rem 1.75rem 1.75rem !important; }
 :is(#section-hero-scene ~ section:is(#thrusts, #cases), #overview ~ section:is(#thrusts, #energy-systems, #pathway)) .grid h3 { margin-bottom: .5rem !important; font-size: 1.25rem !important; line-height: 1.4 !important; font-weight: 700; letter-spacing: -.01em; color: var(--u-black) !important; }
 :is(#section-hero-scene ~ section:is(#thrusts, #cases), #overview ~ section:is(#thrusts, #energy-systems, #pathway)) .grid h3 + p { margin: 0 !important; font-size: 1rem !important; line-height: 1.5; color: var(--u-body) !important; }
+/* /research/ thrusts: the scientific question on its own line, then one quieter sentence (description is "**question**<br>sentence") */
+#overview ~ section#thrusts .grid h3 + p { font-size: .9375rem !important; color: var(--u-muted) !important; }
+#overview ~ section#thrusts .grid h3 + p strong { display: block; margin-bottom: .5rem; font-size: 1rem; font-weight: 600; line-height: 1.45; color: var(--u-black); }
+#overview ~ section#thrusts .grid h3 + p br { display: none; }
 /* Pills sit on the (dark) figure, so they use fixed values in both modes: white = current/active, translucent = other. */
 /* thrusts: step number pill, top left of the figure */
 :is(#section-hero-scene, #overview) ~ section:is(#thrusts, #pathway) .grid > .group > div::after {
