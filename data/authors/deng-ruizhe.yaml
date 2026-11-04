@@ -50,6 +50,13 @@ education:
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2024-09-01
+    end: 2026-11-04
+  - degree: PhD, Energy Engineering
+    degree_zh: 博士，能源工程
+    institution: Eastern Institute of Technology, Ningbo
+    institution_zh: 宁波东方理工大学
+    start: 2023-09-01
+    end: 2026-11-04
   - degree: PhD, Electronic Information
     degree_zh: 博士，电子信息
     institution: Aerospace Information Research Institute, Chinese Academy of Sciences
