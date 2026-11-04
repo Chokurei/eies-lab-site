@@ -1,4 +1,4 @@
-{{/* Site footer: black, three columns (lab logo + affiliated centre / university emblem + address / links) + copyright row. Content: data/site_footer.yaml (en/zh).
+{{/* Site footer: black, three columns (lab logo + affiliation logos / address / links) + copyright row. Content: data/site_footer.yaml (en/zh).
      Replaces the theme footer (no language switcher, licence icons or theme credit). */}}
 {{ $L := cond (eq site.Language.Lang "zh") "zh" "en" }}
 {{ $f := index (hugo.Data.site_footer | default dict) $L | default dict }}
@@ -7,15 +7,14 @@
     <div>
       <p class="sf-brand">{{ with resources.Get "media/logo.svg" }}{{ .Content | safeHTML }}{{ end }}</p>
       {{ with $f.tagline }}<p class="sf-tag">{{ . }}</p>{{ end }}
-      {{ with $f.centre }}<a class="sf-centre" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ with resources.Get (printf "media/%s" .logo) }}{{ $img := .Resize "240x" }}<img src="{{ $img.RelPermalink }}" alt="" width="{{ div $img.Width 2 }}" height="{{ div $img.Height 2 }}">{{ end }}<span>{{ .name }}</span></a>{{ end }}
+      {{ with $f.affiliations }}<ul class="sf-affil">{{ range . }}{{ $a := . }}{{ with resources.Get (printf "media/%s" .logo) }}
+        <li><a href="{{ $a.url }}" target="_blank" rel="noopener noreferrer" title="{{ $a.name }}"><img src="{{ .RelPermalink }}" alt="{{ $a.name }}" width="{{ div .Width 3 }}" height="{{ div .Height 3 }}"></a></li>{{ end }}{{ end }}
+      </ul>{{ end }}
     </div>
     {{ with $f.address }}
-    <div class="sf-visit">
-      {{ with $f.university }}<a class="sf-uni" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">{{ with resources.Get (printf "media/%s" .logo) }}{{ $img := .Resize "144x" }}<img src="{{ $img.RelPermalink }}" alt="{{ $f.university.name }}" width="{{ div $img.Width 2 }}" height="{{ div $img.Height 2 }}">{{ end }}</a>{{ end }}
-      <div>
-        <h3>{{ $f.address_title }}</h3>
-        {{ range . }}<p>{{ . }}</p>{{ end }}
-      </div>
+    <div>
+      <h3>{{ $f.address_title }}</h3>
+      {{ range . }}<p>{{ . }}</p>{{ end }}
     </div>
     {{ end }}
     {{ with $f.links }}

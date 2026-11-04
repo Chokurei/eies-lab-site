@@ -2,8 +2,9 @@
 # Link urls are written like research/ (no leading slash, no /zh/): the template adds both, as for the menus.
 en:
   tagline: Embodied intelligence for renewable and interconnected urban energy systems.
-  centre: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
-  university: { name: The Hong Kong Polytechnic University, url: "https://www.polyu.edu.hk/", logo: partners/polyu-emblem.png }   # emblem left of Visit
+  affiliations:   # logos side by side under the lab logo (images under assets/media/, shown 40px tall)
+    - { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
+    - { name: The Hong Kong Polytechnic University, url: "https://www.polyu.edu.hk/", logo: partners/polyu.png }
   address_title: Visit
   address:
     - Room ZS831, Block Z
@@ -21,8 +22,9 @@ en:
   credit: "3D scene data: Lands Department, HKSAR · PolyU."   # data attribution for the homepage 3D scene (scenes/src/places/polyu.js)
 zh:
   tagline: 面向可再生与互联城市能源系统的具身智能研究。
-  centre: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
-  university: { name: 香港理工大学, url: "https://www.polyu.edu.hk/", logo: partners/polyu-emblem.png }
+  affiliations:
+    - { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
+    - { name: 香港理工大学, url: "https://www.polyu.edu.hk/", logo: partners/polyu.png }
   address_title: 地址
   address:
     - Z 座 ZS831 室
