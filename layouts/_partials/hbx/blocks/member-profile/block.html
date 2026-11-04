@@ -1,4 +1,4 @@
-{{/* Member profile hero: editorial intro with portrait, key numbers, research interests and a sticky section bar. */}}
+{{/* Member profile hero: editorial intro with portrait, research interests and a sticky section bar. */}}
 {{ $page := .wcPage }}
 {{ $slug := .wcBlock.content.username }}
 {{ $profile := partial "functions/get_author_profile" $slug }}
@@ -9,12 +9,6 @@
 {{ $scholar := "" }}{{ $home := "" }}
 {{ range $profile.links }}{{ $u := .url | default .link | default "" }}{{ if in (.icon | default "") "google-scholar" }}{{ $scholar = $u }}{{ else if or (eq (.icon | default "") "globe-alt") (eq (lower (.label | default "")) "homepage") }}{{ $home = $u }}{{ end }}{{ end }}
 {{ with $data.website }}{{ if and (not $home) (not (in . "example.com")) }}{{ $home = . }}{{ end }}{{ end }}
-{{/* Key numbers */}}
-{{ $papers := partial "member/papers" $slug }}
-{{ $lead := 0 }}{{ range $papers }}{{ if in (slice "first" "co-first") (partial "member/author-role" (dict "paper" . "member" $slug)) }}{{ $lead = add $lead 1 }}{{ end }}{{ end }}
-{{/* Same pages as the Talks section below (generated from every profile's talks, owner or co-speaker). */}}
-{{ $talks := slice }}{{ range where site.RegularPages "Section" "talks" }}{{ if in (apply (.Params.authors | default slice) "urlize" ".") $slug }}{{ $talks = $talks | append . }}{{ end }}{{ end }}
-{{ $since := "" }}{{ with $data.joined }}{{ $since = (time.AsTime .).Format "2006" }}{{ end }}
 <div class="mp-hero mp-shell">
   <div class="mp-hero-copy">
     {{ with $profile.role }}<p class="mp-eyebrow">{{ . | markdownify }}</p>{{ end }}
@@ -47,13 +41,6 @@
 </div>
 
 <div class="mp-shell">
-  <dl class="mp-stats">
-    <div><dt>{{ cond $zh "论文" "Publications" }}</dt><dd>{{ len $papers }}</dd></div>
-    <div><dt>{{ cond $zh "一作 / 共同一作" "First / co-first author" }}</dt><dd>{{ $lead }}</dd></div>
-    <div><dt>{{ cond $zh "学术报告" "Talks" }}</dt><dd>{{ len $talks }}</dd></div>
-    <div><dt>{{ cond $zh "加入课题组" "In the lab since" }}</dt><dd>{{ $since | default "—" }}</dd></div>
-  </dl>
-
   <div class="mp-about">
     <section aria-labelledby="mp-interests-h">
       <h2 id="mp-interests-h">{{ cond $zh "研究兴趣" "Research Interests" }}</h2>

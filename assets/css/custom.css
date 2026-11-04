@@ -682,11 +682,6 @@ section#member-education.hbb-section { padding-top: 0 !important; }
 #section-member-profile .mp-social-icon { width: 18px; height: 18px; }
 #section-member-profile .mp-portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 12px; background: var(--u-chip); display: grid; place-items: center; font-size: 4rem; font-weight: 700; }
 #section-member-profile .mp-portrait img { width: 100%; height: 100%; object-fit: cover; }
-#section-member-profile .mp-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 3rem 0 0; border-top: 1px solid var(--u-black); }
-#section-member-profile .mp-stats > div { padding: 1.125rem 1.25rem 0 0; }
-#section-member-profile .mp-stats > div + div { padding-left: 1.25rem; border-left: 1px solid var(--u-line); }
-#section-member-profile .mp-stats dt { color: var(--u-body); font-size: .8125rem; }
-#section-member-profile .mp-stats dd { margin: .375rem 0 0; font-size: 1.75rem; font-weight: 700; line-height: 1; letter-spacing: -.02em; }
 /* about: interests + education */
 #section-member-profile .mp-about { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem; margin-top: 3.5rem; }
 #section-member-profile .mp-about h2 { margin-bottom: .75rem; font-size: 1.125rem; font-weight: 700; }
@@ -776,8 +771,6 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
   section#section-member-profile.hbb-section { padding-top: 2rem !important; }
   #section-member-profile .mp-hero { grid-template-columns: 1fr; gap: 1.5rem; }
   #section-member-profile .mp-portrait { order: -1; width: 7.5rem; aspect-ratio: 1; border-radius: 50%; font-size: 2.5rem; }
-  #section-member-profile .mp-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  #section-member-profile .mp-stats > div:nth-child(3) { padding-left: 0; border-left: 0; }
   #section-member-profile .mp-about { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 2.5rem; }
   #section-member-profile .mp-edu-list > li { grid-template-columns: 1fr; gap: .125rem; }
   .mp-talk { grid-template-columns: 4rem minmax(0, 1fr); gap: 1rem; }
