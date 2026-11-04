@@ -461,9 +461,8 @@ body:has(#section-hero-scene) .sf { margin-top: 0; } /* homepage: Join is alread
 /* lab logo (assets/media/logo.svg, text in currentColor = white here); affiliated centre (UEX) below the tagline */
 .sf-brand svg { display: block; width: auto; height: 52px; }
 .sf-centre { display: flex; align-items: center; gap: 1rem; width: fit-content; max-width: 22rem; margin-top: 2rem; }
-.sf-centre img { flex: none; width: auto; height: 44px; opacity: .9; transition: opacity .2s ease; }
+.sf-centre img { flex: none; width: auto; height: 44px; }
 .sf-centre span { font-size: .8125rem; line-height: 1.45; }
-.sf-centre:hover img { opacity: 1; }
 /* PolyU emblem left of the Visit column, top-aligned with its heading */
 .sf-visit { display: flex; align-items: flex-start; gap: 1.5rem; }
 .sf-uni { flex: none; }
