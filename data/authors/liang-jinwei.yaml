@@ -18,3 +18,16 @@ interests:
 interests_zh:
   - 城市遥感与环境感知
   - 低碳能源系统与空间优化
+bio: My research interests lie at the intersection of geospatial analysis, urban
+  environments, and low-carbon energy systems. I focus on interactions among
+  urban energy infrastructure, building morphology, and microclimates, exploring
+  spatial planning and design approaches that improve energy efficiency and
+  urban thermal conditions. My previous work includes low-temperature power
+  transmission and LNG cold energy utilization. I am interested in combining
+  multi-source environmental data with physics-based models for energy systems
+  analysis and environmental impact assessment.
+bio_zh: 我的研究方向聚焦地理空间分析、城市环境与低碳能源系统的交叉，重点关注城市能源设施与建筑形态、微气候之间的相互作用，探索兼顾能源效率与热环境改善的空间布局和设计方法。此前参与过低温输电与
+  LNG 冷能利用研究，关注多源环境数据与物理模型在能源系统分析及环境影响评估中的应用。
+education:
+  - start: 2026-11-04
+    end: 2026-11-04
