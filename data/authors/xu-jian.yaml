@@ -53,3 +53,16 @@ education:
     institution_zh: 香港理工大学
     start: 2026-01-03
     end: 2026-11-04
+skills:
+  - name: Skills
+    name_zh: 技能
+    sample: false
+    items:
+      - name: Python, PyTorch, Deep Learning, 3D Computer Vision, GIS
+        name_zh: Python, PyTorch, Deep Learning, 3D Computer Vision, GIS
+  - name: Hobbies
+    name_zh: 爱好
+    sample: false
+    items:
+      - name: GTA Enthusiast, Table Tennis, Football
+        name_zh: GTA 狂热爱好者、乒乓球、足球
