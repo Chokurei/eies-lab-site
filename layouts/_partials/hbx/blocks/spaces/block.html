@@ -1,7 +1,7 @@
 {{/* Spaces page (content/spaces/_index*.md): intro with the lab's sensing and actuation interfaces, the validation
      pathway as four stages on a progress rail.
-     content: eyebrow, title, lead, interfaces [{name, icon}],
-              pathway {eyebrow, title, items [{name, description, image (under assets/media/), status: active | emerging | planning}]} */}}
+     content: eyebrow, title, lead?, interfaces? [{name, icon}],
+              pathway {eyebrow?, title?, items [{name, description, image (under assets/media/), status: active | emerging | planning}]} */}}
 {{ $c := .wcBlock.content }}
 {{ $page := .wcPage }}
 {{ $zh := eq site.Language.Lang "zh" }}
@@ -19,11 +19,11 @@
   </header>
 
   {{ with $c.pathway }}
-  <section class="sp-path" aria-labelledby="sp-path-h">
+  <section class="sp-path"{{ with .title }} aria-labelledby="sp-path-h"{{ end }}>
     <div class="sp-head">
       <div>
         {{ with .eyebrow }}<p class="sp-eyebrow">{{ . }}</p>{{ end }}
-        <h2 id="sp-path-h">{{ .title }}</h2>
+        {{ with .title }}<h2 id="sp-path-h">{{ . }}</h2>{{ end }}
       </div>
       <ul class="sp-legend" aria-label="{{ cond $zh "状态说明" "Status" }}">
         {{ range slice "active" "emerging" "planning" }}<li><span class="sp-node is-{{ . }}" aria-hidden="true"></span>{{ index $status . }}</li>{{ end }}

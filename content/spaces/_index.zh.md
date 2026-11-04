@@ -7,17 +7,8 @@ sections:
     id: spaces
     content:
       eyebrow: 实验室空间
-      title: 物理具身与验证
-      lead: 我们的研究通过连接智能决策与真实能源系统的**感知与执行接口**落到物理世界。
-      interfaces:
-        - { name: 能源传感器, icon: hero/signal }
-        - { name: 可控负荷, icon: hero/adjustments-horizontal }
-        - { name: 电池与逆变器接口, icon: hero/battery-50 }
-        - { name: 充电控制, icon: hero/bolt }
-        - { name: 移动感知与巡检, icon: hero/paper-airplane }
+      title: 从仿真走向真实场景
       pathway:
-        eyebrow: 验证路径
-        title: 从仿真走向真实场景
         items:
           - name: 数据与物理仿真
             image: spaces/stage-1.jpg
@@ -25,11 +16,11 @@ sections:
             description: 基于能源数据以及太阳能资源、建筑、储能与网络的物理模型，是所有方法的起点。
           - name: 闭环数字实验
             image: spaces/stage-2.jpg
-            status: emerging
+            status: active
             description: 智能体在仿真的能源系统中行动并从后果中学习，然后才接触真实硬件。
           - name: 硬件在环与器件级测试
             image: spaces/stage-3.jpg
-            status: planning
+            status: emerging
             description: 将真实的传感器、电池、逆变器和可控负荷接入仿真，让决策面对真实设备的行为。
           - name: 真实反馈与实地验证
             image: spaces/stage-4.jpg
