@@ -12,11 +12,10 @@ role_zh: 博士生（四年级）
 weight: 13
 joined: 2026-11-04
 interests:
-  - Embodied decision & control
-  - Electric mobility & charging
-interests_zh:
-  - 具身决策与控制
-  - 电动交通与充电
+  - Climate change
+  - Renewable energy
+  - Artificial Intelligence
+  - Urban sustainability
 bio: >-
   I am an interdisciplinary researcher working across climate change, renewable
   energy, artificial intelligence, and urban sustainability, with expertise in
@@ -49,10 +48,13 @@ bio: >-
 links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/hongjun-tan-b8a767289/
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ABOlHiwWuLyzNZbWpJu96hRlVgLI9Uck7lpB586vWbDG9mxzwlxWbgH-tKJ912RF-e7V4w5olGh_L9N46LIZUewVMB4&user=0K9A524AAAAJ
 education:
   - degree: PhD
     institution: The Hong Kong Polytechnic University
     start: 2023-09-01
+    end: 2026-11-04
   - degree: Exchange
     institution: University of Oxford
     start: 2026-09-23
