@@ -37,12 +37,13 @@ education:
     institution: Beijing University of Technology / University College Dublin
     institution_zh: 北京工业大学 / 都柏林大学学院
     start: 2022-09-01
+    end: 2026-11-04
   - degree: M.S. in Mechano-Informatics
     degree_zh: 硕士，智能机械情报学
     institution: The University of Tokyo
     institution_zh: 东京大学
     start: 2027-04-01
-    end: 2026-11-04
+    end: 2029-04-01
     summary: "Supervisor: Prof. Tatsuya Harada"
     summary_zh: 指导教师：原田达也 教授
 affiliations:
