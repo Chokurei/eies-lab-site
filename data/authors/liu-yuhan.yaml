@@ -6,6 +6,7 @@ name:
   alternate: 刘宇涵
   given: Yuhan
   family: LIU
+avatar: media/authors/Weixin Image_20261104084254_3_76.jpg
 user_groups:
   - Affiliated Members
 role: Affiliated Member
@@ -18,13 +19,12 @@ interests:
 interests_zh:
   - 基于物理的世界模型
   - 光伏出力预测
-bio: Yuhan Liu is a second-year Master student in the computer science
-  department at University of Copenhagen. He used to study at Southern
-  Univerisity of Science and Technology. His early research primarily focused on
-  human computer interaction, while his current research is mainly about remote
-  sensing, especially physic-grounded world models and PV output
-  forecasting.  He has published several works on international conferences such
-  as Applied Energy and CHI's Workshop.
+bio: "Yuhan Liu is a second-year Master student in the computer science
+  department at University of Copenhagen. Before, he studied at Southern
+  Univerisity of Science and Technology. His research interests lie in remote
+  sensing and deep learning, especially physic-grounded world models and PV
+  output forecasting. "
+bio_zh: 刘宇涵是哥本哈根大学计算机科学系硕士二年级学生。他曾在南方科技大学学习。他的主要研究兴趣在遥感与深度学习，尤其是基于物理的世界模型和光伏出力预测。
 website: https://yuhanliu.space/
 links:
   - icon: academicons/google-scholar
@@ -60,3 +60,28 @@ education:
     institution_zh: 哥本哈根大学
     start: 2025-09-01
     end: 2026-11-04
+affiliations:
+  - name: DIKU · UCPH
+    name_zh: 哥本哈根大学计算机科学系
+    url: https://di.ku.dk/
+awards:
+  - title: The Second Class Prize, ASC Student Supercomputer Challange 2024
+    title_zh: 2024 世界大学生超级计算机竞赛（ASC）二等奖
+    awarder: ASC24 Committee
+    awarder_zh: ASC24 竞赛组委会
+    date: 2024-02-04
+    sample: false
+skills:
+  - name: Technical Skills
+    name_zh: 技术能力
+    sample: false
+    items:
+      - name: Deep Learning
+        name_zh: 深度学习
+      - name: PyTorch
+  - name: Hobbies
+    name_zh: 爱好
+    sample: false
+    items:
+      - name: Music Production
+        name_zh: 音乐制作
