@@ -44,6 +44,8 @@ bio_zh: 邓睿哲现为香港理工大学建筑环境与能源工程系博士三
 links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=l05MGhMAAAAJ&hl=zh-CN
+  - icon: at-symbol
+    url: rui-zhe.deng@connect.polyu.hk
 education:
   - degree: PhD, Building Energy
     degree_zh: 博士，建筑环境及能源工程
@@ -56,6 +58,7 @@ education:
     institution: Eastern Institute of Technology, Ningbo
     institution_zh: 宁波东方理工大学
     start: 2023-09-01
+    end: 2026-11-04
   - degree: PhD, Electronic Information
     degree_zh: 博士，电子信息
     institution: Aerospace Information Research Institute, Chinese Academy of Sciences
@@ -76,3 +79,4 @@ education:
     end: 2019-06-30
 affiliations:
   - name: EIES-Lab · PolyU
+    name_zh: Ruizhe
