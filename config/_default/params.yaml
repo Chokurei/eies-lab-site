@@ -13,7 +13,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "EIES-Lab"  # navbar text next to the PolyU logo (assets/media/logo.png)
+    name: "EIES-Lab"  # footer/browser title; navbar shows the lab logo (assets/media/logo.svg) instead
     # Legal entity for copyright notices (defaults to name if not set)
     organization: "The Hong Kong Polytechnic University"
     # Schema.org type for structured data
@@ -82,6 +82,8 @@ hugoblox:
     enable: true
     # Header style variant
     style: navbar # navbar | navbar-simple | minimal
+    # logo.svg already reads "EIES Lab", so no text title next to it
+    show_title: false
     # Stick to top on scroll
     sticky: true
     # Menu alignment

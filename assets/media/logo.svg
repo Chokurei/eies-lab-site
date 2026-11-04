@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="72 72 1260 386" width="1260" height="386" role="img" aria-label="EIES Lab, Embodied Intelligence in Energy Systems">
+  <g>
+    <rect x="72" y="72" width="386" height="72" rx="36" ry="36" fill="#6BBE2F"/>
+    <rect x="72" y="217" width="296" height="72" rx="36" ry="36" fill="#16A79D"/>
+    <rect x="72" y="362" width="386" height="72" rx="36" ry="36" fill="#1B70B5"/>
+  </g>
+  <g>
+    <text x="535.40" y="217.00" font-family="Inter" font-weight="700" font-size="199.38" letter-spacing="-3.99" fill="currentColor">EIES Lab</text>
+    <text x="542.14" y="342.33" font-family="Inter" font-weight="500" font-size="73.33" letter-spacing="0.83" fill="currentColor">Embodied Intelligence</text>
+    <text x="543.76" y="434.00" font-family="Inter" font-weight="500" font-size="73.33" letter-spacing="0.83" fill="currentColor">in Energy Systems</text>
+  </g>
+</svg>

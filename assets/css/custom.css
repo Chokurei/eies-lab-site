@@ -14,6 +14,11 @@ html:not(.dark) .prose, html:not(.dark) p { color: var(--muted); }
 html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: var(--ink); }
 html:not(.dark) body > header, html:not(.dark) #site-header { background: #fff !important; border-bottom: 1px solid var(--line); box-shadow: none !important; }
 header a img { height: 34px; width: auto; }
+/* navbar brand = assets/media/logo.svg (bars + "EIES Lab"); its text is currentColor: pure black / pure white */
+.navbar-brand svg { height: 40px; }
+@media (min-width: 640px) { .navbar-brand { margin-left: 1.75rem; } }
+html:not(.dark) header nav a.navbar-brand { color: #000; }
+html.dark header nav a.navbar-brand { color: #fff; }
 
 /* Primary buttons: black pills */
 html:not(.dark) a[class*="bg-primary-6"], html:not(.dark) button[class*="bg-primary-6"],
