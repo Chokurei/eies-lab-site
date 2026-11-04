@@ -456,7 +456,7 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 .sf { margin-top: 6rem; background: #000; color: #afafaf; font-size: .875rem; line-height: 1.6; }
 body:has(#section-hero-scene) .sf { margin-top: 0; } /* homepage: Join is already black */
 .sf-inner { max-width: 80rem; margin: 0 auto; padding: 4rem 2rem 2rem; box-sizing: content-box; display: grid; gap: 2.5rem; }
-@media (min-width: 900px) { .sf-inner { grid-template-columns: 2fr 2fr 1fr; } }
+@media (min-width: 900px) { .sf-inner { grid-template-columns: 1.6fr 2.4fr 1fr; } }   /* Visit is wider: emblem + one-line department name */
 @media (max-width: 639px) { .sf-inner { padding: 3rem 1rem 1.5rem; } }
 /* lab logo (assets/media/logo.svg, text in currentColor = white here); affiliated centre (UEX) below the tagline */
 .sf-brand svg { display: block; width: auto; height: 52px; }
@@ -464,6 +464,11 @@ body:has(#section-hero-scene) .sf { margin-top: 0; } /* homepage: Join is alread
 .sf-centre img { flex: none; width: auto; height: 44px; opacity: .9; transition: opacity .2s ease; }
 .sf-centre span { font-size: .8125rem; line-height: 1.45; }
 .sf-centre:hover img { opacity: 1; }
+/* PolyU emblem left of the Visit column, top-aligned with its heading */
+.sf-visit { display: flex; align-items: flex-start; gap: 1.5rem; }
+.sf-uni { flex: none; }
+.sf-uni img { display: block; width: 72px; height: auto; }
+@media (max-width: 639px) { .sf-visit { gap: 1rem; } .sf-uni img { width: 56px; } }
 .sf p { margin: 0; color: #afafaf !important; }
 .sf-tag { margin-top: .75rem !important; max-width: 22rem; }
 .sf .sf-brand { color: #fff !important; }

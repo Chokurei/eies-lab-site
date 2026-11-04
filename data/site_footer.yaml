@@ -3,6 +3,7 @@
 en:
   tagline: Embodied intelligence for renewable and interconnected urban energy systems.
   centre: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex-white.png }
+  university: { name: The Hong Kong Polytechnic University, url: "https://www.polyu.edu.hk/", logo: partners/polyu-emblem.png }   # emblem left of Visit
   address_title: Visit
   address:
     - Room ZS831, Block Z
@@ -21,6 +22,7 @@ en:
 zh:
   tagline: 面向可再生与互联城市能源系统的具身智能研究。
   centre: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex-white.png }
+  university: { name: 香港理工大学, url: "https://www.polyu.edu.hk/", logo: partners/polyu-emblem.png }
   address_title: 地址
   address:
     - Z 座 ZS831 室
