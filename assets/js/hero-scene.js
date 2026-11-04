@@ -2,7 +2,8 @@
 // - a recorded video of the scene loop (.hs-video): starts after the page is idle, fades in once playing; the act
 //   buttons show which act is on screen and jump to an act when clicked;
 // - the live scene in an iframe (.hs-frame): fades in when the scene posts { type: 'lab-scene', event: 'ready' }.
-// Both pause while the hero is off-screen. Small screens, reduced motion and data-saver keep the poster only.
+// Both pause while the hero is off-screen. Phones play the lighter portrait cut of the recording (data-mobile) if there
+// is one and otherwise keep the poster, as do reduced motion and data-saver.
 ( () => {
 
 	const root = document.querySelector( '[data-hero-scene]' );
@@ -10,12 +11,22 @@
 	const video = root.querySelector( '.hs-video' );
 	const frame = root.querySelector( '.hs-frame' );
 	const save = navigator.connection && navigator.connection.saveData;
-	const live = window.matchMedia( '(min-width: 768px) and (prefers-reduced-motion: no-preference)' ).matches && ! save;
-	if ( ! live || ! ( video || frame ) ) return;
+	const calm = window.matchMedia( '(prefers-reduced-motion: no-preference)' ).matches && ! save;
+	const wide = window.matchMedia( '(min-width: 768px)' ).matches;
+	const phoneCut = ! wide && video && video.dataset.mobile;
+	if ( ! calm || ! ( wide ? ( video || frame ) : phoneCut ) ) return;
 	const idle = fn => ( 'requestIdleCallback' in window ? window.requestIdleCallback( fn, { timeout: 2000 } ) : window.setTimeout( fn, 800 ) );
 
 	if ( video ) {
 
+		// phones: the portrait cut replaces both sources (it is H.264, so it plays everywhere)
+		if ( phoneCut ) {
+
+			const sources = [ ...video.querySelectorAll( 'source' ) ];
+			sources.slice( 0, - 1 ).forEach( s => s.remove() );
+			sources[ sources.length - 1 ].dataset.src = phoneCut;
+
+		}
 		const acts = [ ...root.querySelectorAll( '.hs-act' ) ].map( b => ( { b, start: Number( b.dataset.start ), dur: Number( b.dataset.dur ) } ) );
 		let raf = 0, onScreen = true, started = false;
 

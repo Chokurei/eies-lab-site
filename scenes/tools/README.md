@@ -28,3 +28,10 @@ ffmpeg -framerate 30 -i /tmp/hero-frames/f%05d.jpg \
 
 Then update `assets/media/scenes/pv-polyu.json` (act starts, durations and titles) if the acts changed.
 The AV1 file (about 7 MB) is used where the browser supports it; the H.264 file (about 6 MB) everywhere else.
+Phones get a portrait cut of the campus (about 3 MB; same keyframes, cropped from the AV1 file):
+
+```bash
+ffmpeg -c:v libdav1d -i assets/media/scenes/pv-polyu-av1.mp4 -vf "crop=648:1080:1058:0,scale=540:900:flags=lanczos:out_range=tv:out_color_matrix=bt709,format=yuv420p" \
+  -color_range tv -colorspace bt709 -color_primaries bt709 -color_trc bt709 -c:v libx264 -preset veryslow -crf 30 -profile:v high -level 4.1 \
+  -g 60 -keyint_min 30 -force_key_frames "$K" -movflags +faststart -an assets/media/scenes/pv-polyu-mobile.mp4
+```

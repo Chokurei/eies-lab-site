@@ -357,9 +357,11 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 .hs-act-n, .hs-act-t { grid-row: 2; }
 .hs-act-n { font-variant-numeric: tabular-nums; opacity: .7; }
 .hs-act-t { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500; }
+@media (max-width: 767px) { .hs-act-t { display: none; } }   /* too narrow for six titles: numbers + progress bars */
 /* functional scrim only: keeps white copy legible over any frame */
 .hs-veil { z-index: -1; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 38%, rgba(0,0,0,0) 66%); }
-@media (max-width: 767px) { .hs-veil { background: rgba(0,0,0,.66); } }
+/* phones: the copy fills the width below the top third, so darken from there down and let the scene show above it */
+@media (max-width: 767px) { .hs-veil { background: linear-gradient(180deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.32) 24%, rgba(0,0,0,.68) 40%, rgba(0,0,0,.7) 100%); } }
 .hs-inner { width: 100%; max-width: 80rem; margin: 0 auto; padding: 6rem 2rem; box-sizing: content-box; }
 @media (max-width: 1023px) { .hs-inner { padding: 4.5rem 1.5rem; } }
 @media (max-width: 639px) { .hs-inner { padding: 3.5rem 1rem; } }
