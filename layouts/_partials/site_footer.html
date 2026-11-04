@@ -17,7 +17,7 @@
     {{ with $f.links }}
     <nav aria-label="{{ $f.links_title }}">
       <h3>{{ $f.links_title }}</h3>
-      <ul>{{ range . }}<li><a href="{{ .url }}">{{ .text }}</a></li>{{ end }}</ul>
+      <ul>{{ range . }}<li><a href="{{ .url | relLangURL }}">{{ .text }}</a></li>{{ end }}</ul>
     </nav>
     {{ end }}
     <div class="sf-bottom">

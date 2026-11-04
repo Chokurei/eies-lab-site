@@ -1,4 +1,5 @@
 # Footer content per language (layouts/_partials/site_footer.html). Address matches content/contact/_index*.md.
+# Link urls are written like research/ (no leading slash, no /zh/): the template adds both, as for the menus.
 en:
   name: EIES-Lab
   tagline: Embodied intelligence for renewable and interconnected urban energy systems.
@@ -10,11 +11,11 @@ en:
     - Hung Hom, Kowloon, Hong Kong
   links_title: Explore
   links:
-    - { text: Research, url: /research/ }
-    - { text: Publications, url: /publications/ }
-    - { text: Team, url: /team/ }
-    - { text: News, url: /news/ }
-    - { text: Contact, url: /contact/ }
+    - { text: Research, url: research/ }
+    - { text: Publications, url: publications/ }
+    - { text: Team, url: team/ }
+    - { text: News, url: news/ }
+    - { text: Contact, url: contact/ }
   org: PolyU · Department of Building Environment and Energy Engineering (BEEE)
 zh:
   name: EIES-Lab
@@ -26,9 +27,9 @@ zh:
     - 香港九龙红磡
   links_title: 导航
   links:
-    - { text: 研究方向, url: /zh/research/ }
-    - { text: 论文, url: /zh/publications/ }
-    - { text: 团队, url: /zh/team/ }
-    - { text: 新闻, url: /zh/news/ }
-    - { text: 联系我们, url: /zh/contact/ }
+    - { text: 研究方向, url: research/ }
+    - { text: 论文, url: publications/ }
+    - { text: 团队, url: team/ }
+    - { text: 新闻, url: news/ }
+    - { text: 联系我们, url: contact/ }
   org: 香港理工大学 · 建筑环境及能源工程学系（BEEE）

@@ -5,6 +5,8 @@ type: landing
 # validation as real cases; publications/team as selected previews. Details live on /research/, /publications/, /team/.
 # Keep in sync with content/_index.zh.md.
 sections:
+  # Internal links are written like research/ (no leading slash, no /zh/) so they work both locally
+  # and under the GitHub Pages subpath (/eies-lab-site/).
   - block: hero-scene
     content:
       eyebrow: EIES-Lab · The Hong Kong Polytechnic University
@@ -12,10 +14,10 @@ sections:
       text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.**'
       primary_action:
         text: Explore Our Research
-        url: /research/
+        url: research/
       secondary_action:
         text: Our Team
-        url: /team/
+        url: team/
       # Live 3D background (scenes/ project). theme: research theme in scenes/src/themes/; place: scenes/src/places/;
       # poster: shown first and on phones / reduced motion. act: pin one act (0–5), omit to loop.
       scene:
@@ -48,7 +50,7 @@ sections:
     id: thrusts
     content:
       title: '<span class="sec-eyebrow">Our Research</span>Research Thrusts'
-      text: 'Three connected steps of one loop. <a class="section-link" href="/research/">Read more about our research →</a>'
+      text: 'Three connected steps of one loop. <a class="section-link" href="research/">Read more about our research →</a>'
       items:
         - name: Energy-System Perception & Observability
           image: home/thrust-perception.jpg
@@ -65,7 +67,7 @@ sections:
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
       title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Embodied Intelligence in Energy Systems'
-      text: 'A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="/research/#scenarios-intro">Read more about our scenarios →</a>'
+      text: 'A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
           image: home/thrust-world-model.jpg
@@ -81,7 +83,7 @@ sections:
     id: news
     content:
       title: '<span class="sec-eyebrow">Latest</span>News'
-      text: '<a class="section-link" href="/news/">All news →</a>'
+      text: '<a class="section-link" href="news/">All news →</a>'
       count: 3
       filters: { folders: [news] }
     design: { view: date-title-summary }
@@ -91,7 +93,7 @@ sections:
     content:
       eyebrow: Join Us
       title: Build the Future
-      subtitle: '<a class="section-link" href="/team/">Meet the team →</a> &nbsp; <a class="section-link" href="/contact/">Contact us →</a>'
+      subtitle: '<a class="section-link" href="team/">Meet the team →</a> &nbsp; <a class="section-link" href="contact/">Contact us →</a>'
       text: |-
         We welcome students, researchers, and collaborators with interests in energy systems science, GeoAI, physical AI, physics-based modeling, and real-world validation and deployment.
     design:

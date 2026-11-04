@@ -3,6 +3,8 @@ title: ''
 type: landing
 # 与 content/_index.md 结构一一对应；改动时两边同步。
 sections:
+  # Internal links are written like research/ (no leading slash, no /zh/) so they work both locally
+  # and under the GitHub Pages subpath (/eies-lab-site/).
   - block: hero-scene
     content:
       eyebrow: EIES-Lab · 香港理工大学
@@ -10,10 +12,10 @@ sections:
       text: '**能源塑造智能，智能重塑能源系统。**'
       primary_action:
         text: 了解我们的研究
-        url: /zh/research/
+        url: research/
       secondary_action:
         text: 团队成员
-        url: /zh/team/
+        url: team/
       # Live 3D background (scenes/ project). theme: research theme in scenes/src/themes/; place: scenes/src/places/;
       # poster: shown first and on phones / reduced motion. act: pin one act (0–5), omit to loop.
       scene:
@@ -46,7 +48,7 @@ sections:
     id: thrusts
     content:
       title: '<span class="sec-eyebrow">研究内容</span>研究方向'
-      text: '同一闭环中相互衔接的三个环节。<a class="section-link" href="/zh/research/">了解更多研究内容 →</a>'
+      text: '同一闭环中相互衔接的三个环节。<a class="section-link" href="research/">了解更多研究内容 →</a>'
       items:
         - name: 能源系统感知与可观测性
           image: home/thrust-perception.jpg
@@ -63,7 +65,7 @@ sections:
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
       title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的具身智能'
-      text: '一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。<a class="section-link" href="/zh/research/#scenarios-intro">了解更多研究场景 →</a>'
+      text: '一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。<a class="section-link" href="research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
           image: home/thrust-world-model.jpg
@@ -79,7 +81,7 @@ sections:
     id: news
     content:
       title: '<span class="sec-eyebrow">最新动态</span>新闻'
-      text: '<a class="section-link" href="/zh/news/">全部新闻 →</a>'
+      text: '<a class="section-link" href="news/">全部新闻 →</a>'
       count: 3
       filters: { folders: [news] }
     design: { view: date-title-summary }
@@ -89,7 +91,7 @@ sections:
     content:
       eyebrow: 加入我们
       title: 共建未来
-      subtitle: '<a class="section-link" href="/zh/team/">认识团队 →</a> &nbsp; <a class="section-link" href="/zh/contact/">联系我们 →</a>'
+      subtitle: '<a class="section-link" href="team/">认识团队 →</a> &nbsp; <a class="section-link" href="contact/">联系我们 →</a>'
       text: |-
         欢迎对能源系统科学、地理人工智能（GeoAI）、物理人工智能（Physical AI）、基于物理的建模以及真实场景验证与部署感兴趣的学生、研究人员和合作者加入我们。
     design:

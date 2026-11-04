@@ -51,8 +51,8 @@
     <h1 class="hs-title">{{ $title | safeHTML }}</h1>
     {{ with $c.text }}<div class="hs-text">{{ . | markdownify }}</div>{{ end }}
     <div class="hs-actions">
-      {{ with $c.primary_action }}{{ if .url }}<a class="hs-btn" href="{{ .url }}">{{ .text }}</a>{{ end }}{{ end }}
-      {{ with $c.secondary_action }}{{ if .url }}<a class="hs-link" href="{{ .url }}">{{ .text }} <span aria-hidden="true">→</span></a>{{ end }}{{ end }}
+      {{ with $c.primary_action }}{{ if .url }}<a class="hs-btn" href="{{ .url | relLangURL }}">{{ .text }}</a>{{ end }}{{ end }}
+      {{ with $c.secondary_action }}{{ if .url }}<a class="hs-link" href="{{ .url | relLangURL }}">{{ .text }} <span aria-hidden="true">→</span></a>{{ end }}{{ end }}
     </div>
   </div>
   {{ if and $video $rec.acts }}
