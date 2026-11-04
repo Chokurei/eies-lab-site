@@ -1,20 +1,33 @@
-schema: hugoblox/author/v1
 slug: li-yongjiang
-weight: 28
-user_groups: [Affiliated Members]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: LI Yongjiang
+  alternate: 李勇江
   given: Yongjiang
   family: LI
-  alternate: '' # TODO: Chinese name
+avatar: media/authors/liyongjiang.jpg
+user_groups:
+  - Affiliated Members
 role: Affiliated Member
 role_zh: 编外成员
+weight: 28
+joined: 2026-11-04
 interests:
-  # TODO: placeholder, align with the three research thrusts
   - Embodied decision & control
   - Low-altitude / eVTOL energy
 interests_zh:
   - 具身决策与控制
   - 低空 / eVTOL 能源
-
-# TODO: bio, education, links, avatar (assets/media/authors/li-yongjiang.jpg)
+education:
+  - degree: Bachelor of Engineering in Urban Planning
+    degree_zh: 工学学士，城乡规划（在读）
+    institution: Harbin Institute of Technology
+    institution_zh: 哈尔滨工业大学
+    start: 2023-09-01
+  - degree: Exchange Student, Faculty of Engineering (Urban Planning)
+    degree_zh: 交换生（工学部、都市计划）
+    institution: Hokkaido University
+    institution_zh: 北海道大学
+    start: 2025-09-25
+    end: 2026-10-01
