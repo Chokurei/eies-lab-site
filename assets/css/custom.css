@@ -386,7 +386,7 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
   font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--u-body) !important; }
 #section-hero-scene ~ section :is(.md-title, h2[class*="text-3xl"], .mb-6.text-3xl) { font-size: clamp(1.75rem, 3vw, 2.25rem) !important; line-height: 1.22 !important;
   font-weight: 700; letter-spacing: -.015em; color: var(--u-black) !important; }
-#section-hero-scene ~ section :is(.md-subtitle, .ld-sub), #section-hero-scene ~ section .text-center.max-w-3xl.mx-auto > p {
+:is(#section-hero-scene ~ section, section#overview) :is(.md-subtitle, .ld-sub), #section-hero-scene ~ section .text-center.max-w-3xl.mx-auto > p {
   margin: .75rem 0 0 !important; max-width: 40rem; font-size: 1rem !important; line-height: 1.5; font-weight: 400 !important; color: var(--u-body) !important; text-align: left; }
 #section-hero-scene ~ section .text-center.max-w-3xl.mx-auto { max-width: 48rem; text-align: left; margin-left: 0; }
 #section-hero-scene ~ section .mb-12.lg\:mb-16 { margin-bottom: 2.5rem !important; }

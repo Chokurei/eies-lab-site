@@ -8,6 +8,7 @@ sections:
     content:
       eyebrow: Research
       title: Research Thrusts
+      subtitle: Three connected steps of one loop.
       text: |-
         Energy systems are dynamic, interconnected and only partially observable. Their evolving physical states and operational constraints shape what an intelligent agent can observe, predict and safely do. In turn, the agent's actions can change energy flows, equipment operation and system performance.
     design:
