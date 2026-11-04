@@ -20,3 +20,24 @@ interests_zh:
   - 基于物理的世界模型
   - 建筑与储能动态
 website: https://jiazeli0329.github.io/
+links:
+  - icon: at-symbol
+    url: jiazeli0923@gmail.com
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=fmupigYAAAAJ&hl=en
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0008-8214-5954
+education:
+  - degree: BE
+    degree_zh: 工学学士
+    institution: Beijing University of Technology
+    institution_zh: 北京工业大学
+    start: 2022-09-01
+    end: 2026-07-01
+skills:
+  - name: Football
+    name_zh: 足球
+    sample: false
+  - name: Jazz Piano
+    name_zh: 爵士钢琴
+    sample: false
