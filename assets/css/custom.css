@@ -387,8 +387,8 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 .hs-link:hover { background: #333; }
 
 /* ---------- Sections ---------- */
-#section-hero-scene ~ section.hbb-section { padding-top: 6rem !important; padding-bottom: 6rem !important; background: transparent; border: 0; }
-@media (max-width: 767px) { #section-hero-scene ~ section.hbb-section { padding-top: 4rem !important; padding-bottom: 4rem !important; } }
+#section-hero-scene ~ section.hbb-section { padding-top: 4rem !important; padding-bottom: 4rem !important; background: transparent; border: 0; }
+@media (max-width: 767px) { #section-hero-scene ~ section.hbb-section { padding-top: 3rem !important; padding-bottom: 3rem !important; } }
 #section-hero-scene ~ section.hbb-section + section.hbb-section:not(#join) { border-top: 1px solid var(--u-line); }
 
 /* labels, titles, leads, links */
@@ -455,7 +455,7 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 #section-hero-scene ~ section#news .mt-10.flex.justify-center:has(> a) { display: none; } /* "See all" duplicates the header link */
 
 /* ---------- Join: black block that runs into the black footer ---------- */
-#section-hero-scene ~ section#join { margin-top: 6rem; padding: 6rem 0 !important; background: #000 !important; color: #fff; }
+#section-hero-scene ~ section#join { margin-top: 2rem; padding: 4.5rem 0 !important; background: #000 !important; color: #fff; }
 #section-hero-scene ~ section#join .home-section-bg { display: none; }
 #section-hero-scene ~ section#join .md-eyebrow { color: #afafaf !important; }
 #section-hero-scene ~ section#join .md-title { color: #fff !important; font-size: clamp(2rem, 4vw, 3.25rem) !important; line-height: 1.18 !important; }
