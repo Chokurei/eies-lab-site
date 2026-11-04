@@ -20,27 +20,31 @@ interests_zh:
   - 基于物理的世界模型
   - 建筑与储能动态
 bio: >-
-  I am a first-year PhD student at The Hong Kong Polytechnic University (PolyU)
-  and a member of EIES-Lab. I received my bachelor’s degree in Building Science
-  and Engineering with a secondary major in Artificial Intelligence and Data
-  Analytics from PolyU. 
+  Yujie Jiang is a first-year PhD student at The Hong Kong Polytechnic
+  University (PolyU) and a member of EIES-Lab. He received his bachelor’s degree
+  in Building Science and Engineering with a Secondary Major in Artificial
+  Intelligence and Data Analytics from PolyU in 2026. 
 
 
-  My research interests include physics-grounded world models and the dynamics
+  His research interests include physics-grounded world models and the dynamics
   of buildings and energy storage systems.
+bio_zh: |-
+  江宇杰现为香港理工大学 EIES-Lab 的一年级博士生。本科毕业于香港理工大学，主修建筑科学及工程学，副主修人工智能及数据分析。
+
+  研究兴趣包括融合物理知识的世界模型，以及建筑与储能系统的动态特性。
 education:
-  - degree: BEng in Building Science and Engineering with a Secondary Major in
+  - degree: BEng, Building Science and Engineering with a Secondary Major in
       Artificial Intelligence and Data Analytics
+    degree_zh: 工学学士，建筑科学及工程学（副主修人工智能及数据分析）
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2022-09-01
     end: 2026-09-01
-  - degree: PhD in Building Environment and Energy Engineering
+  - degree: PhD, Building Environment and Energy Engineering
     degree_zh: 博士，建筑环境及能源工程
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2026-09-01
-    end: 2026-11-03
 skills:
   - name: Technical Skills
     name_zh: 技术能力
@@ -54,4 +58,6 @@ skills:
     sample: false
     items:
       - name: Photography, Movie, Painting
+        name_zh: 摄影，电影，绘画
       - name: Table tennis
+        name_zh: 乒乓球
