@@ -44,7 +44,7 @@ sections:
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
           status: active
-          image: home/thrust-world-model.jpg
+          image: home/case-solar-twin.jpg
           description: Integrating active urban sensing, physics-grounded solar assessment, building-integrated photovoltaics, and adaptive energy management. We investigate how intelligent sensing, physical world models, and autonomous control enable more reliable renewable energy assessment, deployment, and operation in complex urban environments.
         - name: Embodied Intelligence for Data Center Energy & Cooling
           status: active

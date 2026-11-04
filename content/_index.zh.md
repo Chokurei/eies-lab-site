@@ -66,7 +66,7 @@ sections:
       text: '一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。<a class="section-link" href="/zh/research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
-          image: home/thrust-world-model.jpg
+          image: home/case-solar-twin.jpg
           status: active
         - name: 面向数据中心能源与冷却的具身智能
           image: home/case-datacenter.jpg
