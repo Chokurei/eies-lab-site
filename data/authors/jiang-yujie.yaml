@@ -31,6 +31,7 @@ education:
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2026-09-01
+    end: 2026-11-03
 skills:
   - name: Technical Skills
     name_zh: 技术能力
@@ -43,6 +44,5 @@ skills:
     name_zh: 爱好
     sample: false
     items:
-      - name: Movie
-      - name: Photography
-      - name: Painting
+      - name: Photography, Movie, Painting
+      - name: Table Tennis
