@@ -29,5 +29,15 @@ bio: My research interests lie at the intersection of geospatial analysis, urban
 bio_zh: 我的研究方向聚焦地理空间分析、城市环境与低碳能源系统的交叉，重点关注城市能源设施与建筑形态、微气候之间的相互作用，探索兼顾能源效率与热环境改善的空间布局和设计方法。此前参与过低温输电与
   LNG 冷能利用研究，关注多源环境数据与物理模型在能源系统分析及环境影响评估中的应用。
 education:
-  - start: 2026-11-04
-    end: 2026-11-04
+  - degree: BS in Ecology
+    degree_zh: 学士，生态学
+    institution: Jinan University
+    institution_zh: 暨南大学
+    start: 2020-09-01
+    end: 2024-06-01
+  - degree: MS in Urban Studies
+    degree_zh: 硕士，城市学
+    institution: The Chinese University of Hong Kong, Shenzhen
+    institution_zh: 香港中文大学（深圳）
+    start: 2024-09-01
+    end: 2025-06-01
