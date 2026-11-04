@@ -44,5 +44,29 @@ bio_zh: 邓睿哲现为香港理工大学建筑环境与能源工程系博士三
 links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=l05MGhMAAAAJ&hl=zh-CN
+education:
+  - degree: PhD, Building Energy
+    degree_zh: 博士，建筑环境及能源工程
+    institution: The Hong Kong Polytechnic University
+    institution_zh: 香港理工大学
+    start: 2024-09-01
+  - degree: PhD, Electronic Information
+    degree_zh: 博士，电子信息
+    institution: Aerospace Information Research Institute, Chinese Academy of Sciences
+    institution_zh: 空天信息创新研究院，中国科学院大学
+    start: 2022-09-01
+    end: 2023-06-30
+  - degree: MS, Photogrammetry and Remote Sensing
+    degree_zh: 硕士，摄影测量与遥感
+    institution: China University of Geoscience (Wuhan)
+    institution_zh: 中国地质大学（武汉）
+    start: 2019-09-01
+    end: 2022-06-30
+  - degree: BS, Remote Sensing Science and Technology
+    degree_zh: 学士，遥感科学与技术
+    institution: China University of Geoscience (Wuhan)
+    institution_zh: 中国地质大学（武汉）
+    start: 2015-09-01
+    end: 2019-06-30
 affiliations:
-  - {}
+  - name: EIES-Lab · PolyU
