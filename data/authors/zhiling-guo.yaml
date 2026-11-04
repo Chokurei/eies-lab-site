@@ -25,17 +25,18 @@ interests_zh:
   - 地理空间人工智能
   - 物理信息驱动的AI
   - 气候韧性基础设施
-bio: >
-  Zhiling Guo is an Assistant Professor in the Department of Building
+bio: "Dr. Zhiling Guo is an Assistant Professor in the Department of Building
   Environment and Energy Engineering (BEEE) at The Hong Kong Polytechnic
-  University. The research develops digital, intelligent, and efficient urban
-  energy systems for sustainable and resilient cities, integrating machine
-  learning, geoscience, IoT, and renewable energy.
-bio_zh: |
-  香港理工大学建筑环境及能源工程学系（BEEE）助理教授。
-  研究聚焦数字化、智能化、高效的城市能源系统，
-  融合机器学习、地球科学、物联网与可再生能源技术，服务于可持续、有韧性的城市。
-website: https://example.com/
+  University. His research focuses on Embodied Intelligence in Energy Systems:
+  how energy dynamics and physical constraints shape intelligent perception and
+  decision-making, and how closed-loop physical actions enable energy systems to
+  adapt autonomously. Building on his background in spatiotemporal data
+  analytics, GeoAI and remote sensing, he studies the Energy–Information–Action
+  loop across urban solar–storage systems, data-center energy, and
+  climate-resilient energy networks."
+bio_zh: 郭直灵博士现为香港理工大学屋宇设备工程学系助理教授。他的研究聚焦于能源系统中的具身智能：探讨能源动态与物理约束如何塑造智能体的感知与决策，以及闭环的物理行动如何使能源系统实现自主适应。在其时空数据分析、GeoAI
+  与遥感研究背景基础上，他重点研究贯穿城市光伏—储能系统、数据中心能源以及具备气候韧性的能源网络的“能源—信息—行动”闭环机制。
+website: https://chokurei.github.io/
 links:
   - icon: at-symbol
     url: zhiling.guo@polyu.edu.hk
