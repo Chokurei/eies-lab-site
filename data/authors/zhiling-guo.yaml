@@ -8,7 +8,7 @@ name:
   alternate: 郭直灵
   given: Zhiling
   family: Guo
-avatar: media/authors/WechatIMG107009-1.jpg
+avatar: media/authors/WechatIMG107009.jpg
 user_groups:
   - Principal Investigator
 role: Assistant Professor
@@ -17,8 +17,8 @@ weight: 1
 joined: 2025-05-19
 interests:
   - Urban energy systems
-  - Geospatial Al
-  - Physics-informed Al
+  - Geospatial AI
+  - Physics-informed AI
   - Climate-resilient infrastructure
 interests_zh:
   - 城市能源系统
@@ -43,7 +43,7 @@ bio_zh: |
 website: https://example.com/
 links:
   - icon: at-symbol
-    url: zhiling.guo@polyu.edu.hk
+    url: mailto:zhiling.guo@polyu.edu.hk
     label: E-mail
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=RWzTK10AAAAJ&hl=en&oi=ao
