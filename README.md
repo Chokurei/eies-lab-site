@@ -50,7 +50,7 @@ The extra `demo-paper-3` through `demo-paper-8` bundles are member-only previews
 
 - Monochrome system (black / white / greys, pill buttons, 12px cards, Inter) in the `HOMEPAGE — monochrome system` block of `assets/css/custom.css`; inner pages still use the earlier site-wide rules above it.
 - Homepage blocks: `hero-scene` (3D scene hero), `loop-diagram` (animated closed loop, content in `data/loop.yaml`). Footer: `layouts/_partials/site_footer.html` + `data/site_footer.yaml`.
-- Logo: `assets/media/logo.png` (navbar, footer) and `assets/media/icon.png` (favicon) are the PolyU emblem. `static/media/eies-framework.jpg` is the source framework figure the loop diagram is based on.
+- Logo: `assets/media/logo.svg` is the lab logo in the navbar and footer (its text uses currentColor, so it follows the theme); `assets/media/icon.png` (favicon) is the three-bar symbol. The footer's affiliated-centre logo is `assets/media/partners/uex-white.png` (set in `data/site_footer.yaml`). `static/media/eies-framework.jpg` is the source framework figure the loop diagram is based on.
 
 ## Local overrides of theme files
 

@@ -1,12 +1,13 @@
-{{/* Site footer: black, three columns (lab / address / links) + copyright row. Content: data/site_footer.yaml (en/zh).
+{{/* Site footer: black, three columns (lab logo + affiliated centre / address / links) + copyright row. Content: data/site_footer.yaml (en/zh).
      Replaces the theme footer (no language switcher, licence icons or theme credit). */}}
 {{ $L := cond (eq site.Language.Lang "zh") "zh" "en" }}
 {{ $f := index (hugo.Data.site_footer | default dict) $L | default dict }}
 <footer class="sf">
   <div class="sf-inner">
     <div>
-      <p class="sf-brand">{{ with resources.Get "media/logo.png" }}{{ $img := .Resize "64x" }}<img src="{{ $img.RelPermalink }}" alt="" width="32" height="32">{{ end }}<span>{{ $f.name | default site.Title }}</span></p>
+      <p class="sf-brand">{{ with resources.Get "media/logo.svg" }}{{ .Content | safeHTML }}{{ end }}</p>
       {{ with $f.tagline }}<p class="sf-tag">{{ . }}</p>{{ end }}
+      {{ with $f.centre }}<a class="sf-centre" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ with resources.Get (printf "media/%s" .logo) }}{{ $img := .Resize "240x" }}<img src="{{ $img.RelPermalink }}" alt="" width="{{ div $img.Width 2 }}" height="{{ div $img.Height 2 }}">{{ end }}<span>{{ .name }}</span></a>{{ end }}
     </div>
     {{ with $f.address }}
     <div>

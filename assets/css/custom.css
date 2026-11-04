@@ -458,8 +458,12 @@ body:has(#section-hero-scene) .sf { margin-top: 0; } /* homepage: Join is alread
 .sf-inner { max-width: 80rem; margin: 0 auto; padding: 4rem 2rem 2rem; box-sizing: content-box; display: grid; gap: 2.5rem; }
 @media (min-width: 900px) { .sf-inner { grid-template-columns: 2fr 2fr 1fr; } }
 @media (max-width: 639px) { .sf-inner { padding: 3rem 1rem 1.5rem; } }
-.sf-brand { display: flex; align-items: center; gap: .75rem; color: #fff; font-size: 1.25rem; font-weight: 700; }
-.sf-brand img { width: 32px; height: 32px; }
+/* lab logo (assets/media/logo.svg, text in currentColor = white here); affiliated centre (UEX) below the tagline */
+.sf-brand svg { display: block; width: auto; height: 52px; }
+.sf-centre { display: flex; align-items: center; gap: 1rem; width: fit-content; max-width: 22rem; margin-top: 2rem; }
+.sf-centre img { flex: none; width: auto; height: 44px; opacity: .9; transition: opacity .2s ease; }
+.sf-centre span { font-size: .8125rem; line-height: 1.45; }
+.sf-centre:hover img { opacity: 1; }
 .sf p { margin: 0; color: #afafaf !important; }
 .sf-tag { margin-top: .75rem !important; max-width: 22rem; }
 .sf .sf-brand { color: #fff !important; }
