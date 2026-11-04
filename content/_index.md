@@ -54,13 +54,13 @@ sections:
       items:
         - name: Energy-System Perception & Observability
           image: home/thrust-perception.jpg
-          description: 'What can an energy agent know, and what information does it need?'
+          description: 'What information is sufficient for reliable energy decisions?'
         - name: Physics-Grounded Energy World Models
           image: home/thrust-world-model.jpg
-          description: 'How will an energy system respond to changes and actions?'
+          description: 'How do energy systems respond to changes and actions?'
         - name: Energy-Constrained Embodied Decision & Control
           image: home/thrust-control.jpg
-          description: 'How can an energy agent act safely and adaptively in the physical world?'
+          description: 'How can energy agents act safely and adaptively?'
 
   - block: focus-areas
     id: cases

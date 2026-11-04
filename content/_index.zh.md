@@ -52,13 +52,13 @@ sections:
       items:
         - name: 能源系统感知与可观测性
           image: home/thrust-perception.jpg
-          description: '能源智能体能知道什么？它需要哪些信息？'
+          description: '什么样的信息足以支撑可靠的能源决策？'
         - name: 基于物理的能源世界模型
           image: home/thrust-world-model.jpg
-          description: '能源系统会如何响应变化与行动？'
+          description: '能源系统如何响应变化与行动？'
         - name: 能源约束下的具身决策与控制
           image: home/thrust-control.jpg
-          description: '能源智能体如何在物理世界中安全、自适应地行动？'
+          description: '能源智能体如何安全、自适应地行动？'
 
   - block: focus-areas
     id: cases
