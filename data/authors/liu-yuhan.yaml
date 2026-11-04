@@ -39,6 +39,14 @@ links:
     url: https://www.researchgate.net/profile/Yuhan-Liu-105
     label: ResearchGate
     label_zh: ResearchGate
+  - icon: brands/github
+    url: https://github.com/yhn-liu
+    label: GitHub
+    label_zh: GitHub
+  - icon: at-symbol
+    url: mailto:wcj883@alumni.ku.dk
+    label: Email
+    label_zh: 电子邮箱
 education:
   - degree: Bachelor, Computer Science and Technology
     degree_zh: 学士，计算机科学与技术
