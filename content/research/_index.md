@@ -32,36 +32,35 @@ sections:
     content:
       eyebrow: Flagship Research Scenarios
       title: Embodied Intelligence in Energy Systems
-      subtitle: From Physical Energy Dynamics to Autonomous Intelligent Action.
+      subtitle: A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics.
       text: |-
         We investigate how intelligent agents perceive, model, and interact with physical energy systems. Across complementary research scenarios, we explore how energy constraints, incomplete observations, and physical feedback shape autonomous adaptation and coordinated action.
     design:
       layout: split
 
-  # Images marked TODO are placeholders borrowed from other cards.
   - block: focus-areas
     id: energy-systems
     content:
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
           status: active
-          image: home/case-solar.jpg
+          image: home/thrust-world-model.jpg
           description: Integrating active urban sensing, physics-grounded solar assessment, building-integrated photovoltaics, and adaptive energy management. We investigate how intelligent sensing, physical world models, and autonomous control enable more reliable renewable energy assessment, deployment, and operation in complex urban environments.
         - name: Embodied Intelligence for Data Center Energy & Cooling
           status: active
-          image: home/case-buildings.jpg  # TODO: data center photo
+          image: home/case-datacenter.jpg
           description: Integrating indoor spatial perception, BIM-informed energy–thermal world models, autonomous inspection, and adaptive cooling control. We investigate how intelligent agents interact with physical data center environments to improve energy efficiency, thermal management, and operational reliability.
         - name: Climate-Resilient Urban Renewable Energy Networks
           status: active
-          image: home/area-resilience.jpg
+          image: home/case-resilience.jpg
           description: Investigating autonomous coordination among distributed renewable generation, buildings, energy storage, electric vehicles, and urban energy networks under climate extremes. We study how multi-agent intelligence, physical energy interactions, and adaptive control enhance energy resilience, service continuity, and system recovery.
         - name: Low-Altitude Energy & Mobility Systems
           status: emerging
-          image: home/area-low-altitude.jpg
+          image: home/case-low-altitude.jpg
           description: Exploring the coupling among low-altitude mobility, onboard energy constraints, and ground-based energy infrastructure. We investigate energy-aware autonomous missions, intelligent charging and storage coordination, and adaptive energy management for UAVs, future eVTOL systems, and low-altitude mobility networks.
         - name: Energy-Integrated Smart Agriculture
           status: emerging
-          image: home/case-agriculture.jpg
+          image: home/case-greenhouse.jpg
           description: Exploring embodied intelligence in coupled agricultural energy, environmental, and biological systems. We investigate how intelligent perception, physics-grounded world models, and autonomous physical control can coordinate energy supply, environmental regulation, water use, and crop growth for efficient and adaptive agricultural operations.
 
 ---

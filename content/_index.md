@@ -65,16 +65,16 @@ sections:
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
       title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Embodied Intelligence in Energy Systems'
-      text: 'From Physical Energy Dynamics to Autonomous Intelligent Action. <a class="section-link" href="/research/#scenarios-intro">Read more about our scenarios →</a>'
+      text: 'A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="/research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
-          image: home/case-solar.jpg
+          image: home/thrust-world-model.jpg
           status: active
         - name: Embodied Intelligence for Data Center Energy & Cooling
-          image: home/case-buildings.jpg  # TODO: data center photo
+          image: home/case-datacenter.jpg
           status: active
         - name: Climate-Resilient Urban Renewable Energy Networks
-          image: home/area-resilience.jpg
+          image: home/case-resilience.jpg
           status: active
 
   - block: collection

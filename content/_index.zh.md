@@ -63,16 +63,16 @@ sections:
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
       title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的具身智能'
-      text: '从物理能源动态到自主智能行动。<a class="section-link" href="/zh/research/#scenarios-intro">了解更多研究场景 →</a>'
+      text: '一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。<a class="section-link" href="/zh/research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
-          image: home/case-solar.jpg
+          image: home/thrust-world-model.jpg
           status: active
         - name: 面向数据中心能源与冷却的具身智能
-          image: home/case-buildings.jpg  # TODO: data center photo
+          image: home/case-datacenter.jpg
           status: active
         - name: 气候韧性城市可再生能源网络
-          image: home/area-resilience.jpg
+          image: home/case-resilience.jpg
           status: active
 
   - block: collection

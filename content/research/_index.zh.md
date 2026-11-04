@@ -32,36 +32,35 @@ sections:
     content:
       eyebrow: 旗舰研究场景
       title: 能源系统中的具身智能
-      subtitle: 从物理能源动态到自主智能行动。
+      subtitle: 一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。
       text: |-
         我们研究智能体如何感知、建模并作用于物理能源系统。在多个相互补充的研究场景中，我们探索能源约束、不完整观测与物理反馈如何塑造自主适应与协同行动。
     design:
       layout: split
 
-  # 标 TODO 的配图是借用其他卡片的占位图。
   - block: focus-areas
     id: energy-systems
     content:
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
           status: active
-          image: home/case-solar.jpg
+          image: home/thrust-world-model.jpg
           description: 整合城市主动感知、基于物理的太阳能评估、光伏建筑一体化与自适应能源管理。我们研究智能感知、物理世界模型与自主控制如何在复杂城市环境中，实现更可靠的可再生能源评估、部署与运行。
         - name: 面向数据中心能源与冷却的具身智能
           status: active
-          image: home/case-buildings.jpg  # TODO: 数据中心照片
+          image: home/case-datacenter.jpg
           description: 整合室内空间感知、基于 BIM 的能量–热世界模型、自主巡检与自适应冷却控制。我们研究智能体如何与数据中心的物理环境交互，以提升能源效率、热管理水平与运行可靠性。
         - name: 气候韧性城市可再生能源网络
           status: active
-          image: home/area-resilience.jpg
+          image: home/case-resilience.jpg
           description: 研究极端气候下分布式可再生能源发电、建筑、储能、电动汽车与城市能源网络之间的自主协同。我们探讨多智能体智能、物理能量交互与自适应控制如何增强能源韧性、保障服务连续性并加快系统恢复。
         - name: 低空能源与交通系统
           status: emerging
-          image: home/area-low-altitude.jpg
+          image: home/case-low-altitude.jpg
           description: 探索低空交通、机载能源约束与地面能源基础设施之间的耦合。我们研究面向无人机、未来 eVTOL 系统与低空交通网络的能源感知自主任务、智能充电与储能协同，以及自适应能源管理。
         - name: 能源融合的智慧农业
           status: emerging
-          image: home/case-agriculture.jpg
+          image: home/case-greenhouse.jpg
           description: 探索农业能源、环境与生物耦合系统中的具身智能。我们研究智能感知、基于物理的世界模型与自主物理控制如何协调能源供给、环境调控、用水与作物生长，实现高效、自适应的农业运行。
 
 ---

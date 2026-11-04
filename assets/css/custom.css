@@ -956,7 +956,8 @@ a.mp-talk:hover .mp-talk-arrow { background: var(--u-black); color: var(--u-whit
 /* Homepage section intros (#thrusts, #cases): sentence and "Read more →" link on one line */
 #section-hero-scene ~ section:is(#thrusts, #cases) .max-w-3xl.mx-auto:has(> p .section-link) { max-width: 64rem !important; }
 #section-hero-scene ~ section:is(#thrusts, #cases) p:has(> .section-link) { max-width: none !important; }
-#section-hero-scene ~ section:is(#thrusts, #cases) .section-link { white-space: nowrap; }
+/* No left margin, only the preceding space: when a long sentence pushes the link onto the next line, the space collapses and the link lines up with the text */
+#section-hero-scene ~ section:is(#thrusts, #cases) .section-link { white-space: nowrap; margin-left: 0; }
 /* Homepage Approach intro in the Mission block's two-column form (loop-diagram content.text): same columns, same right-hand text */
 #approach .ld-split { margin-bottom: 2.5rem; }
 @media (min-width: 900px) { #approach .md-split.ld-split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
