@@ -1,20 +1,37 @@
-schema: hugoblox/author/v1
 slug: zhang-xiao
-weight: 22
-user_groups: [Research Assistants]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: ZHANG Xiao
+  alternate: 张骁
   given: Xiao
   family: ZHANG
-  alternate: '' # TODO: Chinese name
+avatar: media/authors/223d7fe5fa7bd180631849aef6ad31fb.jpg
+user_groups:
+  - Research Assistants
 role: Research Assistant
 role_zh: 研究助理
+weight: 22
+joined: 2026-07-07
 interests:
-  # TODO: placeholder, align with the three research thrusts
-  - Embodied decision & control
-  - Low-altitude / eVTOL energy
+  - urban renewal
+  - BIM /Life Cycle Analysis
 interests_zh:
-  - 具身决策与控制
-  - 低空 / eVTOL 能源
-
-# TODO: bio, education, links, avatar (assets/media/authors/zhang-xiao.jpg)
+  - 城市更新
+  - BIM/全生命周期分析
+bio: Originally worked in the field of architectural design. At present, the
+  focus has shifted to the energy-related aspects of building renovation.
+  Interest lies in the energy impacts brought about by urban renewal and the
+  entire life cycle of buildings.
+bio_zh: 原从事建筑设计行业。目前兴趣方向转向建筑更新有关的能源影响。兴趣是城市更新与建筑全生命周期产生的能源足迹和环境影响。
+education:
+  - degree: MArch，architecture design
+    degree_zh: 硕士
+    institution: NUS
+    institution_zh: 新加坡国立大学
+    start: 2023-06-05
+    end: 2025-08-05
+    summary: Carry out urban design/architectural design theoretical research under
+      the guidance of Professor Ruzica BOZOVIC STAMENOVIC (Dr)
+    summary_zh: |
+      随导师Ruzica BOZOVIC STAMENOVIC (DR) 进行城市设计/建筑设计理论研究
