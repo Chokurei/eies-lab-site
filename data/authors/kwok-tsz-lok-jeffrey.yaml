@@ -13,22 +13,14 @@ interests:
   - Photovoltaic system monitoring
   - Energy data quality and anomaly detection
   - Interpretable machine learning
-  - School and building energy management
+  - Energy monitoring systems (EMS) for schools and buildings
 interests_zh:
   - 光伏系统监测
   - 能源数据质量与异常检测
   - 可解释机器学习
-  - 学校与建筑能源管理
-bio: Jeffrey is a PhD student in the Department of Building Environment and
-  Energy Engineering at The Hong Kong Polytechnic University, supervised by
-  Prof. Zhiling Guo. His research interests include photovoltaic system
-  monitoring, energy data quality, anomaly detection and interpretable machine
-  learning. He is developing a study of incomplete telemetry in school
-  photovoltaic systems, with an emphasis on distinguishing monitoring problems
-  from suspected operational anomalies and evaluating them against independent
-  operational evidence.
-bio_zh: Jeffrey 是香港理工大学建筑环境及能源工程学系的博士研究生，导师为 Prof. Zhiling
-  Guo。他的研究兴趣包括光伏系统监测、能源数据质量、异常检测及可解释机器学习。目前，他正在开展面向学校光伏系统不完整监测数据的研究，重点是区分监测数据问题与疑似运行异常，并利用独立的运行记录进行验证。
+  - 面向学校与建筑的能源监测系统（EMS）
+bio: "Jeffrey is a PhD student in the Department of Building Environment and Energy Engineering at The Hong Kong Polytechnic University, supervised by Prof. Zhiling Guo. His research interests span energy monitoring systems (EMS), photovoltaic monitoring, energy data quality and interpretable machine learning for school and building energy management. His current research explores how to distinguish telemetry problems from suspected operational anomalies in school photovoltaic systems under incomplete monitoring data, with an emphasis on validation against independent operational records."
+bio_zh: "Jeffrey 是香港理工大学建筑环境及能源工程学系的博士研究生，导师为 Prof. Zhiling Guo。他的研究兴趣涵盖能源监测系统（EMS）、光伏系统监测、能源数据质量，以及面向学校和建筑能源管理的可解释机器学习。目前，他正在研究如何在监测数据不完整的情况下，区分学校光伏系统的监测数据问题与疑似运行异常，并强调利用独立的运行记录进行验证。"
 links:
   - icon: at-symbol
     url: mailto:jeffrey-tsz-lok.kwok@connect.polyu.hk
