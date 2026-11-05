@@ -1,20 +1,36 @@
-schema: hugoblox/author/v1
 slug: li-xiaoyuan
-weight: 12
-user_groups: [Postdoctoral Fellows]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: LI Xiaoyuan
+  alternate: 李啸远
   given: Xiaoyuan
   family: LI
-  alternate: '' # TODO: Chinese name
+avatar: media/authors/微信图片_20260329101512_94_5.jpg
+user_groups:
+  - Postdoctoral Fellows
 role: Postdoctoral Fellow
 role_zh: 博士后研究员
+weight: 12
+joined: 2026-06-16
 interests:
-  # TODO: placeholder, align with the three research thrusts
-  - Physics-grounded world models
-  - Building & storage dynamics
+  - Optimal design and operation of building energy systems
+  - Building energy flexibility and demand response
 interests_zh:
-  - 基于物理的世界模型
-  - 建筑与储能动态
-
-# TODO: bio, education, links, avatar (assets/media/authors/li-xiaoyuan.jpg)
+  - 建筑能源系统设计与运行优化
+  - 建筑能源灵活性与电力市场
+bio: I received my bachelor’s degree in Building Environment and Energy
+  Engineering from Tianjin University in 2020. I then entered Tianjin
+  University’s master’s program on recommendation after ranking first in my
+  major. I began doctoral studies in 2022 and joint doctoral training at the
+  Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, in
+  2023. In 2026, I received my PhD in Building Environment and Energy
+  Engineering from Tianjin University. My dissertation received the university’s
+  Outstanding Doctoral Dissertation Award. Later that year, I began postdoctoral
+  research at The Hong Kong Polytechnic University.
+bio_zh: 2020年获天津大学建筑环境与能源应用工程专业学士学位，并以专业第一的成绩获推荐免试攻读硕士研究生资格。2022年转入博士阶段学习，2023年起在中国科学院深圳先进技术研究院接受联合培养。2026年获天津大学建筑环境与能源应用工程专业博士学位，博士学位论文获评天津大学优秀博士学位论文。同年起在香港理工大学从事博士后研究。
+links:
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=zh-CN&user=6O5374wAAAAJ
+  - icon: at-symbol
+    url: xiaoyuan.li@polyu.edu.hk
