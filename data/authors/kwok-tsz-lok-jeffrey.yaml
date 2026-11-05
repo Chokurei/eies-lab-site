@@ -9,3 +9,43 @@ role: PhD Student (Year 3)
 role_zh: 博士生（三年级）
 weight: 17
 joined: 2026-11-04
+interests:
+  - Photovoltaic system monitoring
+  - Energy data quality and anomaly detection
+  - Interpretable machine learning
+  - School and building energy management
+interests_zh:
+  - 光伏系统监测
+  - 能源数据质量与异常检测
+  - 可解释机器学习
+  - 学校与建筑能源管理
+bio: Jeffrey is a PhD student in the Department of Building Environment and
+  Energy Engineering at The Hong Kong Polytechnic University, supervised by
+  Prof. Zhiling Guo. His research interests include photovoltaic system
+  monitoring, energy data quality, anomaly detection and interpretable machine
+  learning. He is developing a study of incomplete telemetry in school
+  photovoltaic systems, with an emphasis on distinguishing monitoring problems
+  from suspected operational anomalies and evaluating them against independent
+  operational evidence.
+bio_zh: Jeffrey 是香港理工大学建筑环境及能源工程学系的博士研究生，导师为 Prof. Zhiling
+  Guo。他的研究兴趣包括光伏系统监测、能源数据质量、异常检测及可解释机器学习。目前，他正在开展面向学校光伏系统不完整监测数据的研究，重点是区分监测数据问题与疑似运行异常，并利用独立的运行记录进行验证。
+links:
+  - icon: at-symbol
+    url: mailto:jeffrey-tsz-lok.kwok@connect.polyu.hk
+    label: Email
+    label_zh: 电子邮件
+  - icon: brands/github
+    url: https://github.com/jeffreyktl
+    label: GitHub
+    label_zh: GitHub
+education:
+  - degree: PhD in Building Environment and Energy Engineering (in progress)
+    degree_zh: 建筑环境及能源工程博士（在读）
+    institution: The Hong Kong Polytechnic University
+    institution_zh: 香港理工大学
+    summary: "Supervisor: Prof. Zhiling Guo"
+    summary_zh: 导师：Prof. Zhiling Guo
+affiliations:
+  - name: The Hong Kong Polytechnic University
+    name_zh: 香港理工大学
+    url: https://www.polyu.edu.hk/
