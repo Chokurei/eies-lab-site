@@ -27,15 +27,25 @@ interests_zh:
   - 气候韧性基础设施
 bio: "Dr. Zhiling Guo is an Assistant Professor in the Department of Building
   Environment and Energy Engineering (BEEE) at The Hong Kong Polytechnic
-  University. His research focuses on Embodied Intelligence in Energy Systems:
-  how energy dynamics and physical constraints shape intelligent perception and
-  decision-making, and how closed-loop physical actions enable energy systems to
-  adapt autonomously. Building on his background in spatiotemporal data
-  analytics, GeoAI and remote sensing, he studies the Energy–Information–Action
-  loop across urban solar–storage systems, data-center energy, and
-  climate-resilient energy networks."
-bio_zh: 郭直灵博士现为香港理工大学屋宇设备工程学系助理教授。他的研究聚焦于能源系统中的具身智能：探讨能源动态与物理约束如何塑造智能体的感知与决策，以及闭环的物理行动如何使能源系统实现自主适应。在其时空数据分析、GeoAI
-  与遥感研究背景基础上，他重点研究贯穿城市光伏—储能系统、数据中心能源以及具备气候韧性的能源网络的“能源—信息—行动”闭环机制。
+  University. His research focuses on embodied intelligence in energy systems,
+  exploring how energy dynamics and physical constraints shape intelligent
+  perception and decision-making, and how physical actions and feedback enable
+  energy systems to adapt autonomously. His group pursues three interconnected
+  research directions: Energy-System Perception & Observability, which
+  investigates how to obtain decision-relevant information from incomplete
+  observations; Physics-Grounded Energy World Models, which aim to understand
+  and predict how energy systems evolve and respond to actions; and
+  Energy-Constrained Embodied Decision & Control, which focuses on safe,
+  adaptive decision-making and physical interaction with energy systems.
+  Building on his expertise in renewable energy assessment, AI-enhanced
+  geospatial data science, and urban sensing and simulation, the group
+  integrates these directions through a unified Energy–Information–Action
+  framework, with applications in urban solar–storage systems, data-center
+  energy and cooling, and climate-resilient urban renewable energy networks."
+bio_zh: |-
+  郭直灵博士现为香港理工大学建筑环境与能源工程系（BEEE）助理教授。他的研究聚焦于能源系统中的具身智能，探讨能源动态与物理约束如何塑造智能感知与决策，以及物理行动与反馈如何使能源系统实现自主适应。
+  他的研究团队围绕三个相互关联的方向开展工作：（1）能源系统感知与可观测性，研究如何在观测不完整的情况下获取与决策相关的信息；（2）物理约束下的能源世界模型，旨在理解并预测能源系统如何演化以及对行动如何响应；（3）受能源约束的具身决策与控制，聚焦于安全、可适应的决策机制以及与能源系统的物理交互。
+  依托其在可再生能源评估、AI 增强的地理空间数据科学以及城市感知与仿真方面的专长，团队通过统一的“能源—信息—行动”框架将上述方向加以整合，并面向城市光伏—储能系统、数据中心能源与制冷，以及具备气候韧性的城市可再生能源网络等应用场景开展研究。
 website: https://chokurei.github.io/
 links:
   - icon: at-symbol
