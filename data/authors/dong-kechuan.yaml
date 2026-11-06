@@ -64,7 +64,6 @@ education:
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2026-09-01
-    end: 2026-11-06
   - degree: MS in Information and Communication Engineering
     degree_zh: 硕士，信息与通信工程（电子情报学）
     institution: The University of Tokyo
@@ -109,8 +108,7 @@ talks:
   - id: 2026-eies-seminar-rooftop-pv
     title: Spatiotemporal deep learning for rooftop PV potential
     title_zh: 面向屋顶光伏潜力的时空深度学习
-    date: 2026-11-06T21:37
-    date_end: 2026-11-06T21:37
+    date: 2026-10-15T16:00:00
     event: EIES-Lab seminar
     event_zh: EIES-Lab 组会
     format: Seminar
@@ -131,8 +129,8 @@ talks:
   - id: 2026-icae-facade-solar
     title: City-scale facade solar potential through AIoT, GIS and meteorology synergy
     title_zh: 融合 AIoT、GIS 与气象数据的城市级建筑立面光伏潜力评估
-    date: 2026-11-06T21:37
-    date_end: 2026-11-06T21:37
+    date: 2026-08-20T10:30:00
+    date_end: 2026-08-20T10:50:00
     event: ICAE 2026
     event_url: https://www.applied-energy.org/
     format: Oral

@@ -88,7 +88,7 @@ content:
       - { name: co_supervisor, label: "Co-supervisor / 联合导师（英文，如 Prof. Jinyue Yan）", description: "联合培养的学生才填。团队卡片和个人主页的职位下面会多一行：Jointly supervised with …", type: string }
       - { name: co_supervisor_zh, label: 联合导师（中文，如 严晋跃教授）, description: 中文页面显示为「与…联合指导」。, type: string }
       - { name: weight, label: Order on team page / 团队页排序（数字小的在前）, type: number }
-      - { name: joined, label: Joined the lab / 加入课题组日期, type: date }
+      - { name: joined, label: Joined the lab / 加入课题组日期, type: date, default: "" }
       - { name: interests, label: Research interests / 研究兴趣（英文）, type: string, list: true }
       - { name: interests_zh, label: 研究兴趣（中文）, type: string, list: true }
       - { name: bio, label: Bio / 简介（英文）, type: text }
@@ -123,8 +123,8 @@ content:
           - { name: degree_zh, label: 学位（中文，如 博士，建筑环境及能源工程）, type: string }
           - { name: institution, label: Institution / 学校（英文）, type: string }
           - { name: institution_zh, label: 学校（中文）, type: string }
-          - { name: start, label: Start / 开始, type: date }
-          - { name: end, label: End / 结束（在读留空）, type: date }
+          - { name: start, label: Start / 开始, type: date, default: "" }
+          - { name: end, label: End / 结束（在读留空）, type: date, default: "" }
           - { name: summary, label: Notes / 备注（英文：实验室 / 导师 / 主修课程）, type: text }
           - { name: summary_zh, label: 备注（中文）, type: text }
       - name: affiliations
@@ -144,7 +144,7 @@ content:
           - { name: title_zh, label: 奖项（中文）, type: string }
           - { name: awarder, label: Awarded by / 颁发单位（英文）, type: string }
           - { name: awarder_zh, label: 颁发单位（中文）, type: string }
-          - { name: date, label: Date / 日期, type: date }
+          - { name: date, label: Date / 日期, type: date, default: "" }
           - { name: summary, label: Note / 备注（英文）, type: text }
           - { name: summary_zh, label: 备注（中文）, type: text }
           - { name: sample, type: boolean, hidden: true }
@@ -181,8 +181,8 @@ content:
             description: The talk also appears on their pages. / 选中的成员个人页也会显示这一条。
             type: reference
             options: { collection: members, multiple: true, value: "{slug}", label: "{name.display}", search: "name.display" }
-          - { name: date, label: Start / 开始时间, type: date, required: true, options: { time: true } }
-          - { name: date_end, label: End / 结束时间（可选）, type: date, options: { time: true } }
+          - { name: date, label: Start / 开始时间, type: date, required: true, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss" } }
+          - { name: date_end, label: End / 结束时间（可选）, type: date, default: "", options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss" } }
           - { name: event, label: "Event / 会议或活动（英文简称，如 ICAE 2026）", type: string }
           - { name: event_zh, label: 会议或活动（中文）, type: string }
           - { name: event_url, label: Event website / 活动网址, type: string }
