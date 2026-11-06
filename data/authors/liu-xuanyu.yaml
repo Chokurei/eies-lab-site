@@ -1,20 +1,52 @@
-schema: hugoblox/author/v1
 slug: liu-xuanyu
-weight: 17
-user_groups: [PhD Students]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: LIU Xuanyu
+  alternate: 刘轩语
   given: Xuanyu
   family: LIU
-  alternate: '' # TODO: Chinese name
+user_groups:
+  - PhD Students
 role: PhD Student (Year 2)
 role_zh: 博士生（二年级）
+weight: 17
+joined: 2025-09-01
 interests:
-  # TODO: placeholder, align with the three research thrusts
   - Energy-system perception
   - Solar & urban remote sensing
+  - Urban computing
 interests_zh:
   - 能源系统感知
   - 太阳能与城市遥感
-
-# TODO: bio, education, links, avatar (assets/media/authors/liu-xuanyu.jpg)
+  - 城市计算
+education:
+  - degree: Bachelor
+    degree_zh: 学士
+    institution: Tongji University
+    institution_zh: 同济大学
+    start: 2017-09-01
+    end: 2021-07-01
+  - degree: Master
+    degree_zh: 硕士
+    institution: Tongji University
+    institution_zh: 同济大学
+    start: 2022-09-01
+    end: 2025-07-01
+  - degree: PhD
+    degree_zh: 博士，建筑环境及能源工程
+    institution: The HongKong Polytechnic University
+    institution_zh: 香港理工大学
+    start: 2025-09-01
+    end: 2028-07-01
+    summary: I am a PhD student in the Department of Building Environment and Energy
+      Engineering at The Hong Kong Polytechnic University. I received my
+      bachelor’s and master’s degrees from Tongji University. My research
+      focuses on low-carbon urban energy and transportation systems,
+      particularly electric vehicle charging demand, integrated
+      solar–storage–charging systems, and urban carbon emissions. Outside
+      research, I enjoy murder mystery games, singing, and teaming up with
+      friends for online gaming.
+    summary_zh: 我目前是香港理工大学建筑环境及能源工程学系的博士研究生，本科和硕士均就读于同济大学。我的研究主要围绕城市能源与交通系统的低碳发展，关注电动汽车充电需求、光储充系统优化及城市碳排放。科研之外，我喜欢玩剧本杀、唱歌，也喜欢和朋友一起开黑。
+skills:
+  - sample: false
