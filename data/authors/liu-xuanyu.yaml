@@ -6,12 +6,11 @@ name:
   alternate: 刘轩语
   given: Xuanyu
   family: LIU
+avatar: media/authors/liu-xuanyu.png
 user_groups:
   - PhD Students
 role: PhD Student (Year 2)
 role_zh: 博士生（二年级）
-co_supervisor: Prof. Jinyue YAN
-co_supervisor_zh: 严晋跃教授
 weight: 17
 joined: 2025-09-01
 interests:
@@ -30,6 +29,12 @@ bio: I am a PhD student in the Department of Building Environment and Energy
   emissions. Outside research, I enjoy murder mystery games, singing, and
   teaming up with friends for online gaming.
 bio_zh: 我目前是香港理工大学建筑环境及能源工程学系的博士研究生，本科和硕士均就读于同济大学。我的研究主要围绕城市能源与交通系统的低碳发展，关注电动汽车充电需求、光储充系统优化及城市碳排放。科研之外，我喜欢玩剧本杀、唱歌，也喜欢和朋友一起开黑。
+website: https://scholar.google.com/citations?user=xiwZSWkAAAAJ&hl=en&oi=ao
+links:
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=xiwZSWkAAAAJ&hl=en&oi=ao
+    label: Google Scholar
+    label_zh: Google Scholar
 education:
   - degree: Bachelor
     degree_zh: 学士
