@@ -1,20 +1,27 @@
-schema: hugoblox/author/v1
 slug: lin-zhengyuan
-weight: 26
-user_groups: [Affiliated Members]
+schema: hugoblox/author/v1
+is_owner: false
 name:
   display: LIN Zhengyuan
+  alternate: 林政源
   given: Zhengyuan
   family: LIN
-  alternate: '' # TODO: Chinese name
+user_groups:
+  - Affiliated Members
 role: Affiliated Member
 role_zh: 编外成员
+weight: 26
+joined: 2026-11-06
 interests:
-  # TODO: placeholder, align with the three research thrusts
   - Energy-system perception
   - Observability & state estimation
+  - Generative AI
+  - Interactive world model
 interests_zh:
   - 能源系统感知
   - 可观测性与状态估计
-
-# TODO: bio, education, links, avatar (assets/media/authors/lin-zhengyuan.jpg)
+  - 生成式人工智能
+  - 可交互的世界模型
+links:
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=nv9jIyIAAAAJ
