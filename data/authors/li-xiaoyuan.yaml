@@ -41,6 +41,12 @@ education:
     institution_zh: 天津大学
     start: 2022-09-01
     end: 2026-06-30
+  - degree: Visiting PhD Student
+    degree_zh: 联合培养博士生
+    institution: " Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences"
+    institution_zh: 中国科学院深圳先进技术研究院
+    start: 2023-06-01
+    end: 2024-06-30
   - degree: Master
     degree_zh: 硕士（硕博连读）
     institution: Tianjin University
