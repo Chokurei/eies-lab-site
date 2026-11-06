@@ -17,6 +17,22 @@ interests:
   - AI for Energy Systems
   - Remote Sensing & Computer Vision
   - Domain Agent Evaluation
+bio: >-
+  I received my M.S. degree in Artificial Intelligence from Northwestern
+  Polytechnical University, Xi’an, China, in 2024. I am currently a joint Ph.D.
+  candidate at The Hong Kong Polytechnic University, Hong Kong, China, and the
+  Eastern Institute for Advanced Study, Ningbo, China. I specialize in data
+  analysis and the construction of artificial intelligence systems, with an
+  interdisciplinary research background covering artificial intelligence, energy
+  engineering, and vehicular transportation. I have published several papers in
+  peer-reviewed journals including IEEE TGRS, Renewable Energy, and IEEE RAL et.
+  al.
+
+
+  Outside of research, I keep an active lifestyle through outdoor activities,
+  badminton, running and cycling. I have watched more than 1140 films, tracked
+  on Douban platform, and am working toward my goal of watching over 2000 films.
+  Photography has recently grown into my new passion.
 links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=68pyUvgAAAAJ&hl=en
@@ -24,6 +40,7 @@ education:
   - degree: PhD Candidate
     institution: Hong Kong Polytechnic University & EIT (Ningbo)
     start: 2024-09-01
+    end: 2026-11-06
     summary: Ongoing
   - degree: MSc of Artificial Intelligence
     institution: Northwestern Polytechnical University
