@@ -37,14 +37,18 @@ links:
     url: https://scholar.google.com/citations?user=xiwZSWkAAAAJ&hl=en&oi=ao
     label: Google Scholar
     label_zh: Google Scholar
+  - icon: at-symbol
+    url: 25145415r@connect.polyu.hk
+    label: E-mail
+    label_zh: 邮箱
 education:
-  - degree: Bachelor
+  - degree: Bachelor, Transportation
     degree_zh: 学士
     institution: Tongji University
     institution_zh: 同济大学
     start: 2017-09-01
     end: 2021-07-01
-  - degree: Master
+  - degree: Master, Transportation
     degree_zh: 硕士
     institution: Tongji University
     institution_zh: 同济大学
@@ -52,7 +56,7 @@ education:
     end: 2025-07-01
   - degree: PhD
     degree_zh: 博士，建筑环境及能源工程
-    institution: The HongKong Polytechnic University
+    institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2025-09-01
     end: 2028-07-01
