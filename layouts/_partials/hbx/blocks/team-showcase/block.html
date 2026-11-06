@@ -67,6 +67,7 @@
             <h3 id="team-name-{{ .slug }}">{{ .title }}</h3>
           </a>
           {{ with .role }}<p class="td-role">{{ . }}</p>{{ end }}
+          {{ with .co_supervisor }}<p class="td-cosup">{{ cond $zh (printf "与%s联合指导" .) (printf "Jointly supervised with %s" .) }}</p>{{ end }}
           {{ with .interests }}<ul class="td-interests">{{ range first 3 . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
           {{ partial "member/team-social" (dict "profile" . "zh" $zh) }}
         </article>

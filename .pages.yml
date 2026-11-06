@@ -85,6 +85,8 @@ content:
             - { value: Alumni, label: Alumni / 已毕业 }
       - { name: role, label: "Role / 职位（英文，如 PhD Student (Year 2)）", type: string, required: true }
       - { name: role_zh, label: 职位（中文，如 博士生（二年级））, type: string, required: true }
+      - { name: co_supervisor, label: "Co-supervisor / 联合导师（英文，如 Prof. Jinyue Yan）", description: "联合培养的学生才填。团队卡片和个人主页的职位下面会多一行：Jointly supervised with …", type: string }
+      - { name: co_supervisor_zh, label: 联合导师（中文，如 严晋跃教授）, description: 中文页面显示为「与…联合指导」。, type: string }
       - { name: weight, label: Order on team page / 团队页排序（数字小的在前）, type: number }
       - { name: joined, label: Joined the lab / 加入课题组日期, type: date }
       - { name: interests, label: Research interests / 研究兴趣（英文）, type: string, list: true }

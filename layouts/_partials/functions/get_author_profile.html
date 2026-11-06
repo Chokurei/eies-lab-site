@@ -73,6 +73,7 @@ Output (dict):
 {{- end -}}
 
 {{- $role := $data.role -}}
+{{- $coSupervisor := $data.co_supervisor -}}
 {{- $bio := $data.bio -}}
 {{- $status := $data.status -}}
 {{- $affiliations := $data.affiliations -}}
@@ -116,6 +117,7 @@ Output (dict):
   "name_alternate" $alternate
   "name_pronunciation" $namePronunciation
   "role" $role
+  "co_supervisor" $coSupervisor
   "bio" $bio
   "status" $status
   "affiliations" $affiliations
