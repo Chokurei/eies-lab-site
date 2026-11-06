@@ -6,4 +6,6 @@ cascade:
     type: landing
 sections:
   - block: team-showcase
+    content:
+      text: '我们有多位学生与<a href="https://www.polyu.edu.hk/iuex/" target="_blank" rel="noopener">International Centre of Urban Energy Nexus（UEX）</a>的严晋跃教授联合指导。'
 ---

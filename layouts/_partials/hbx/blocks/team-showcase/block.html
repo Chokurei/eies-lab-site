@@ -20,6 +20,7 @@
 
 <div class="td-shell td-head">
   <h1>{{ cond $zh "团队" "Team" }}</h1>
+  {{ with .wcBlock.content.text }}<p class="td-intro">{{ . | safeHTML }}</p>{{ end }}
   <nav class="td-jump" aria-label="{{ cond $zh "成员分组" "Member groups" }}">
     {{ range $i, $g := $groups }}<a href="#team-group-{{ $i }}">{{ $g }} <span>{{ len (where $members "user_groups" "intersect" (slice $g)) }}</span></a>{{ end }}
   </nav>

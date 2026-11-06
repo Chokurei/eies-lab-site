@@ -195,6 +195,8 @@ section#section-team-showcase.hbb-section { padding: 3rem 0 4rem !important; bac
 /* Team: page title + group jump bar, PI intro, group counts */
 #section-team-showcase .td-head { margin-bottom: 3rem; }
 #section-team-showcase .td-head h1 { font-size: clamp(2.25rem, 4.2vw, 3.25rem); line-height: 1.15; font-weight: 700; letter-spacing: -.02em; }
+#section-team-showcase .td-intro { margin-top: .75rem; max-width: 48rem; color: var(--u-body); font-size: 1.0625rem; line-height: 1.6; }
+#section-team-showcase .td-intro a { color: var(--u-black); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 #section-team-showcase .td-jump { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
 #section-team-showcase .td-jump a { padding: .3rem .875rem; border-radius: 999px; background: var(--u-chip); color: var(--u-black); font-size: .875rem; font-weight: 500; text-decoration: none; }
 #section-team-showcase .td-jump a:hover { background: var(--u-hover); }
