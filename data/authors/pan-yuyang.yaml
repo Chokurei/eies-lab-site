@@ -11,6 +11,8 @@ user_groups:
   - MPhil Students
 role: MPhil Student (Year 1)
 role_zh: MPhil 研究生（一年级）
+co_supervisor: Prof. Jinyue YAN
+co_supervisor_zh: 严晋跃教授
 weight: 21
 joined: 2026-11-05
 interests:
@@ -31,3 +33,4 @@ education:
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
     start: 2026-05-04
+    end: 2026-11-06
