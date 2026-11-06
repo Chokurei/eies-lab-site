@@ -11,6 +11,8 @@ user_groups:
   - PhD Students
 role: PhD Student (Year 1)
 role_zh: 博士生（一年级）
+co_supervisor: Prof. Jinyue YAN
+co_supervisor_zh: 严晋跃教授
 weight: 19
 joined: 2026-09-01
 interests:
