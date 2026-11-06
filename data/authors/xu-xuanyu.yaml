@@ -3,6 +3,7 @@ schema: hugoblox/author/v1
 is_owner: false
 name:
   display: XU Xuanyu
+  alternate: 许炫宇
   given: Xuanyu
   family: XU
 user_groups:
@@ -20,9 +21,10 @@ interests_zh:
 bio: Xuanyu Xu joined EIES-Lab as RA in September 2025.  His research focus on
   the intersection of GeoAI, traffic analysis and urban sensing, with a focus on
   spatiotemporal deep learning for vehicle rooftop solar potential estimation
-  and road extraction. My objective is to leverage this high-resolution data to
+  and road extraction. His objective is to leverage this high-resolution data to
   model urban mobility, identify traffic congestion patterns, and even evaluate
   the potential of transportation infrastructure for sustainable applications.
+website: https://scholar.google.com.hk/citations?hl=en&user=Ujr31tkAAAAJ
 education:
   - degree: Bachelor
     degree_zh: GIS
