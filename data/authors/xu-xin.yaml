@@ -6,15 +6,30 @@ name:
   alternate: 徐鑫
   given: Xin
   family: XU
+avatar: media/authors/徐鑫-19991018.png
 user_groups:
   - PhD Students
 role: PhD Student (Year 3)
 role_zh: 博士生（三年级）
 weight: 16
-joined: 2026-11-06
+joined: 2026-09-01
 interests:
-  - Embodied decision & control
-  - Low-altitude / eVTOL energy
-interests_zh:
-  - 具身决策与控制
-  - 低空 / eVTOL 能源
+  - AI for Energy Systems
+  - Remote Sensing & Computer Vision
+  - Domain Agent Evaluation
+links:
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=68pyUvgAAAAJ&hl=en
+education:
+  - degree: PhD Candidate
+    institution: Hong Kong Polytechnic University & EIT (Ningbo)
+    start: 2024-09-01
+    summary: Ongoing
+  - degree: MSc of Artificial Intelligence
+    institution: Northwestern Polytechnical University
+    start: 2021-09-01
+    end: 2024-04-01
+  - degree: BSc of Transportation
+    institution: Chang'An University
+    start: 2017-09-01
+    end: 2021-06-01
