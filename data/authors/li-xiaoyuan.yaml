@@ -11,6 +11,8 @@ user_groups:
   - Postdoctoral Fellows
 role: Postdoctoral Fellow
 role_zh: 博士后研究员
+co_supervisor: Prof. Jinyue YAN
+co_supervisor_zh: 严晋跃教授
 weight: 12
 joined: 2026-06-16
 interests:
