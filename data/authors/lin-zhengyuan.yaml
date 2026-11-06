@@ -13,14 +13,12 @@ role_zh: 编外成员
 weight: 26
 joined: 2026-11-06
 interests:
-  - Energy-system perception
-  - Observability & state estimation
   - Generative AI
+  - Spatial intelligence
   - Interactive world model
 interests_zh:
-  - 能源系统感知
-  - 可观测性与状态估计
   - 生成式人工智能
+  - 空间智能
   - 可交互的世界模型
 links:
   - icon: academicons/google-scholar
