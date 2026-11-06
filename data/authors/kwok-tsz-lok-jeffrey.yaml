@@ -1,13 +1,15 @@
 slug: kwok-jeffrey
 schema: hugoblox/author/v1
-avatar: media/authors/1545e_hk.jpg
 is_owner: false
 name:
   display: KWOK Tsz Lok Jeffrey
+avatar: media/authors/1545e_hk.jpg
 user_groups:
   - PhD Students
 role: PhD Student (Year 2)
 role_zh: 博士生（二年级）
+co_supervisor: Prof. Lin LV
+co_supervisor_zh: 吕琳教授
 weight: 17
 joined: 2026-11-04
 interests:
@@ -20,8 +22,16 @@ interests_zh:
   - 能源数据质量与异常检测
   - 可解释机器学习
   - 面向学校与建筑的能源监测系统（EMS）
-bio: "Jeffrey is a PhD student in the Department of Building Environment and Energy Engineering at The Hong Kong Polytechnic University, supervised by Prof. Zhiling Guo. His research interests span energy monitoring systems (EMS), photovoltaic monitoring, energy data quality and interpretable machine learning for school and building energy management. His current research explores how to distinguish telemetry problems from suspected operational anomalies in school photovoltaic systems under incomplete monitoring data, with an emphasis on validation against independent operational records."
-bio_zh: "Jeffrey 是香港理工大学建筑环境及能源工程学系的博士研究生，导师为 Prof. Zhiling Guo。他的研究兴趣涵盖能源监测系统（EMS）、光伏系统监测、能源数据质量，以及面向学校和建筑能源管理的可解释机器学习。目前，他正在研究如何在监测数据不完整的情况下，区分学校光伏系统的监测数据问题与疑似运行异常，并强调利用独立的运行记录进行验证。"
+bio: Jeffrey is a PhD student in the Department of Building Environment and
+  Energy Engineering at The Hong Kong Polytechnic University, supervised by
+  Prof. Zhiling Guo. His research interests span energy monitoring systems
+  (EMS), photovoltaic monitoring, energy data quality and interpretable machine
+  learning for school and building energy management. His current research
+  explores how to distinguish telemetry problems from suspected operational
+  anomalies in school photovoltaic systems under incomplete monitoring data,
+  with an emphasis on validation against independent operational records.
+bio_zh: Jeffrey 是香港理工大学建筑环境及能源工程学系的博士研究生，导师为 Prof. Zhiling
+  Guo。他的研究兴趣涵盖能源监测系统（EMS）、光伏系统监测、能源数据质量，以及面向学校和建筑能源管理的可解释机器学习。目前，他正在研究如何在监测数据不完整的情况下，区分学校光伏系统的监测数据问题与疑似运行异常，并强调利用独立的运行记录进行验证。
 links:
   - icon: at-symbol
     url: mailto:jeffrey-tsz-lok.kwok@connect.polyu.hk
@@ -36,6 +46,8 @@ education:
     degree_zh: 建筑环境及能源工程博士（在读）
     institution: The Hong Kong Polytechnic University
     institution_zh: 香港理工大学
+    start: 2026-11-06
+    end: 2026-11-06
     summary: "Supervisor: Prof. Zhiling Guo"
     summary_zh: 导师：Prof. Zhiling Guo
 affiliations:
