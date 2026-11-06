@@ -11,6 +11,8 @@ user_groups:
   - MPhil Students
 role: MPhil Student (Year 2)
 role_zh: MPhil 研究生（二年级）
+co_supervisor: Prof. Jinyue YAN
+co_supervisor_zh: 严晋跃教授
 weight: 20
 joined: 2024-09-03
 interests:
