@@ -50,3 +50,8 @@ education:
     institution: Chang'An University
     start: 2017-09-01
     end: 2021-06-01
+awards:
+  - title: "Best paper of EMNLP 2026 Workshop Grounding Language Models: Learning
+      Faithfully and Efficiently "
+    date: 2026-11-06
+    sample: false
