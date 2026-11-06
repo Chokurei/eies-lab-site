@@ -36,6 +36,8 @@ bio: >-
 links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=68pyUvgAAAAJ&hl=en
+  - icon: at-symbol
+    url: xin666.xu@connect.polyu.hk
 education:
   - degree: PhD Candidate
     institution: Hong Kong Polytechnic University & EIT (Ningbo)
