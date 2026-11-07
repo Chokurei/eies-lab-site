@@ -37,7 +37,6 @@ Set `website` in the author YAML to show the Personal Website button after the b
 Research shows up to four featured papers (or the latest four if none are featured). All Publications shows the complete list. Paper details link to their immediate previous and next papers in date order.
 Paper links from a profile carry `?from=profile`, so the detail's back button returns to that profile, including after moving between papers. Entries from the publications list or a direct detail URL return to the publications list.
 Personal paper details follow the source paper's draft, publication and expiry dates. Chinese details are generated only when `index.zh.md` exists, matching Hugo's translation availability. Local attachment and body links resolve against the source paper bundle; resource links retain their `contexts: [list]` / `[page]` visibility settings.
-The extra `demo-paper-3` through `demo-paper-8` bundles are member-only previews: `member_preview: zhiling-guo` selects their owner, while `build: {list: never, render: never}` keeps their source pages out of global publication lists. Their detail views are generated under that member's URL.
 
 ## Add a paper / news
 
@@ -60,5 +59,3 @@ The extra `demo-paper-3` through `demo-paper-8` bundles are member-only previews
 - New blocks: `hero-scene` (+ `assets/js/hero-scene.js`), `loop-diagram` (+ `assets/js/loop-diagram.js`), `member-profile`.
 
 Known issue: `hugo server` can panic (`Shift: unknown type ... "/authors"`) on live reload after edits. Run `scripts/serve.sh` instead of `hugo server`: it restarts automatically. Full builds are unaffected.
-
-Demo members are gone; still delete the demo papers in `content/publications/demo-paper-*`.
