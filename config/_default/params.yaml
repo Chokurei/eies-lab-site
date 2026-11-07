@@ -221,7 +221,7 @@ hugoblox:
   # Search engine site verification codes
   # ────────────────────────────────────────────────────────────────────────────
   verification:
-    google: ""
+    google: "3l-z_1B8Hi7Omfjjztd62yFV0mEWc_QCc7zLUEgTfy0"  # Google Search Console, URL-prefix property
     bing: ""
     baidu: ""
     yandex: ""
