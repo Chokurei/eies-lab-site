@@ -1,5 +1,9 @@
 ---
 title: ''
+# For search engines: browser-tab / Google result title and snippet (not shown on the page).
+seo:
+  title: EIES-Lab | Laboratory for Embodied Intelligence in Energy Systems, PolyU
+summary: EIES-Lab (能源具身智能实验室), the Laboratory for Embodied Intelligence in Energy Systems at The Hong Kong Polytechnic University, studies how energy constraints shape intelligent perception and decision-making, and how embodied intelligence reshapes energy systems through physical action.
 type: landing
 # Restrained homepage: Hero (live 3D scene) + Mission + Approach carry the narrative; thrusts as short cards;
 # validation as real cases; publications/team as selected previews. Details live on /research/, /publications/, /team/.
