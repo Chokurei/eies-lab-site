@@ -48,6 +48,9 @@ links:
     url: https://scholar.google.com/citations?user=l05MGhMAAAAJ&hl=zh-CN
   - icon: at-symbol
     url: rui-zhe.deng@connect.polyu.hk
+  - icon: globe-alt
+    url: https://huggingface.co/UEXdo
+    label: HuggingFace
 education:
   - degree: PhD, Building Energy
     degree_zh: 博士，建筑环境及能源工程
