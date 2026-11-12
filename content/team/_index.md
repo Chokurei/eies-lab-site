@@ -9,5 +9,5 @@ sections:
   - block: team-showcase
     content:
       # One line under the page title (HTML allowed)
-      text: 'Several of our students are jointly supervised with <a href="https://scholar.google.com/citations?user=hfCPxHkAAAAJ&hl=en" target="_blank" rel="noopener">Prof.&nbsp;Jinyue&nbsp;YAN</a> at the <a href="https://www.polyu.edu.hk/iuex/" target="_blank" rel="noopener">International Centre of Urban Energy Nexus (UEX)</a>.'
+      text: 'DigiEnergy Lab is one of the <a href="https://www.polyu.edu.hk/iuex/research/" target="_blank" rel="noopener">four labs</a> of the <a href="https://www.polyu.edu.hk/iuex/" target="_blank" rel="noopener">International Centre of Urban Energy Nexus (UEX)</a> at PolyU.'
 ---
