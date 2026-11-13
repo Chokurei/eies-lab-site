@@ -32,7 +32,7 @@ sections:
     id: scenarios-intro
     content:
       eyebrow: Flagship Research Scenarios
-      title: Digital & Embodied Intelligence in Energy Systems
+      title: Where Intelligence Meets Real Energy Systems
       subtitle: A unified digital and embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics.
       text: |-
         We investigate how intelligent agents perceive, model, and interact with physical energy systems. Across complementary research scenarios, we explore how energy constraints, incomplete observations, and physical feedback shape autonomous adaptation and coordinated action.

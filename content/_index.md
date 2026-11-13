@@ -70,7 +70,7 @@ sections:
     id: cases
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Digital & Embodied Intelligence in Energy Systems'
+      title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Where Intelligence Meets Real Energy Systems'
       text: 'A unified digital and embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems

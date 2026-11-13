@@ -68,7 +68,7 @@ sections:
     id: cases
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的数字与具身智能'
+      title: '<span class="sec-eyebrow">旗舰研究场景</span>让智能走进真实能源系统'
       text: '一个贯通多样能源系统、物理约束与反馈动态的数字与具身智能统一框架。<a class="section-link" href="research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
