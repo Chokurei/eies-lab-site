@@ -379,6 +379,8 @@ section.hbb-section#section-hero-scene { padding: 0 !important; }
 .hs-eyebrow { margin: 0 0 1rem; font-size: 1rem; font-weight: 500; color: #fff !important; opacity: .72; }
 .hs-title { max-width: 20ch; margin: 0; color: #fff !important; font-size: clamp(2.25rem, 4.2vw, 3.25rem); line-height: 1.18; font-weight: 700; letter-spacing: -.02em; }
 .hs-grad { color: inherit; }
+/* 中文标题只有一行，字数少，放大 1.25 倍和英文两行的分量相当 */
+:lang(zh) .hs-title { font-size: clamp(2.812rem, 5.25vw, 4.062rem); }
 .hs-text { max-width: 34rem; margin-top: 1.25rem; }
 .hs-text p { margin: 0; font-size: 1.125rem; line-height: 1.5; color: #e2e2e2 !important; }
 .hs-text strong { font-weight: 500; color: #e2e2e2; }
