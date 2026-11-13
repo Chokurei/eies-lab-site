@@ -30,8 +30,7 @@ interests_zh:
 bio: >-
   Dr. Zhiling Guo is an Assistant Professor in the Department of Building
   Environment and Energy Engineering (BEEE) at The Hong Kong Polytechnic
-  University, where he leads DigiEnergy Lab, part of the International Centre
-  of Urban Energy Nexus (UEX). His research focuses on Digital and Embodied
+  University. His research focuses on Digital and Embodied
   Intelligence in Energy Systems: how intelligence moves from digital perception
   and prediction to embodied decision and action, how energy dynamics and
   physical constraints shape this transition, and how intelligence, through
@@ -53,7 +52,7 @@ bio: >-
   framework, with applications in urban solar–storage systems, data-center
   energy and cooling, and climate-resilient urban renewable energy networks.
 bio_zh: |-
-  郭直灵博士现为香港理工大学建筑环境与能源工程系（BEEE）助理教授，主持隶属于 International Centre of Urban Energy Nexus（UEX）的 DigiEnergy Lab。他的研究聚焦于能源系统中的数字与具身智能：智能如何从数字感知与预测走向具身决策与行动，能源动态与物理约束如何塑造这一过程，以及智能如何通过物理行动与反馈改变能源系统的运行。
+  郭直灵博士现为香港理工大学建筑环境与能源工程系（BEEE）助理教授。他的研究聚焦于能源系统中的数字与具身智能：智能如何从数字感知与预测走向具身决策与行动，能源动态与物理约束如何塑造这一过程，以及智能如何通过物理行动与反馈改变能源系统的运行。
   他的研究团队围绕三个相互关联的方向开展工作：（1）能源系统感知与可观测性，研究如何在观测不完整的情况下获取与决策相关的信息；（2）物理约束下的能源世界模型，旨在理解并预测能源系统如何演化以及对行动如何响应；（3）受能源约束的具身决策与控制，聚焦于安全、可适应的决策机制以及与能源系统的物理交互。
   依托其在可再生能源评估、AI 增强的地理空间数据科学以及城市感知与仿真方面的专长，他与团队通过统一的“能源—信息—行动”框架将上述方向加以整合，并面向城市光伏—储能系统、数据中心能源与制冷，以及具备气候韧性的城市可再生能源网络等应用场景开展研究。
 website: https://chokurei.github.io/
