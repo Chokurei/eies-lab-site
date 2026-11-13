@@ -7,7 +7,7 @@
 <div class="pl-shell">
   <header class="pl-head">
     <h1>{{ .Title }}</h1>
-    <p class="pl-lead">{{ if $zh }}课题组成员发表的论文，共 {{ len $papers }} 篇。成员姓名加粗。{{ else }}{{ len $papers }} papers by lab members. Lab members are shown in bold.{{ end }}</p>
+    <p class="pl-lead">{{ if $zh }}成员姓名加粗。{{ else }}Lab members are shown in bold.{{ end }}</p>
     {{ with .Content }}<div class="pl-intro">{{ . }}</div>{{ end }}
   </header>
 

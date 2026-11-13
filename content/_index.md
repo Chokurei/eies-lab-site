@@ -2,8 +2,8 @@
 title: ''
 # For search engines: browser-tab / Google result title and snippet (not shown on the page).
 seo:
-  title: EIES-Lab | Laboratory for Embodied Intelligence in Energy Systems, PolyU
-summary: EIES-Lab (能源具身智能实验室), the Laboratory for Embodied Intelligence in Energy Systems at The Hong Kong Polytechnic University, studies how energy constraints shape intelligent perception and decision-making, and how embodied intelligence reshapes energy systems through physical action.
+  title: DigiEnergy Lab | Embodied Intelligence in Energy Systems, PolyU
+summary: DigiEnergy Lab at The Hong Kong Polytechnic University, one of the four labs of the International Centre of Urban Energy Nexus (UEX), studies how energy constraints shape intelligent perception and decision-making, and how embodied intelligence reshapes energy systems through physical action.
 type: landing
 # Restrained homepage: Hero (live 3D scene) + Mission + Approach carry the narrative; thrusts as short cards;
 # validation as real cases; publications/team as selected previews. Details live on /research/, /publications/, /team/.
@@ -13,8 +13,8 @@ sections:
   # and under the GitHub Pages subpath (/eies-lab-site/).
   - block: hero-scene
     content:
-      eyebrow: EIES-Lab · The Hong Kong Polytechnic University
-      title: Laboratory for<br>[Embodied Intelligence<br>in Energy Systems]
+      eyebrow: DigiEnergy Lab · UEX · The Hong Kong Polytechnic University
+      title: '[Embodied Intelligence<br>in Energy Systems]'
       text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.**'
       primary_action:
         text: Explore Our Research

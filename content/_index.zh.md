@@ -2,8 +2,8 @@
 title: ''
 # 搜索引擎用：浏览器标签/谷歌结果标题与摘要（页面上不显示）。中文全称必须连续出现。
 seo:
-  title: 能源具身智能实验室 EIES-Lab | 香港理工大学
-summary: 能源具身智能实验室（EIES-Lab，Laboratory for Embodied Intelligence in Energy Systems）隶属香港理工大学，研究能源约束如何塑造智能感知与决策，以及具身智能如何通过物理行动改变能源系统的运行：能源系统感知、基于物理的能源世界模型、能源约束下的具身决策与控制。
+  title: DigiEnergy Lab · 能源具身智能 | 香港理工大学
+summary: DigiEnergy Lab 是香港理工大学 International Centre of Urban Energy Nexus（UEX）的四个实验室之一，研究能源约束如何塑造智能感知与决策，以及具身智能如何通过物理行动改变能源系统的运行：能源系统感知、基于物理的能源世界模型、能源约束下的具身决策与控制。
 type: landing
 # 与 content/_index.md 结构一一对应；改动时两边同步。
 sections:
@@ -11,8 +11,8 @@ sections:
   # and under the GitHub Pages subpath (/eies-lab-site/).
   - block: hero-scene
     content:
-      eyebrow: EIES-Lab · 香港理工大学
-      title: '[能源具身智能]<br>实验室'
+      eyebrow: DigiEnergy Lab · UEX · 香港理工大学
+      title: '[能源具身智能]'
       text: '**能源塑造智能，智能重塑能源系统。**'
       primary_action:
         text: 了解我们的研究

@@ -13,7 +13,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "EIES-Lab"  # footer/browser title; navbar shows the lab logo (assets/media/logo.svg) instead
+    name: "DigiEnergy Lab"  # footer/browser title; navbar shows the lab logo (assets/media/logo.svg) instead
     # Legal entity for copyright notices (defaults to name if not set)
     organization: "The Hong Kong Polytechnic University"
     # Schema.org type for structured data
@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "EIES-Lab, The Hong Kong Polytechnic University: embodied intelligence in energy systems."
+    description: "DigiEnergy Lab, The Hong Kong Polytechnic University: embodied intelligence in energy systems."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
@@ -82,7 +82,7 @@ hugoblox:
     enable: true
     # Header style variant
     style: navbar # navbar | navbar-simple | minimal
-    # logo.svg already reads "EIES Lab", so no text title next to it
+    # logo.svg already reads "DigiEnergy Lab", so no text title next to it
     show_title: false
     # Partner logo beside the lab logo (image under assets/media/; layouts/_partials/components/headers/navbar.html)
     partner: { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
@@ -118,7 +118,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} EIES-Lab, The Hong Kong Polytechnic University."
+    notice: "© {year} DigiEnergy Lab, The Hong Kong Polytechnic University."
     license:
       type: cc # cc | custom
       allow_derivatives: false

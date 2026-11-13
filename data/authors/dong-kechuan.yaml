@@ -25,7 +25,7 @@ interests_zh:
   - 地理空间 AI 与三维城市模型
   - 物理信息驱动的 AI
 bio: >
-  Kechuan Dong joined EIES-Lab as a PhD student in September 2026. His research
+  Kechuan Dong joined DigiEnergy Lab as a PhD student in September 2026. His research
   sits at the
 
   intersection of artificial intelligence, geospatial analysis and urban energy
@@ -42,7 +42,7 @@ bio: >
 
   real-world sustainability problems.
 bio_zh: |
-  2026 年 9 月加入 EIES-Lab 攻读博士学位。研究方向是人工智能、地理空间分析与城市能源系统的交叉，
+  2026 年 9 月加入 DigiEnergy Lab 攻读博士学位。研究方向是人工智能、地理空间分析与城市能源系统的交叉，
   重点是面向大规模屋顶与立面太阳能潜力估算的时空深度学习。此前也从事过基于多源数据融合的
   假肢用户 3D 人体姿态估计研究，关注可解释、物理信息驱动的 AI 在真实可持续问题中的应用。
 links:
@@ -109,8 +109,8 @@ talks:
     title: Spatiotemporal deep learning for rooftop PV potential
     title_zh: 面向屋顶光伏潜力的时空深度学习
     date: 2026-10-15T16:00:00
-    event: EIES-Lab seminar
-    event_zh: EIES-Lab 组会
+    event: DigiEnergy Lab seminar
+    event_zh: DigiEnergy Lab 组会
     format: Seminar
     format_zh: 研讨会
     location: PolyU, Hong Kong

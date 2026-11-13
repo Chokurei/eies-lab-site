@@ -14,7 +14,7 @@
     {{ with $profile.role }}<p class="mp-eyebrow">{{ . | markdownify }}</p>{{ end }}
     <h1 class="mp-name">{{ $profile.title }}{{ with $profile.name_alternate }}{{ if ne . $profile.title }} <span class="mp-alt">{{ . }}</span>{{ end }}{{ end }}</h1>
     {{ with $profile.affiliations }}{{ range first 1 . }}<p class="mp-aff">{{ .name }}</p>{{ end }}
-    {{ else }}<p class="mp-aff">{{ cond $zh "EIES-Lab · 香港理工大学" "EIES-Lab · The Hong Kong Polytechnic University" }}</p>{{ end }}
+    {{ else }}<p class="mp-aff">{{ cond $zh "DigiEnergy Lab · 香港理工大学" "DigiEnergy Lab · The Hong Kong Polytechnic University" }}</p>{{ end }}
     {{ with $profile.co_supervisor }}<p class="mp-cosup">{{ cond $zh (printf "与%s联合指导" .) (printf "Jointly supervised with %s" .) }}</p>{{ end }}
     <div class="mp-lead">
       {{ with $profile.bio }}{{ $page.RenderString (dict "display" "block") . }}{{ else }}<p>{{ cond $zh "个人简介待补充。" "Biography to come." }}</p>{{ end }}

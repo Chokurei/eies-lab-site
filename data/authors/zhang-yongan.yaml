@@ -25,7 +25,7 @@ interests_zh:
   - 能源系统建模与决策智能体
   - 可再生能源时序预测
 bio: >
-  Yongan Zhang is a third-year PhD student at EIES-Lab, The Hong Kong
+  Yongan Zhang is a third-year PhD student at DigiEnergy Lab, The Hong Kong
   Polytechnic University. His research
 
   centres on large language model (LLM) agents for urban resilience and global
@@ -45,7 +45,7 @@ bio: >
 
   low-carbon, resilient energy supply.
 bio_zh: |
-  香港理工大学 EIES-Lab 三年级博士生，研究核心是面向城市韧性与全球能源系统的大语言模型智能体。他构建能够整合城市、气候与能源基础设施多源数据、结合物理约束模型进行推理的智能体，支撑城市能源系统在极端事件前的准备、事件中的承压与事后恢复决策。在全球尺度上，他研究水电、风电与光伏系统，利用 AI 智能体和时序模型评估资源、预测发电并辅助规划，服务于低碳且有韧性的能源供应。
+  香港理工大学 DigiEnergy Lab 三年级博士生，研究核心是面向城市韧性与全球能源系统的大语言模型智能体。他构建能够整合城市、气候与能源基础设施多源数据、结合物理约束模型进行推理的智能体，支撑城市能源系统在极端事件前的准备、事件中的承压与事后恢复决策。在全球尺度上，他研究水电、风电与光伏系统，利用 AI 智能体和时序模型评估资源、预测发电并辅助规划，服务于低碳且有韧性的能源供应。
 links:
   - icon: at-symbol
     url: mailto:yongan.zhang@connect.polyu.hk

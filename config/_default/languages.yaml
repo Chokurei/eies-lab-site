@@ -22,7 +22,7 @@ zh:
   label: 中文
   locale: zh-cn
   weight: 2
-  title: EIES-Lab
+  title: DigiEnergy Lab
   menus:
     main:
       - { name: 首页, url: ./, weight: 10 }
