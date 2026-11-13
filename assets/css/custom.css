@@ -482,7 +482,7 @@ body:has(#section-hero-scene) .sf { margin-top: 0; } /* homepage: Join is alread
 .sf .sf-affil { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2rem; margin-top: 2rem; }
 .sf-affil img { display: block; width: auto; height: 40px; }
 .sf p { margin: 0; color: #afafaf !important; }
-.sf-tag { margin-top: .75rem !important; max-width: 22rem; }
+.sf-tag { margin-top: .75rem !important; max-width: 22rem; text-wrap: balance; }
 .sf .sf-brand { color: #fff !important; }
 .sf h3 { margin: 0 0 .75rem; color: #fff !important; font-size: 1rem; font-weight: 700; }
 .sf ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
