@@ -1,7 +1,7 @@
 # Footer content per language (layouts/_partials/site_footer.html). Address matches content/contact/_index*.md.
 # Link urls are written like research/ (no leading slash, no /zh/): the template adds both, as for the menus.
 en:
-  tagline: Embodied intelligence for renewable and interconnected urban energy systems.
+  tagline: Digital intelligence for renewable and interconnected urban energy systems.
   affiliations:   # logos side by side under the lab logo (images under assets/media/, shown 40px tall)
     - { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
     - { name: The Hong Kong Polytechnic University, url: "https://www.polyu.edu.hk/", logo: partners/polyu.png }
@@ -21,7 +21,7 @@ en:
   org: PolyU · Department of Building Environment and Energy Engineering (BEEE)
   credit: "3D scene data: Lands Department, HKSAR · PolyU."   # data attribution for the homepage 3D scene (scenes/src/places/polyu.js)
 zh:
-  tagline: 面向可再生与互联城市能源系统的具身智能研究。
+  tagline: 面向可再生与互联城市能源系统的数字智能研究。
   affiliations:
     - { name: International Centre of Urban Energy Nexus (UEX), url: "https://www.polyu.edu.hk/iuex/", logo: partners/uex.png }
     - { name: 香港理工大学, url: "https://www.polyu.edu.hk/", logo: partners/polyu.png }
