@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="72 72 1153 294" width="1153" height="294" role="img" aria-label="DigiEnergy Lab, Embodied Intelligence in Energy Systems">
-  <g transform="translate(72 72) scale(0.7511) translate(-72 -72)">
-      <rect x="72" y="72" width="386" height="72" rx="36" ry="36" fill="#6BBE2F"/>
-      <rect x="72" y="217" width="296" height="72" rx="36" ry="36" fill="#16A79D"/>
-      <rect x="72" y="362" width="386" height="72" rx="36" ry="36" fill="#1B70B5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="71.0 66.25 1092.75 259.5" width="1093" height="260" role="img" aria-label="DigiEnergy Lab, Digital &amp; Embodied Intelligence in Energy Systems">
+  <g transform="translate(72 72) scale(0.66657) translate(-72 -72)">
+    <rect x="72" y="72" width="386" height="72" rx="36" ry="36" fill="#6BBE2F"/>
+    <rect x="72" y="217" width="296" height="72" rx="36" ry="36" fill="#16A79D"/>
+    <rect x="72" y="362" width="386" height="72" rx="36" ry="36" fill="#1B70B5"/>
   </g>
   <g>
-    <text x="420.07" y="153.52" font-family="Inter" font-weight="700" font-size="112.14" letter-spacing="-2.24" fill="currentColor">DigiEnergy Lab</text>
-    <text x="421.07" y="259.57" font-family="Inter" font-weight="500" font-size="67.46" letter-spacing="0.76" fill="currentColor">Embodied Intelligence</text>
-    <text x="422.67" y="343.90" font-family="Inter" font-weight="500" font-size="67.46" letter-spacing="0.76" fill="currentColor">in Energy Systems</text>
+    <text x="373.82" y="153.33" font-family="Inter" font-weight="700" font-size="111.83" letter-spacing="-2.24" fill="currentColor">DigiEnergy Lab</text>
+    <text x="376.73" y="248.20" font-family="Inter" font-weight="500" font-size="52.07" letter-spacing="0.59" fill="currentColor">Digital &amp; Embodied Intelligence</text>
+    <text x="377.87" y="313.30" font-family="Inter" font-weight="500" font-size="52.07" letter-spacing="0.59" fill="currentColor">in Energy Systems</text>
   </g>
 </svg>

@@ -12,7 +12,7 @@ sections:
   - block: hero-scene
     content:
       eyebrow: DigiEnergy Lab · UEX · 香港理工大学
-      title: '[能源具身智能]'
+      title: '[<span class="hs-nw">从数字智能，</span><span class="hs-nw">走向具身智能</span>]'
       text: '**能源塑造智能，智能重塑能源系统。**'
       primary_action:
         text: 了解我们的研究

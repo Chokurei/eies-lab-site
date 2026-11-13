@@ -14,7 +14,7 @@ sections:
   - block: hero-scene
     content:
       eyebrow: DigiEnergy Lab · UEX · The Hong Kong Polytechnic University
-      title: '[Embodied Intelligence<br>in Energy Systems]'
+      title: '[From Digital to<br>Embodied Intelligence]'
       text: '**Energy Shapes Intelligence. Intelligence Reshapes Energy Systems.**'
       primary_action:
         text: Explore Our Research
