@@ -22,7 +22,7 @@
   <h1>{{ cond $zh "团队" "Team" }}</h1>
   {{ with .wcBlock.content.text }}<p class="td-intro">{{ . | safeHTML }}</p>{{ end }}
   <nav class="td-jump" aria-label="{{ cond $zh "成员分组" "Member groups" }}">
-    {{ range $i, $g := $groups }}<a href="#team-group-{{ $i }}">{{ $g }} <span>{{ len (where $members "user_groups" "intersect" (slice $g)) }}</span></a>{{ end }}
+    {{ range $i, $g := $groups }}<a href="#team-group-{{ $i }}">{{ $g }}</a>{{ end }}
   </nav>
 </div>
 
@@ -53,7 +53,7 @@
 {{ $people := where $members "user_groups" "intersect" (slice $g) }}
 <section class="td-section" id="team-group-{{ $i }}" aria-labelledby="team-group-title-{{ $i }}">
   <div class="td-shell">
-    <h2 id="team-group-title-{{ $i }}">{{ $g }} <span class="td-count">{{ len $people }}</span></h2>
+    <h2 id="team-group-title-{{ $i }}">{{ $g }}</h2>
     <div class="td-grid">
       {{ range $people }}
         {{ $profile := . }}
