@@ -2,8 +2,8 @@
 title: ''
 # For search engines: browser-tab / Google result title and snippet (not shown on the page).
 seo:
-  title: DigiEnergy Lab | Embodied Intelligence in Energy Systems, PolyU
-summary: DigiEnergy Lab at The Hong Kong Polytechnic University, one of the four labs of the International Centre of Urban Energy Nexus (UEX), studies how energy constraints shape intelligent perception and decision-making, and how embodied intelligence reshapes energy systems through physical action.
+  title: DigiEnergy Lab | Digital & Embodied Intelligence in Energy Systems, PolyU
+summary: DigiEnergy Lab is part of the International Centre of Urban Energy Nexus (UEX) at PolyU. We study digital and embodied intelligence in energy systems, from digital perception and prediction to embodied decision and action.
 type: landing
 # Restrained homepage: Hero (live 3D scene) + Mission + Approach carry the narrative; thrusts as short cards;
 # validation as real cases; publications/team as selected previews. Details live on /research/, /publications/, /team/.
@@ -35,10 +35,10 @@ sections:
     id: mission
     content:
       eyebrow: Our Mission
-      title: Understanding the Coupled Dynamics of Energy and Embodied Intelligence
+      title: Understanding the Coupled Dynamics of Energy and Intelligence
       subtitle: 'Underlying Mechanism: Energy–Information–Action Coupling'
       text: |-
-        > We investigate how energy constraints and physical dynamics shape intelligent perception, decision-making, and autonomous adaptation, and how embodied intelligence, through physical actions and feedback, transforms the operation of energy systems.
+        > Intelligence is moving from digital perception and prediction to embodied decision and action. We investigate how energy constraints and physical dynamics shape this transition, and how intelligence, through physical actions and feedback, transforms the operation of energy systems.
     design:
       layout: split
 
@@ -54,7 +54,7 @@ sections:
     id: thrusts
     content:
       title: '<span class="sec-eyebrow">Our Research</span>Research Thrusts'
-      text: 'Three connected steps of one loop. <a class="section-link" href="research/">Read more about our research →</a>'
+      text: 'Three connected steps of one loop, from digital perception and modeling to embodied action. <a class="section-link" href="research/">Read more about our research →</a>'
       items:
         - name: Energy-System Perception & Observability
           image: home/thrust-perception.jpg
@@ -70,8 +70,8 @@ sections:
     id: cases
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Embodied Intelligence in Energy Systems'
-      text: 'A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="research/#scenarios-intro">Read more about our scenarios →</a>'
+      title: '<span class="sec-eyebrow">Flagship Research Scenarios</span>Digital & Embodied Intelligence in Energy Systems'
+      text: 'A unified digital and embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics. <a class="section-link" href="research/#scenarios-intro">Read more about our scenarios →</a>'
       items:
         - name: Autonomous Urban BIPV & Solar–Storage Systems
           image: home/case-solar-twin.jpg

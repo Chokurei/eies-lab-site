@@ -1,9 +1,9 @@
 ---
 title: ''
-# 搜索引擎用：浏览器标签/谷歌结果标题与摘要（页面上不显示）。中文全称必须连续出现。
+# 搜索引擎用：浏览器标签/谷歌结果标题与摘要（页面上不显示）。格式「名字 · 研究方向」，与英文标题对应；不要写成「……实验室」（实验室名只用 DigiEnergy Lab）。
 seo:
-  title: DigiEnergy Lab · 能源具身智能 | 香港理工大学
-summary: DigiEnergy Lab 是香港理工大学 International Centre of Urban Energy Nexus（UEX）的四个实验室之一，研究能源约束如何塑造智能感知与决策，以及具身智能如何通过物理行动改变能源系统的运行：能源系统感知、基于物理的能源世界模型、能源约束下的具身决策与控制。
+  title: DigiEnergy Lab · 面向能源系统的数字与具身智能 | 香港理工大学
+summary: DigiEnergy Lab 隶属于香港理工大学 International Centre of Urban Energy Nexus（UEX）。我们研究能源系统中的数字与具身智能：从数字感知与预测，走向具身决策与行动。
 type: landing
 # 与 content/_index.md 结构一一对应；改动时两边同步。
 sections:
@@ -33,10 +33,10 @@ sections:
     id: mission
     content:
       eyebrow: 我们的使命
-      title: 理解能源与具身智能的耦合动态
+      title: 理解能源与智能的耦合动态
       subtitle: 底层机制：能量–信息–行动耦合
       text: |-
-        > 我们研究能源约束与物理动态如何塑造智能感知、决策与自主适应，以及具身智能如何通过物理行动与反馈，改变能源系统的运行方式。
+        > 智能正从数字感知与预测，走向具身决策与行动。我们研究能源约束与物理动态如何塑造这一过程，以及智能如何通过物理行动与反馈，改变能源系统的运行方式。
     design:
       layout: split
 
@@ -52,7 +52,7 @@ sections:
     id: thrusts
     content:
       title: '<span class="sec-eyebrow">研究内容</span>研究方向'
-      text: '同一闭环中相互衔接的三个环节。<a class="section-link" href="research/">了解更多研究内容 →</a>'
+      text: '同一闭环中相互衔接的三个环节，从数字感知与建模走向具身行动。<a class="section-link" href="research/">了解更多研究内容 →</a>'
       items:
         - name: 能源系统感知与可观测性
           image: home/thrust-perception.jpg
@@ -68,8 +68,8 @@ sections:
     id: cases
     # The three Active scenarios from /research/ (titles only here; all five with descriptions on the Research page).
     content:
-      title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的具身智能'
-      text: '一个贯通多样能源系统、物理约束与反馈动态的统一具身智能框架。<a class="section-link" href="research/#scenarios-intro">了解更多研究场景 →</a>'
+      title: '<span class="sec-eyebrow">旗舰研究场景</span>能源系统中的数字与具身智能'
+      text: '一个贯通多样能源系统、物理约束与反馈动态的数字与具身智能统一框架。<a class="section-link" href="research/#scenarios-intro">了解更多研究场景 →</a>'
       items:
         - name: 城市自主光伏建筑一体化（BIPV）与光储系统
           image: home/case-solar-twin.jpg

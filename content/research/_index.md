@@ -8,7 +8,7 @@ sections:
     content:
       eyebrow: Research
       title: Research Thrusts
-      subtitle: Three connected steps of one loop.
+      subtitle: Three connected steps of one loop, from digital perception and modeling to embodied action.
       text: |-
         Energy systems are dynamic, interconnected and only partially observable. Their evolving physical states and operational constraints shape what an intelligent agent can observe, predict and safely do. In turn, the agent's actions can change energy flows, equipment operation and system performance.
     design:
@@ -32,8 +32,8 @@ sections:
     id: scenarios-intro
     content:
       eyebrow: Flagship Research Scenarios
-      title: Embodied Intelligence in Energy Systems
-      subtitle: A unified embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics.
+      title: Digital & Embodied Intelligence in Energy Systems
+      subtitle: A unified digital and embodied intelligence framework across diverse energy systems, physical constraints, and feedback dynamics.
       text: |-
         We investigate how intelligent agents perceive, model, and interact with physical energy systems. Across complementary research scenarios, we explore how energy constraints, incomplete observations, and physical feedback shape autonomous adaptation and coordinated action.
     design:
