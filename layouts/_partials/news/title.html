@@ -1,0 +1,4 @@
+{{/* A news item's title, linked to where it leads: its `link` (opens in a new tab), else its own page if it has text, else no link. */}}
+{{ if .Params.link }}<a class="nf-title-link" href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}&nbsp;<span aria-hidden="true">↗</span></a>
+{{- else if strings.TrimSpace .RawContent }}<a class="nf-title-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{- else }}{{ .Title }}{{ end -}}

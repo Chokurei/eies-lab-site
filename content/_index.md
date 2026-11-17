@@ -83,14 +83,12 @@ sections:
           image: home/case-resilience.jpg
           status: active
 
-  - block: collection
+  - block: news-feed
     id: news
     content:
-      title: '<span class="sec-eyebrow">Latest</span>News'
-      text: '<a class="section-link" href="news/">All news →</a>'
-      count: 3
-      filters: { folders: [news] }
-    design: { view: date-title-summary }
+      eyebrow: Latest
+      title: News
+      all_label: All news →
 
   - block: markdown
     id: join

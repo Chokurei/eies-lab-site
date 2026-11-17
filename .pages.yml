@@ -380,6 +380,9 @@ content:
       - { name: date, label: Date / 日期, type: date, required: true }
       - { name: summary, label: One-line summary / 一句话简介（英文，新闻列表中显示）, type: text, required: true }
       - { name: summary_zh, label: 一句话简介（中文）, type: text, required: true }
+      - { name: news_type, label: Type / 类型（可选，用于标签和筛选）, type: select, options: { values: [{ value: paper, label: Paper / 论文 }, { value: award, label: Award / 获奖 }, { value: talk, label: Talk / 报告 }, { value: people, label: People / 人员 }, { value: event, label: Event / 活动 }] } }
+      - { name: cover, label: Cover image / 配图（16:9，可选；有图的最新一条会在首页大图展示）, type: image, options: { media: member-media } }
+      - { name: link, label: External link / 外部链接（https://…，可选；填写后列表点击直接跳转）, type: string }
       - { name: draft, label: Hide (draft) / 隐藏（草稿）, type: boolean, default: false }
-      - { name: body, label: Text / 正文（英文）, type: rich-text, options: { media: work-files } }
-      - { name: body_zh, label: 正文（中文）, type: rich-text, options: { media: work-files } }
+      - { name: body, label: Text / 正文（英文，可选）, type: rich-text, options: { media: work-files } }
+      - { name: body_zh, label: 正文（中文，可选）, type: rich-text, options: { media: work-files } }

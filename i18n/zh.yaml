@@ -5,3 +5,14 @@
   translation: 起步中
 - id: status_planning
   translation: 规划中
+# News type chips (layouts/_partials/news/meta.html, layouts/news/list.html)
+- id: news_type_paper
+  translation: 论文
+- id: news_type_award
+  translation: 获奖
+- id: news_type_talk
+  translation: 报告
+- id: news_type_people
+  translation: 人员
+- id: news_type_event
+  translation: 活动

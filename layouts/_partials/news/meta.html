@@ -1,0 +1,3 @@
+{{/* A news item's type chip and full date. */}}
+{{ $zh := eq site.Language.Lang "zh" -}}
+<div class="nf-meta">{{ with .Params.news_type }}<span class="nf-type">{{ i18n (printf "news_type_%s" .) }}</span>{{ end }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ if $zh }}{{ .Date.Format "2006年1月2日" }}{{ else }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}</time></div>

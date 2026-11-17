@@ -1,30 +1,45 @@
-{{/* News index: dated rows (DESIGN.md list style), same look as the homepage News section. */}}
+{{/* News index: all posts on one page, grouped by year, with a filter by type (assets/js/news-filter.js). */}}
 {{ define "main" }}
 {{ $zh := eq site.Language.Lang "zh" }}
-{{ $paginator := .Paginate .Pages.ByDate.Reverse 20 }}
+{{ $present := slice }}{{ range .Pages }}{{ with .Params.news_type }}{{ $present = $present | append . }}{{ end }}{{ end }}
+{{ $types := slice }}{{ range slice "paper" "award" "talk" "people" "event" }}{{ if in $present . }}{{ $types = $types | append . }}{{ end }}{{ end }}
 <div class="pl-shell">
   <header class="pl-head">
     <h1>{{ .Title }}</h1>
     {{ with .Content }}<div class="pl-lead">{{ . }}</div>{{ end }}
   </header>
-  <div class="nl-list">
-    {{ range $paginator.Pages }}
-    <article class="nl-row">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if $zh }}{{ .Date.Format "2006年1月2日" }}{{ else }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}</time>
-      <div>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Summary | plainify }}<p>{{ . | truncate 200 }}</p>{{ end }}
-      </div>
-    </article>
-    {{ else }}
-    <p class="pl-none">{{ cond $zh "暂无新闻。" "No news yet." }}</p>
-    {{ end }}
+  {{ if gt (len $types) 1 }}
+  <div class="nl-filter" role="group" aria-label="{{ cond $zh "按类型筛选" "Filter by type" }}" hidden>
+    <button type="button" data-type="" aria-pressed="true">{{ cond $zh "全部" "All" }}</button>
+    {{ range $types }}<button type="button" data-type="{{ . }}" aria-pressed="false">{{ i18n (printf "news_type_%s" .) }}</button>{{ end }}
   </div>
-  {{ if gt $paginator.TotalPages 1 }}
-  <nav class="nl-pager" aria-label="{{ cond $zh "分页" "Pagination" }}">
-    {{ with $paginator.Prev }}<a href="{{ .URL }}">← {{ cond $zh "较新" "Newer" }}</a>{{ end }}
-    {{ with $paginator.Next }}<a href="{{ .URL }}">{{ cond $zh "较早" "Older" }} →</a>{{ end }}
-  </nav>
   {{ end }}
+  <div class="nl-list">
+  {{ range .Pages.GroupByDate "2006" }}
+  <section class="pl-year">
+    <h2>{{ .Key }}</h2>
+    <div>
+      {{ range .Pages }}
+      <article class="nl-row" data-type="{{ .Params.news_type }}">
+        <div class="nl-when">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if $zh }}{{ .Date.Format "1月2日" }}{{ else }}{{ .Date.Format "Jan 2" }}{{ end }}</time>
+          {{ with .Params.news_type }}<span class="nf-type">{{ i18n (printf "news_type_%s" .) }}</span>{{ end }}
+        </div>
+        <div class="nl-main">
+          <h3>{{ partial "news/title.html" . }}</h3>
+          {{ with .Summary | plainify }}<p class="nl-sum">{{ . | truncate 200 }}</p>{{ end }}
+        </div>
+        {{ with .Params.cover }}{{ with resources.Get (strings.TrimPrefix "/" .) }}{{ $t := .Fill "400x264 Center webp q78" }}<figure class="nl-thumb"><img src="{{ $t.RelPermalink }}" alt="" width="{{ $t.Width }}" height="{{ $t.Height }}" loading="lazy"></figure>{{ end }}{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ else }}
+  <p class="pl-none">{{ cond $zh "暂无新闻。" "No news yet." }}</p>
+  {{ end }}
+  </div>
 </div>
+{{ with resources.Get "js/news-filter.js" }}{{ $js := . | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}
 {{ end }}

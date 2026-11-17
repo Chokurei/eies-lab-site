@@ -81,14 +81,12 @@ sections:
           image: home/case-resilience.jpg
           status: active
 
-  - block: collection
+  - block: news-feed
     id: news
     content:
-      title: '<span class="sec-eyebrow">最新动态</span>新闻'
-      text: '<a class="section-link" href="news/">全部新闻 →</a>'
-      count: 3
-      filters: { folders: [news] }
-    design: { view: date-title-summary }
+      eyebrow: 最新动态
+      title: 新闻
+      all_label: 全部新闻 →
 
   - block: markdown
     id: join

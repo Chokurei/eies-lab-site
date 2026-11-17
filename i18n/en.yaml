@@ -5,3 +5,14 @@
   translation: Emerging
 - id: status_planning
   translation: Planning
+# News type chips (layouts/_partials/news/meta.html, layouts/news/list.html)
+- id: news_type_paper
+  translation: Paper
+- id: news_type_award
+  translation: Award
+- id: news_type_talk
+  translation: Talk
+- id: news_type_people
+  translation: People
+- id: news_type_event
+  translation: Event

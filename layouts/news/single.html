@@ -7,10 +7,12 @@
     <a class="hs-link mp-back-link" href="{{ "news/" | relLangURL }}"><span aria-hidden="true">←</span> <span class="mp-back-label">{{ cond $zh "全部新闻" "All News" }}</span></a>
     <h1>{{ .Title }}</h1>
     <div class="mp-paper-byline">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if $zh }}{{ .Date.Format "2006年1月2日" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time>
+      {{ with .Params.news_type }}<span class="nf-type">{{ i18n (printf "news_type_%s" .) }}</span> {{ end }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ if $zh }}{{ .Date.Format "2006年1月2日" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time>
     </div>
-    {{ with .Resources.GetMatch "featured*" }}<figure class="mp-detail-figure"><img src="{{ .RelPermalink }}" alt="{{ $.Title }}"{{ if ne .MediaType.SubType "svg+xml" }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}></figure>{{ end }}
+    {{ $img := .Resources.GetMatch "featured*" }}{{ with .Params.cover }}{{ with resources.Get (strings.TrimPrefix "/" .) }}{{ $img = . }}{{ end }}{{ end }}
+    {{ with $img }}<figure class="mp-detail-figure"><img src="{{ .RelPermalink }}" alt="{{ $.Title }}"{{ if ne .MediaType.SubType "svg+xml" }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}></figure>{{ end }}
     <div class="mp-article-content mp-body">{{ .Content }}</div>
+    {{ with .Params.link }}<p><a class="hs-link" href="{{ . }}" target="_blank" rel="noopener">{{ cond $zh "查看原文" "Read more" }} <span aria-hidden="true">↗</span></a></p>{{ end }}
   </article>
 </div>
 {{ $older := .PrevInSection }}{{ $newer := .NextInSection }}

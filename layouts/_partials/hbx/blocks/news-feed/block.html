@@ -1,0 +1,44 @@
+{{/* Homepage News: the newest of the latest posts that has a cover is shown large, the others as short rows beside it.
+     With no cover among them, all are plain rows with their summaries.
+     content: eyebrow, title, all_label, count (posts shown, default 5) */}}
+{{ $c := .wcBlock.content }}
+{{ $zh := eq site.Language.Lang "zh" }}
+{{ $recent := first ($c.count | default 5) (where site.RegularPages "Section" "news").ByDate.Reverse }}
+{{ $lead := false }}{{ $img := false }}
+{{ range $p := $recent }}{{ if not $lead }}{{ with $p.Params.cover }}{{ with resources.Get (strings.TrimPrefix "/" .) }}{{ $lead = $p }}{{ $img = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{ $rest := $recent }}{{ with $lead }}{{ $rest = where $recent "RelPermalink" "ne" .RelPermalink }}{{ end }}
+<div class="md-block max-w-6xl mx-auto px-6 nf">
+  <header class="nf-head">
+    <div>
+      {{ with $c.eyebrow }}<p class="md-eyebrow">{{ . }}</p>{{ end }}
+      {{ with $c.title }}<h2 class="md-title">{{ . }}</h2>{{ end }}
+    </div>
+    <a class="section-link" href="{{ "news/" | relLangURL }}">{{ $c.all_label | default (cond $zh "全部新闻 →" "All news →") }}</a>
+  </header>
+  <div class="nf-grid{{ if not $lead }} is-plain{{ end }}">
+    {{ with $lead }}
+    <article class="nf-lead">
+      {{ $r := $img.Fill "1280x720 Center webp q82" }}
+      <figure><img src="{{ $r.RelPermalink }}" alt="" width="{{ $r.Width }}" height="{{ $r.Height }}" loading="lazy"></figure>
+      {{ partial "news/meta.html" . }}
+      <h3>{{ partial "news/title.html" . }}</h3>
+      {{ with .Summary | plainify }}<p class="nf-sum">{{ . }}</p>{{ end }}
+    </article>
+    {{ end }}
+    {{ if $rest }}
+    <div class="nf-rows">
+      {{ range $rest }}
+      <article class="nf-row">
+        <div class="nf-row-text">
+          {{ partial "news/meta.html" . }}
+          <h3>{{ partial "news/title.html" . }}</h3>
+          {{ if not $lead }}{{ with .Summary | plainify }}<p class="nf-sum">{{ . }}</p>{{ end }}{{ end }}
+        </div>
+        {{ with .Params.cover }}{{ with resources.Get (strings.TrimPrefix "/" .) }}{{ $t := .Fill "240x240 Center webp q78" }}<figure class="nf-thumb"><img src="{{ $t.RelPermalink }}" alt="" width="{{ $t.Width }}" height="{{ $t.Height }}" loading="lazy"></figure>{{ end }}{{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ if not $recent }}<p class="pl-none">{{ cond $zh "暂无新闻。" "No news yet." }}</p>{{ end }}
+</div>
